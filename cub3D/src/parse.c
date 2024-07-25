@@ -6,7 +6,7 @@
 /*   By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 22:41:14 by jduraes-          #+#    #+#             */
-/*   Updated: 2024/07/23 19:23:05 by jduraes-         ###   ########.fr       */
+/*   Updated: 2024/07/25 00:42:44 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,28 @@
 static void	t_format(char *s, t_gs *gs)
 {
 	static int	i;
-    
+
 	i++;
-	if(i == 1 && !ft_strncmp(s, "NO ./", 5))
+	if (i == 1 && !ft_strncmp(s, "NO ./", 5))
 		gs->no_t = ft_substr(s, 3, ft_strlen(s) - 3);
-	else if(i == 2 && !ft_strncmp(s, "SO ./", 5))
+	else if (i == 2 && !ft_strncmp(s, "SO ./", 5))
 		gs->so_t = ft_substr(s, 3, ft_strlen(s) - 3);
-	else if(i == 3 && !ft_strncmp(s, "WE ./", 5))
+	else if (i == 3 && !ft_strncmp(s, "WE ./", 5))
 		gs->we_t = ft_substr(s, 3, ft_strlen(s) - 3);
-	else if(i == 4 && !ft_strncmp(s, "EA ./", 5))
+	else if (i == 4 && !ft_strncmp(s, "EA ./", 5))
 		gs->ea_t = ft_substr(s, 3, ft_strlen(s) - 3);
 	else
-		ft_perror("Error\ntexture format error\nshould be: \"NO ./texture\"\n", 1);
+		ft_perror("Error\ntexture format error\nshould be: \"NO ./texture\"\n",
+			1);
 }
 
 static void	get_textures(char *full, t_gs *gs)
 {
 	char	**textures;
-	int    i;
+	int		i;
 
 	textures = ft_split(full, '\n');
-	if (!textures[0] ||!textures[1] ||!textures[2] ||!textures[3])
+	if (!textures[0] || !textures[1] || !textures[2] || !textures[3])
 		ft_perror("Error\nmissing texture info", 1);
 	i = -1;
 	while (textures[++i] != NULL)
@@ -43,18 +44,20 @@ static void	get_textures(char *full, t_gs *gs)
 	doublefree(textures);
 	free(full);
 }
+
 static void	copyconvert(char **s, int *a)
 {
 	int	i;
 
 	i = -1;
-	while(s[++i] != NULL)
+	while (s[++i] != NULL)
 		a[i] = ft_atoi(s[i]);
 }
+
 static void	rgb_format(char *s, t_gs *gs)
 {
-	char    **temp;
-	int	i;
+	char	**temp;
+	int		i;
 
 	if (s[0] != 'F' && s[0] != 'C' && s[1] == ' ')
 		ft_perror("wrong color format\nshould be \"C/F RGB,RGB,RGB\"", 1);
@@ -73,14 +76,14 @@ static void	rgb_format(char *s, t_gs *gs)
 		copyconvert(temp, gs->ceiling);
 }
 
-static void    get_rgb(char *full, t_gs *gs)
+static void	get_rgb(char *full, t_gs *gs)
 {
-	char    **rgb;
+	char	**rgb;
 
-    rgb = ft_split(full, '\n');
-    if (!rgb[0] || !rgb[1])
+	rgb = ft_split(full, '\n');
+	if (!rgb[0] || !rgb[1])
 	{
-        ft_perror("missing color info", 1);
+		ft_perror("missing color info", 1);
 	}
 	rgb_format(rgb[0], gs);
 	rgb_format(rgb[1], gs);
@@ -91,7 +94,7 @@ static void	strfill(char c, char *tofill, int len)
 	int	i;
 
 	i = -1;
-	while(++i < len)
+	while (++i < len)
 		tofill[i] = c;
 }
 
@@ -111,14 +114,14 @@ static void	map_init(t_gs *gs)
 			return ;
 		gs->map[i][gs->xlen] = '\0';
 		strfill(' ', gs->map[i], gs->xlen);
-	}	
+	}
 }
 
 static int	map_write(int fd, t_gs *gs)
 {
 	char	*temp;
 	char	*line;
-	int	i;
+	int		i;
 
 	map_init(gs);
 	line = get_next_line(fd);
@@ -137,8 +140,8 @@ static int	map_write(int fd, t_gs *gs)
 
 static int	info_write(char *f, t_gs *gs)
 {
-	int	fd;
-	int	i;
+	int		fd;
+	int		i;
 	char	*line;
 	char	*temp;
 
@@ -166,9 +169,9 @@ static int	info_write(char *f, t_gs *gs)
 
 static int	length_aux(char *s, t_gs *gs)
 {
-	int	i;
+	int			i;
 	static int	pre;
-	
+
 	i = -1;
 	if (pre++ < 8)
 		return (1);
@@ -176,8 +179,8 @@ static int	length_aux(char *s, t_gs *gs)
 	{
 		while (s[++i] != '\0' && s[i] != '\n')
 		{
-			if (s[i] != '1' && s[i] != '0' && s[i] != 'N' && 
-				s[i] != 'S' && s[i] != 'E' && s[i] != 'W' && s[i] != ' ')
+			if (s[i] != '1' && s[i] != '0' && s[i] != 'N' && s[i] != 'S'
+				&& s[i] != 'E' && s[i] != 'W' && s[i] != ' ')
 				return (0);
 		}
 		gs->ylen++;
@@ -189,8 +192,8 @@ static int	length_aux(char *s, t_gs *gs)
 
 int	parser(char *f, t_gs *gs)
 {
-	int        fd;
-	int	ic;
+	int		fd;
+	int		ic;
 	char	*line;
 
 	ic = 1;
