@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 01:45:06 by luguimar          #+#    #+#             */
-/*   Updated: 2024/07/25 08:33:38 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/07/25 09:15:47 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -194,9 +194,9 @@ void	put_line(t_game *game, double x, double y, double dir, int i)
 	dist2wall = 0;
 	while (game->map.map[(int)x][(int)y] == '0')
 	{
-		x += cos(dir);
-		y += sin(dir);
-		dist2wall += sqrt(pow(cos(dir), 2) + pow(sin(dir), 2));
+		x += 0.1 * cos(dir);
+		y += 0.1 * sin(dir);
+		dist2wall += 0.1;
 	}
 	line_size = 600 / dist2wall;
 	j = 300 - line_size / 2;
@@ -284,8 +284,8 @@ int	key_hook(int keycode, t_game *game)
 			game->player.dir -= 2 * M_PI;
 	}
 	map_render(game);
-	minimaprender(game);
 	cube_render(game);
+	minimaprender(game);
 	return (0);
 }
 
@@ -307,8 +307,8 @@ void	mlx_start(t_game *game)
 	//set_mlx_images(game);
 	get_player_position(game);
 	map_render(game);
-	minimaprender(game);
 	cube_render(game);
+	minimaprender(game);
 	mlx_hook(game->graphics.win, 2, 1L << 0, key_hook, game);
 	mlx_hook(game->graphics.win, 17, 0, mlx_close, game);
 	//mlx_loop_hook(game->graphics.mlx, map_render, game);
