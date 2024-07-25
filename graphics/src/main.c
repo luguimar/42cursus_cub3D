@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 01:45:06 by luguimar          #+#    #+#             */
-/*   Updated: 2024/07/25 09:15:47 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/07/25 23:26:41 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -147,17 +147,53 @@ int	map_render(t_game *game)
 	return (1);
 }
 
-double	get_player_dir(char c)
+double	get_dir(char c)
 {
 	if (c == 'N')
 		return (0);
 	else if (c == 'E')
 		return (M_PI_2);
 	else if (c == 'S')
-		return (M_PI);
+		return (0);
 	else if (c == 'W')
-		return (3 * M_PI_2);
+		return (M_PI_2);
 	return (0);
+}
+
+int	get_side(char c)
+{
+	if (c == 'N')
+		return (0);
+	else if (c == 'E')
+		return (1);
+	else if (c == 'S')
+		return (1);
+	else if (c == 'W')
+		return (0);
+	return (0);
+}
+
+void	get_player_dir(t_game *game)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (game->map.map[i])
+	{
+		j = 0;
+		while (game->map.map[i][j])
+		{
+			if (game->map.map[i][j] == 'N' || game->map.map[i][j] == 'S' || game->map.map[i][j] == 'E' || game->map.map[i][j] == 'W')
+			{
+				game->player.dir = get_dir(game->map.map[i][j]);
+				game->player.side = get_side(game->map.map[i][j]);
+				return ;
+			}
+			j++;
+		}
+		i++;
+	}
 }
 
 void	get_player_position(t_game *game)
@@ -175,7 +211,7 @@ void	get_player_position(t_game *game)
 			{
 				game->player.x = ((double)i) + 0.5;
 				game->player.y = ((double)j) + 0.5;
-				game->player.dir = get_player_dir(game->map.map[i][j]);
+				get_player_dir(game);
 				game->map.map[i][j] = '0';
 				return ;
 			}
@@ -194,15 +230,28 @@ void	put_line(t_game *game, double x, double y, double dir, int i)
 	dist2wall = 0;
 	while (game->map.map[(int)x][(int)y] == '0')
 	{
-		x += 0.1 * cos(dir);
-		y += 0.1 * sin(dir);
-		dist2wall += 0.1;
+		x -= cos(dir);
+		y += sin(dir);
+		dist2wall += 1;
 	}
-	line_size = 600 / dist2wall;
-	j = 300 - line_size / 2;
-	while (j < (300 + line_size))
+	while (game->map.map[(int)x][(int)y] == '1')
 	{
-		mlx_pixel_put(game->graphics.mlx, game->graphics.win, i, j, 0x00FFFFFF);
+		x += 0.1 * cos(dir);
+		y -= 0.1 * sin(dir);
+		dist2wall -= 0.1;
+	}
+	while (game->map.map[(int)x][(int)y] == '0')
+	{
+		x -= 0.01 * cos(dir);
+		y += 0.01 * sin(dir);
+		dist2wall += 0.01;
+	}
+	line_size = 600 / pow(dist2wall, 2);
+	j = 300 - line_size / 2;
+	while (j < (300 + line_size / 2))
+	{
+		if (j >= 0 && j < 600)
+			mlx_pixel_put(game->graphics.mlx, game->graphics.win, i, j, 0x00FFFFFF);
 		j++;
 	}
 }
@@ -226,6 +275,10 @@ void	cube_render(t_game *game)
 	{
 		put_line(game, game->player.x, game->player.y, init_dir, i);
 		init_dir += frac;
+		if (init_dir >= 2 * M_PI)
+			init_dir -= 2 * M_PI;
+		if (init_dir < 0)
+			init_dir += 2 * M_PI;
 		i++;
 	}
 }
@@ -234,23 +287,79 @@ int	move(int keycode, t_game *game)
 {
 	double	new_x;
 	double	new_y;
+	double	alpha;
 
 	new_x = game->player.x;
 	new_y = game->player.y;
 	if (keycode == S)
 	{
-		new_x += 0.1 * cos(game->player.dir);
-		new_y += 0.1 * sin(game->player.dir);
+		if (game->player.side == 2)
+		{
+			new_x += 0.1 * cos(game->player.dir);
+			new_y += 0.1 * sin(game->player.dir);
+		}
+		else if (game->player.side == 0)
+		{
+			new_x -= 0.1 * cos(game->player.dir);
+			new_y -= 0.1 * sin(game->player.dir);
+		}
+		else if (game->player.side == 1)
+		{
+			new_x += 0.1 * cos(game->player.dir);
+			new_y -= 0.1 * sin(game->player.dir);
+		}
+		else if (game->player.side == 3)
+		{
+			new_x -= 0.1 * cos(game->player.dir);
+			new_y += 0.1 * sin(game->player.dir);
+		}
 	}
 	else if (keycode == W)
 	{
-		new_x -= 0.1 * cos(game->player.dir);
-		new_y -= 0.1 * sin(game->player.dir);
+		if (game->player.side == 2)
+		{
+			new_x -= 0.1 * cos(game->player.dir);
+			new_y -= 0.1 * sin(game->player.dir);
+		}
+		else if (game->player.side == 0)
+		{
+			new_x += 0.1 * cos(game->player.dir);
+			new_y += 0.1 * sin(game->player.dir);
+		}
+		else if (game->player.side == 1)
+		{
+			new_x -= 0.1 * cos(game->player.dir);
+			new_y += 0.1 * sin(game->player.dir);
+		}
+		else if (game->player.side == 3)
+		{
+			new_x += 0.1 * cos(game->player.dir);
+			new_y -= 0.1 * sin(game->player.dir);
+		}
 	}
 	else if (keycode == A)
 	{
-		new_x -= 0.1 * cos(game->player.dir + M_PI_2);
-		new_y -= 0.1 * sin(game->player.dir + M_PI_2);
+		if (game->player.side == 2)
+		{
+			alpha = M_PI_2 - game->player.dir;
+			new_x += 0.1 * cos(alpha);
+			new_y -= 0.1 * sin(alpha);
+		}
+		else if (game->player.side == 0)
+		{
+			alpha = M_PI_2 - game->player.dir;
+			new_y
+		}
+		else if (game->player.side == 1)
+		{
+			new_x -= 0.1 * cos(game->player.dir + M_PI_2);
+			new_y += 0.1 * sin(game->player.dir + M_PI_2);
+		}
+		else if (game->player.side == 3)
+		{
+			new_x += 0.1 * cos(game->player.dir);
+			new_y -= 0.1 * sin(game->player.dir + M_PI_2);
+		}
 	}
 	else if (keycode == D)
 	{
@@ -273,15 +382,81 @@ int	key_hook(int keycode, t_game *game)
 		move(keycode, game);
 	else if (keycode == RIGHT)
 	{
-		game->player.dir -= M_PI_2 / 12;
-		if (game->player.dir < 0)
-			game->player.dir += 2 * M_PI;
+		if (game->player.side == 0)
+		{
+			game->player.dir -= M_PI_2 / 200;
+			if (game->player.dir < 0)
+			{
+				game->player.dir = 0;
+				game->player.side = 3;
+			}
+		}
+		else if (game->player.side == 1)
+		{
+			game->player.dir += M_PI_2 / 200;
+			if (game->player.dir > M_PI_2)
+			{
+				game->player.dir = M_PI_2;
+				game->player.side = 0;
+			}
+		}
+		else if (game->player.side == 2)
+		{
+			game->player.dir -= M_PI_2 / 200;
+			if (game->player.dir < 0)
+			{
+				game->player.dir = 0;
+				game->player.side = 1;
+			}
+		}
+		else if (game->player.side == 3)
+		{
+			game->player.dir += M_PI_2 / 200;
+			if (game->player.dir > M_PI_2)
+			{
+				game->player.dir = M_PI_2;
+				game->player.side = 2;
+			}
+		}
 	}
 	else if (keycode == LEFT)
 	{
-		game->player.dir += M_PI_2 / 12;
-		if (game->player.dir >= 2 * M_PI)
-			game->player.dir -= 2 * M_PI;
+		if (game->player.side == 0)
+		{
+			game->player.dir += M_PI_2 / 200;
+			if (game->player.dir < M_PI_2)
+			{
+				game->player.dir = M_PI_2;
+				game->player.side = 1;
+			}
+		}
+		else if (game->player.side == 1)
+		{
+			game->player.dir -= M_PI_2 / 200;
+			if (game->player.dir < 0)
+			{
+				game->player.dir = 0;
+				game->player.side = 2;
+			}
+		}
+		else if (game->player.side == 2)
+		{
+			game->player.dir += M_PI_2 / 200;
+			if (game->player.dir > M_PI_2)
+			{
+				game->player.dir = M_PI_2;
+				game->player.side = 3;
+			}
+		}
+		else if (game->player.side == 3)
+		{
+			game->player.dir -= M_PI_2 / 200;
+			if (game->player.dir < 0)
+			{
+				game->player.dir = 0;
+				game->player.side = 0;
+			}
+		}
 	}
 	map_render(game);
 	cube_render(game);

@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 01:46:50 by luguimar          #+#    #+#             */
-/*   Updated: 2024/07/25 05:49:51 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/07/25 20:36:35 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ typedef struct s_player
 	double	x;
 	double	y;
 	double	dir;
+	int		side;
 }	t_player;
 
 typedef struct s_graphics

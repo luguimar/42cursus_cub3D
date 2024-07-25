@@ -266,13 +266,15 @@ ft_toupper	cub3D/libft/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f	typeref:typena
 ft_toupper	graphics/lib/libft/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f	typeref:typename:int
 ft_wc	cub3D/libft/ft_split.c	/^int	ft_wc(char *str, char c)$/;"	f	typeref:typename:int
 ft_ws	cub3D/libft/ft_split.c	/^int	ft_ws(char *s, char c, int *jj)$/;"	f	typeref:typename:int
+get_dir	graphics/src/main.c	/^double	get_dir(char c)$/;"	f	typeref:typename:double
 get_line	cub3D/libft/get_next_line.c	/^static char	*get_line(char *stash, int eof)$/;"	f	typeref:typename:char *	file:
 get_line	graphics/lib/libft/get_next_line.c	/^static char	*get_line(char *stash)$/;"	f	typeref:typename:char *	file:
 get_next_line	cub3D/libft/get_next_line.c	/^char	*get_next_line(int fd)$/;"	f	typeref:typename:char *
 get_next_line	graphics/lib/libft/get_next_line.c	/^char	*get_next_line(int fd)$/;"	f	typeref:typename:char *
-get_player_dir	graphics/src/main.c	/^double	get_player_dir(char c)$/;"	f	typeref:typename:double
+get_player_dir	graphics/src/main.c	/^void	get_player_dir(t_game *game)$/;"	f	typeref:typename:void
 get_player_position	graphics/src/main.c	/^void	get_player_position(t_game *game)$/;"	f	typeref:typename:void
 get_rgb	cub3D/src/parse.c	/^static void	get_rgb(char *full, t_gs *gs)$/;"	f	typeref:typename:void	file:
+get_side	graphics/src/main.c	/^int	get_side(char c)$/;"	f	typeref:typename:int
 get_stash	cub3D/libft/get_next_line.c	/^static char	*get_stash(int fd, char *stash, int *eof)$/;"	f	typeref:typename:char *	file:
 get_stash	graphics/lib/libft/get_next_line.c	/^static char	*get_stash(int fd, char *stash)$/;"	f	typeref:typename:char *	file:
 get_textures	cub3D/src/parse.c	/^static void	get_textures(char *full, t_gs *gs)$/;"	f	typeref:typename:void	file:
@@ -335,6 +337,7 @@ s_list	graphics/lib/libft/libft.h	/^typedef struct s_list$/;"	s
 s_map	graphics/include/cub3d.h	/^typedef struct s_map$/;"	s
 s_player	graphics/include/cub3d.h	/^typedef struct s_player$/;"	s
 s_position	cub3D/cub3d.h	/^typedef struct s_position$/;"	s
+side	graphics/include/cub3d.h	/^	int		side;$/;"	m	struct:s_player	typeref:typename:int
 smaller	graphics/lib/libft/int_size_utils.c	/^int	smaller(int a, int b)$/;"	f	typeref:typename:int
 so_t	cub3D/cub3d.h	/^	char		*so_t;$/;"	m	struct:s_gs	typeref:typename:char *
 so_t	graphics/include/cub3d.h	/^	char	*so_t;$/;"	m	struct:s_graphics	typeref:typename:char *
