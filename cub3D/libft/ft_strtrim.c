@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jduraes- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 16:23:00 by jduraes-          #+#    #+#             */
-/*   Updated: 2023/05/05 17:06:44 by jduraes-         ###   ########.fr       */
+/*   Updated: 2024/07/25 21:13:30 by jduraes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,15 @@ int	checkend(char *str, char *set)
 			return (count);
 	}
 	return (count);
+}
+
+char	*ft_strtrimfree(char const *s1, char const *set)
+{
+	char *new;
+
+	new = ft_strtrim(s1, set);
+	free((void *)s1);
+	return (new);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)

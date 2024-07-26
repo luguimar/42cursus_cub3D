@@ -6,13 +6,29 @@
 /*   By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 22:41:14 by jduraes-          #+#    #+#             */
-/*   Updated: 2024/07/26 19:21:50 by jduraes-         ###   ########.fr       */
+/*   Updated: 2024/07/23 19:23:05 by jduraes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../cub3d.h"
 
-/*
+static void	t_format(char *s, t_gs *gs)
+{
+	static int	i;
+    
+	i++;
+	if(i == 1 && !ft_strncmp(s, "NO ./", 5))
+		gs->no_t = ft_substr(s, 3, ft_strlen(s) - 3);
+	else if(i == 2 && !ft_strncmp(s, "SO ./", 5))
+		gs->so_t = ft_substr(s, 3, ft_strlen(s) - 3);
+	else if(i == 3 && !ft_strncmp(s, "WE ./", 5))
+		gs->we_t = ft_substr(s, 3, ft_strlen(s) - 3);
+	else if(i == 4 && !ft_strncmp(s, "EA ./", 5))
+		gs->ea_t = ft_substr(s, 3, ft_strlen(s) - 3);
+	else
+		ft_perror("Error\ntexture format error\nshould be: \"NO ./texture\"\n", 1);
+}
+
 static void	get_textures(char *full, t_gs *gs)
 {
 	char	**textures;
@@ -27,15 +43,44 @@ static void	get_textures(char *full, t_gs *gs)
 	doublefree(textures);
 	free(full);
 }
+static void	copyconvert(char **s, int *a)
+{
+	int	i;
+
+	i = -1;
+	while(s[++i] != NULL)
+		a[i] = ft_atoi(s[i]);
+}
+static void	rgb_format(char *s, t_gs *gs)
+{
+	char    **temp;
+	int	i;
+
+	if (s[0] != 'F' && s[0] != 'C' && s[1] == ' ')
+		ft_perror("wrong color format\nshould be \"C/F RGB,RGB,RGB\"", 1);
+	temp = ft_split(s + 2, ',');
+	if (ft_matlen(temp) != 3)
+		ft_perror("wrong color format\nshould be \"C/F RGB,RGB,RGB\"", 1);
+	i = -1;
+	while (temp[++i] != NULL)
+	{
+		if (ft_atoi(temp[i]) < 0 || ft_atoi(temp[i]) > 255)
+			ft_perror("error rgb number", 1);
+	}
+	if (s[0] == 'F')
+		copyconvert(temp, gs->floor);
+	if (s[0] == 'C')
+		copyconvert(temp, gs->ceiling);
+}
 
 static void    get_rgb(char *full, t_gs *gs)
 {
 	char    **rgb;
 
-	rgb = ft_split(full, '\n');
-	if (!rgb[0] || !rgb[1])
+    rgb = ft_split(full, '\n');
+    if (!rgb[0] || !rgb[1])
 	{
-		ft_perror("missing color info", 1);
+        ft_perror("missing color info", 1);
 	}
 	rgb_format(rgb[0], gs);
 	rgb_format(rgb[1], gs);
@@ -140,156 +185,26 @@ static int	length_aux(char *s, t_gs *gs)
 			gs->xlen = ft_strlen(s) - 1;
 		return (1);
 	}
-}*/
-
-static int	t_access(char *s, char **d)
-{
-	char *t;
-	
-	t = ft_substr(s, 3, ft_strlen(s) - 3);
-	*d = ft_strtrimfree(t, " ");
-	free(s);
-	if (!(*d))
-		return (0);
-	return (1);
-}
-
-static int	t_format(char *s, t_gs *gs)
-{
-	if(!ft_strncmp(s, "NO ", 3) && gs->no_t == NULL)
-	{
-		t_access(s, &gs->no_t);
-		return (1);
-	}
-	else if(!ft_strncmp(s, "SO ", 3) && gs->so_t == NULL)
-	{
-		t_access(s, &gs->so_t);
-		return (1);
-	}
-	else if(!ft_strncmp(s, "WE ", 3) && gs->we_t == NULL)
-	{
-		t_access(s, &gs->we_t);
-		return (1);
-	}
-	else if(!ft_strncmp(s, "EA ", 3) && gs->ea_t == NULL)
-	{
-		t_access(s, &gs->ea_t);
-		return (1);
-	}
-	else
-		return (0);
-}
-
-static int	copyconvert(char **s, int *a)
-{
-	int	i;
-
-	i = -1;
-	while(s[++i] != NULL)
-		a[i] = ft_atoi(s[i]);
-	return (1);
-}
-
-static int	rgb_format(char *s, t_gs *gs)
-{
-	char    **temp;
-	int	i;
-
-	if (s[1] != ' ')
-	{
-		free(s);
-		return (0);
-	}
-	temp = ft_split(s + 2, ',');
-	if (ft_matlen(temp) != 3)
-	{
-		printf("wrong color format\nshould be \"C/F RGB,RGB,RGB\"");
-		doublefree(temp);
-		free(s);
-		return (0);
-	}
-	i = -1;
-	while (temp[++i] != NULL)
-	{
-		temp[i] = ft_strtrimfree(temp[i], " ");
-		if (ft_atoi(temp[i]) < 0 || ft_atoi(temp[i]) > 255)
-		{
-			printf("invalid RGB number");
-			free(s);
-			doublefree(temp);
-			return (0);
-		}
-	}
-	if (s[0] == 'F' && gs->floor[0] == -1)
-	{
-		free(s);
-		return (copyconvert(temp, gs->floor));
-	}
-	else if (s[0] == 'C' && gs->ceiling[0] == -1)
-	{
-		free(s);
-		return (copyconvert(temp, gs->ceiling));
-	}
-	free(s);
-	return (0);
-}
-
-static int check_empty(char *line)
-{
-	char	*s;
-
-	s = ft_strtrim(line, " ");
-	if (ft_strncmp(s, "\n", ft_strlen(line)))
-	{
-		free(s);
-		return (1);
-	}
-	free(s);
-	return (0);
-}
-
-static int	check_format(char *line, t_gs *gs)
-{
-	char *s;
-
-	s = ft_strtrim(line, " ");
-	if (s[0] == 'F' || s[0] == 'C')
-		return (rgb_format(s, gs));
-	else if (!ft_strncmp(s, "NO", 2) || !ft_strncmp(s, "SO", 2) ||
-		!ft_strncmp(s, "EA", 2) || !ft_strncmp(s, "WE", 2))
-		return (t_format(s, gs));
-	free(s);
-	return (0);
-}
-
-static int	check_info(t_gs *gs)
-{
-	if (gs->no_t == NULL || gs->so_t == NULL || gs->we_t == NULL ||
-		gs->ea_t == NULL || gs->floor[0] == -1 || gs->ceiling[0] == -1)
-		return (0);
-    return (1);
 }
 
 int	parser(char *f, t_gs *gs)
 {
-	int	fd;
+	int        fd;
+	int	ic;
 	char	*line;
 
+	ic = 1;
 	fd = open(f, O_RDONLY);
 	line = get_next_line(fd);
-	while(line)
+	gs->xlen = 0;
+	while (line && ic != 0)
 	{
-		if (!check_format(line, gs) && !check_empty(line))
-			{
-				free(line);
-				return (0);
-			}
+		ic = length_aux(line, gs);
 		free(line);
-		if(check_info(gs))
-			break;
 		line = get_next_line(fd);
 	}
-	if (!check_info(gs))
-		return (0);
-	return (1);
+	if (gs->ylen < 3 || gs->xlen < 3 || ic == 0)
+		ft_perror("Invalid map", 1);
+	free(line);
+	return (info_write(f, gs));
 }

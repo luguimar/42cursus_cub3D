@@ -6,7 +6,7 @@
 /*   By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:24:58 by jduraes-          #+#    #+#             */
-/*   Updated: 2024/07/26 19:25:26 by jduraes-         ###   ########.fr       */
+/*   Updated: 2024/07/23 20:26:24 by jduraes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,26 +28,8 @@ static t_gs	*gs_init(void)
 	if (!gs)
 		ft_perror("gamestate init error", 1);
 	gs->player = calloc(1, sizeof(t_position));
-	gs->floor[0] = -1;
-	gs->ceiling[0] = -1;
 	return (gs);
 }
-
-static void	deinitialize(t_gs *gs)
-{
-	if (gs)
-	{
-		if(gs->map)
-		    free(gs->map);
-		if(gs->player)
-			free(gs->player);
-		if(gs->no_t)
-			free(gs->no_t);
-	}
-	if(gs)
-	    free(gs);
-}
-
 static void	is_valid(char *f)
 {
 	int	fd;
@@ -73,11 +55,8 @@ int	main(int argc, char **argv)
 		ft_perror("wrong number of arguments", 1);
 	is_valid(argv[1]);
 	gs = gs_init();
-	if (!parser(argv[1], gs))
-	{
-		deinitialize(gs);
-	}
-	//if (!checker(gs))
-	//	ft_perror("Invalid map format", 1);
+	parser(argv[1], gs);
+	if (!checker(gs))
+		ft_perror("Invalid map format", 1);
 	return (0);
 }
