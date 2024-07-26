@@ -320,7 +320,7 @@ player	graphics/include/cub3d.h	/^	t_player	player;$/;"	m	struct:s_game	typeref:
 player_check	cub3D/src/checker.c	/^static int	player_check(t_gs *gs, int i, int j)$/;"	f	typeref:typename:int	file:
 playerrender	graphics/src/main.c	/^void	playerrender(t_game *game)$/;"	f	typeref:typename:void
 prev	graphics/lib/libft/libft.h	/^	struct s_list	*prev;$/;"	m	struct:s_list	typeref:struct:s_list *
-put_line	graphics/src/main.c	/^void	put_line(t_game *game, double x, double y, double dir, int i)$/;"	f	typeref:typename:void
+put_line	graphics/src/main.c	/^void	put_line(t_game *game, double x, double y, double dir, int side, int i)$/;"	f	typeref:typename:void
 quote	graphics/lib/libft/quotes.c	/^char	quote(char *s, int index)$/;"	f	typeref:typename:char
 raw	cub3D/cub3d.h	/^	char		**raw;$/;"	m	struct:s_gs	typeref:typename:char **
 re	cub3D/Makefile	/^re: fclean all$/;"	t
