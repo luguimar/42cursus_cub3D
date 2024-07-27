@@ -1,32 +1,15 @@
 !_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
-!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
-!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
-!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
-!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
-!_TAG_PROC_CWD	/home/luguimar/Documents/42cursus_cub3D/	//
-!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
-!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
-!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
-!_TAG_PROGRAM_VERSION	5.9.0	//
-$(LIBFT)	graphics/Makefile	/^$(LIBFT):$/;"	t
-$(MLX)	graphics/Makefile	/^$(MLX): download-and-extract-mlx$/;"	t
-$(NAME)	cub3D/Makefile	/^$(NAME):	$(OBJS)$/;"	t
-$(NAME)	graphics/Makefile	/^$(NAME): $(MLX) ${OBJS} ${LIBFT}$/;"	t
-$(NAME)	graphics/lib/libft/Makefile	/^$(NAME): ${OBJS}$/;"	t
-${NAME}	cub3D/libft/Makefile	/^${NAME}:	${OBJS}$/;"	t
-.c.o	graphics/lib/libft/Makefile	/^.c.o:$/;"	t
-.o	cub3D/Makefile	/^.o:.c$/;"	t
-.o	cub3D/libft/Makefile	/^.o:.c$/;"	t
-.phony	cub3D/Makefile	/^.phony: clean fclean re$/;"	t
-42cursus_cub3d	README.md	/^# 42cursus_cub3d$/;"	c
-42cursus_cub3d	cub3D/README.md	/^# 42cursus_cub3d$/;"	c
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 A	graphics/include/cub3d.h	/^	A = 97,$/;"	e	enum:e_key
-BONUS	graphics/lib/libft/Makefile	/^BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c/;"	m
-BONUSFUNCTIONS	cub3D/libft/Makefile	/^BONUSFUNCTIONS =	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lst/;"	m
+BONUS	graphics/lib/libft/Makefile	/^BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c ft_lstsize.c ft_lstlast.c$/;"	m
+BONUSFUNCTIONS	cub3D/libft/Makefile	/^BONUSFUNCTIONS =	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c$/;"	m
 BONUSOBJS	cub3D/libft/Makefile	/^BONUSOBJS =	${BONUSFUNCTIONS:.c=.o}$/;"	m
-BUFFER_SIZE	cub3D/libft/libft.h	/^#  define BUFFER_SIZE /;"	d
-BUFFER_SIZE	graphics/lib/libft/libft.h	/^#  define BUFFER_SIZE /;"	d
+BUFFER_SIZE	cub3D/libft/libft.h	25;"	d
+BUFFER_SIZE	graphics/lib/libft/libft.h	23;"	d
 CC	cub3D/Makefile	/^CC = cc -g$/;"	m
 CC	cub3D/libft/Makefile	/^CC =	cc -g$/;"	m
 CC	graphics/Makefile	/^CC = cc -g$/;"	m
@@ -35,15 +18,15 @@ CFLAGS	cub3D/Makefile	/^CFLAGS = -Wall -Wextra -Werror$/;"	m
 CFLAGS	cub3D/libft/Makefile	/^CFLAGS =	-Wall -Wextra -Werror$/;"	m
 CFLAGS	graphics/Makefile	/^CFLAGS = -Wall -Wextra -Werror -O3$/;"	m
 CFLAGS	graphics/lib/libft/Makefile	/^CFLAGS = -Wall -Wextra -Werror$/;"	m
-CUB3D_H	cub3D/cub3d.h	/^# define CUB3D_H$/;"	d
-CUB3D_H	graphics/include/cub3d.h	/^# define CUB3D_H$/;"	d
+CUB3D_H	cub3D/cub3d.h	14;"	d
+CUB3D_H	graphics/include/cub3d.h	14;"	d
 D	graphics/include/cub3d.h	/^	D = 100,$/;"	e	enum:e_key
 DOWNLOAD	graphics/Makefile	/^DOWNLOAD = wget -O$/;"	m
 ESC	graphics/include/cub3d.h	/^	ESC = 65307,$/;"	e	enum:e_key
-EXTRA	cub3D/libft/Makefile	/^EXTRA = ft_printf.c ft_isu.c printfaux1.c printfaux2.c printfaux3.c get_next_line_utils.c ft_str/;"	m
-EXTRA	graphics/lib/libft/Makefile	/^EXTRA = ft_putnbr_base_fd.c ft_printf.c get_next_line.c get_next_line_utils.c free_array_of_stri/;"	m
+EXTRA	cub3D/libft/Makefile	/^EXTRA = ft_printf.c ft_isu.c printfaux1.c printfaux2.c printfaux3.c get_next_line_utils.c ft_strstr.c get_next_line.c doublefree.c ft_atol.c ft_av.c$/;"	m
+EXTRA	graphics/lib/libft/Makefile	/^EXTRA = ft_putnbr_base_fd.c ft_printf.c get_next_line.c get_next_line_utils.c free_array_of_strings.c ft_splitquote.c quotes.c quotes_utils.c ft_matrixlen.c ft_abs_value.c ft_atol.c ft_strcmp.c int_size_utils.c ft_split_if_not_in_quote.c ft_isint.c free_array_of_ints.c ft_dup_array_of_strings.c ft_is_special_char.c ft_splitstr.c ft_lstswap.c ft_lstdup.c ft_isspace.c$/;"	m
 EXTRACT	graphics/Makefile	/^EXTRACT = tar -xvf$/;"	m
-FT_PRINTF_H	cub3D/libft/ft_printf.h	/^# define FT_PRINTF_H$/;"	d
+FT_PRINTF_H	cub3D/libft/ft_printf.h	14;"	d
 HEADER	cub3D/Makefile	/^HEADER = cub3d.h$/;"	m
 HEADER	cub3D/libft/Makefile	/^HEADER =	libft.h$/;"	m
 INCLUDE	cub3D/Makefile	/^INCLUDE = -I .$/;"	m
@@ -52,8 +35,8 @@ INCLUDE	graphics/Makefile	/^INCLUDE = -I .$/;"	m
 INCLUDE	graphics/lib/libft/Makefile	/^INCLUDE = -I .$/;"	m
 LEFT	graphics/include/cub3d.h	/^	LEFT = 65361,$/;"	e	enum:e_key
 LIBFT	graphics/Makefile	/^LIBFT = ${LIBFT_PATH}\/libft.a$/;"	m
-LIBFT_H	cub3D/libft/libft.h	/^# define LIBFT_H$/;"	d
-LIBFT_H	graphics/lib/libft/libft.h	/^# define LIBFT_H$/;"	d
+LIBFT_H	cub3D/libft/libft.h	14;"	d
+LIBFT_H	graphics/lib/libft/libft.h	14;"	d
 LIBFT_PATH	graphics/Makefile	/^LIBFT_PATH = lib\/libft$/;"	m
 LIBRARIES	graphics/Makefile	/^LIBRARIES = lib$/;"	m
 MAKE	graphics/Makefile	/^MAKE = make -C$/;"	m
@@ -70,10 +53,10 @@ OBJS	cub3D/Makefile	/^OBJS = $(SRC:.c=.o)$/;"	m
 OBJS	cub3D/libft/Makefile	/^OBJS =	${SRC:.c=.o}$/;"	m
 OBJS	graphics/Makefile	/^OBJS = ${SRC:.c=.o}$/;"	m
 OBJS	graphics/lib/libft/Makefile	/^OBJS = ${SRC:.c=.o}$/;"	m
-PART1	cub3D/libft/Makefile	/^PART1 =	ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c /;"	m
-PART1	graphics/lib/libft/Makefile	/^PART1 = ft_tolower.c ft_toupper.c ft_isprint.c ft_isascii.c ft_isalnum.c ft_isdigit.c ft_isalpha/;"	m
-PART2	cub3D/libft/Makefile	/^PART2 =	ft_itoa.c ft_split.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_strmapi.c ft_striteri.c ft/;"	m
-PART2	graphics/lib/libft/Makefile	/^PART2 = ft_itoa.c ft_strjoin.c ft_split.c ft_striteri.c ft_strmapi.c ft_substr.c ft_strtrim.c ft/;"	m
+PART1	cub3D/libft/Makefile	/^PART1 =	ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_memset.c ft_strlen.c ft_tolower.c ft_toupper.c ft_memcpy.c ft_memmove.c ft_memchr.c ft_memcmp.c ft_atoi.c ft_strchr.c ft_strdup.c ft_strlcat.c ft_strlcpy.c ft_strncmp.c ft_strnstr.c ft_strrchr.c$/;"	m
+PART1	graphics/lib/libft/Makefile	/^PART1 = ft_tolower.c ft_toupper.c ft_isprint.c ft_isascii.c ft_isalnum.c ft_isdigit.c ft_isalpha.c ft_atoi.c ft_strlen.c ft_strlcat.c ft_strncmp.c ft_strdup.c ft_calloc.c ft_memcpy.c ft_strchr.c ft_strrchr.c ft_strnstr.c ft_bzero.c ft_memchr.c ft_memcmp.c ft_memset.c ft_memmove.c ft_strlcpy.c$/;"	m
+PART2	cub3D/libft/Makefile	/^PART2 =	ft_itoa.c ft_split.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c$/;"	m
+PART2	graphics/lib/libft/Makefile	/^PART2 = ft_itoa.c ft_strjoin.c ft_split.c ft_striteri.c ft_strmapi.c ft_substr.c ft_strtrim.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c$/;"	m
 REMOVE	graphics/Makefile	/^REMOVE = rm -f$/;"	m
 RIGHT	graphics/include/cub3d.h	/^	RIGHT = 65363,$/;"	e	enum:e_key
 RM	cub3D/Makefile	/^RM = rm -f$/;"	m
@@ -85,250 +68,232 @@ SRC	cub3D/libft/Makefile	/^SRC =	${PART1} ${PART2} $(EXTRA)$/;"	m
 SRC	graphics/Makefile	/^SRC = src\/main.c$/;"	m
 SRC	graphics/lib/libft/Makefile	/^SRC = ${PART1} ${PART2} ${BONUS} ${EXTRA}$/;"	m
 W	graphics/include/cub3d.h	/^	W = 119,$/;"	e	enum:e_key
-algcount	cub3D/libft/ft_isu.c	/^static int	algcount(unsigned int x)$/;"	f	typeref:typename:int	file:
-algcount	cub3D/libft/ft_itoa.c	/^static int	algcount(long int n, int isnega)$/;"	f	typeref:typename:int	file:
-algcount	cub3D/libft/ft_putnbr_fd.c	/^static int	algcount(int n)$/;"	f	typeref:typename:int	file:
-algcount	cub3D/libft/printfaux2.c	/^static int	algcount(unsigned int n)$/;"	f	typeref:typename:int	file:
-algcount	cub3D/libft/printfaux3.c	/^static int	algcount(unsigned long long n)$/;"	f	typeref:typename:int	file:
-algcounter	graphics/lib/libft/ft_itoa.c	/^int	algcounter(int n)$/;"	f	typeref:typename:int
-all	cub3D/Makefile	/^all: $(NAME)$/;"	t
-all	cub3D/libft/Makefile	/^all:	${NAME}$/;"	t
-all	graphics/Makefile	/^all: ${NAME}$/;"	t
-all	graphics/lib/libft/Makefile	/^all:	${NAME}$/;"	t
-bigger	graphics/lib/libft/int_size_utils.c	/^int	bigger(int a, int b)$/;"	f	typeref:typename:int
-bonus	cub3D/libft/Makefile	/^bonus:	$(BONUSOBJS) $(OBJS)$/;"	t
-caphex	cub3D/libft/printfaux2.c	/^int	caphex(unsigned int n)$/;"	f	typeref:typename:int
-ceiling	cub3D/cub3d.h	/^	int			ceiling[3];$/;"	m	struct:s_gs	typeref:typename:int[3]
-ceiling	graphics/include/cub3d.h	/^	int		ceiling[3];$/;"	m	struct:s_graphics	typeref:typename:int[3]
-check_extension	graphics/src/main.c	/^static int	check_extension(char *str, char *ext)$/;"	f	typeref:typename:int	file:
-check_map	graphics/src/main.c	/^int	check_map(char *file, t_game *game)$/;"	f	typeref:typename:int
-checkend	cub3D/libft/ft_strtrim.c	/^int	checkend(char *str, char *set)$/;"	f	typeref:typename:int
-checker	cub3D/src/checker.c	/^int	checker(t_gs *gs)$/;"	f	typeref:typename:int
-checkstart	cub3D/libft/ft_strtrim.c	/^int	checkstart(char *str, char *set)$/;"	f	typeref:typename:int
-checktype	cub3D/libft/ft_printf.c	/^int	checktype(int i, va_list args)$/;"	f	typeref:typename:int
-checktype	graphics/lib/libft/ft_printf.c	/^int	checktype(int ch, va_list args)$/;"	f	typeref:typename:int
-clean	cub3D/Makefile	/^clean:$/;"	t
-clean	cub3D/libft/Makefile	/^clean:$/;"	t
-clean	graphics/Makefile	/^clean:$/;"	t
-clean	graphics/lib/libft/Makefile	/^clean:$/;"	t
-clean_stash	cub3D/libft/get_next_line.c	/^static char	*clean_stash(char *stash)$/;"	f	typeref:typename:char *	file:
-clean_stash	graphics/lib/libft/get_next_line.c	/^static char	*clean_stash(char *stash)$/;"	f	typeref:typename:char *	file:
-content	cub3D/libft/libft.h	/^	void			*content;$/;"	m	struct:s_list	typeref:typename:void *
-content	graphics/lib/libft/libft.h	/^	void			*content;$/;"	m	struct:s_list	typeref:typename:void *
-convert	cub3D/libft/ft_itoa.c	/^void	convert(char *str, long int n, int isnega)$/;"	f	typeref:typename:void
-copyconvert	cub3D/src/parse.c	/^static void	copyconvert(char **s, int *a)$/;"	f	typeref:typename:void	file:
-cube_render	graphics/src/main.c	/^void	cube_render(t_game *game)$/;"	f	typeref:typename:void
-dir	graphics/include/cub3d.h	/^	double	dir;$/;"	m	struct:s_player	typeref:typename:double
-doublefree	cub3D/libft/doublefree.c	/^void	doublefree(char **str)$/;"	f	typeref:typename:void
-download-and-extract-mlx	graphics/Makefile	/^download-and-extract-mlx:$/;"	t
+algcount	cub3D/libft/ft_isu.c	/^static int	algcount(unsigned int x)$/;"	f	file:
+algcount	cub3D/libft/ft_itoa.c	/^static int	algcount(long int n, int isnega)$/;"	f	file:
+algcount	cub3D/libft/ft_putnbr_fd.c	/^static int	algcount(int n)$/;"	f	file:
+algcount	cub3D/libft/printfaux2.c	/^static int	algcount(unsigned int n)$/;"	f	file:
+algcount	cub3D/libft/printfaux3.c	/^static int	algcount(unsigned long long n)$/;"	f	file:
+algcounter	graphics/lib/libft/ft_itoa.c	/^int	algcounter(int n)$/;"	f
+bigger	graphics/lib/libft/int_size_utils.c	/^int	bigger(int a, int b)$/;"	f
+caphex	cub3D/libft/printfaux2.c	/^int	caphex(unsigned int n)$/;"	f
+ceiling	cub3D/cub3d.h	/^	int			ceiling[3];$/;"	m	struct:s_gs
+ceiling	graphics/include/cub3d.h	/^	int		ceiling[3];$/;"	m	struct:s_graphics
+check_extension	graphics/src/main.c	/^static int	check_extension(char *str, char *ext)$/;"	f	file:
+check_map	graphics/src/main.c	/^int	check_map(char *file, t_game *game)$/;"	f
+checkend	cub3D/libft/ft_strtrim.c	/^int	checkend(char *str, char *set)$/;"	f
+checker	cub3D/src/checker.c	/^int	checker(t_gs *gs)$/;"	f
+checkstart	cub3D/libft/ft_strtrim.c	/^int	checkstart(char *str, char *set)$/;"	f
+checktype	cub3D/libft/ft_printf.c	/^int	checktype(int i, va_list args)$/;"	f
+checktype	graphics/lib/libft/ft_printf.c	/^int	checktype(int ch, va_list args)$/;"	f
+clean_stash	cub3D/libft/get_next_line.c	/^static char	*clean_stash(char *stash)$/;"	f	file:
+clean_stash	graphics/lib/libft/get_next_line.c	/^static char	*clean_stash(char *stash)$/;"	f	file:
+content	cub3D/libft/libft.h	/^	void			*content;$/;"	m	struct:s_list
+content	graphics/lib/libft/libft.h	/^	void			*content;$/;"	m	struct:s_list
+convert	cub3D/libft/ft_itoa.c	/^void	convert(char *str, long int n, int isnega)$/;"	f
+copyconvert	cub3D/src/parse.c	/^static void	copyconvert(char **s, int *a)$/;"	f	file:
+cube_render	graphics/src/main.c	/^void	cube_render(t_game *game)$/;"	f
+dir	graphics/include/cub3d.h	/^	double	dir;$/;"	m	struct:s_player
+doublefree	cub3D/libft/doublefree.c	/^void	doublefree(char **str)$/;"	f
 e_key	graphics/include/cub3d.h	/^typedef enum e_key$/;"	g
-ea_t	cub3D/cub3d.h	/^	char		*ea_t;$/;"	m	struct:s_gs	typeref:typename:char *
-ea_t	graphics/include/cub3d.h	/^	char	*ea_t;$/;"	m	struct:s_graphics	typeref:typename:char *
-error_msg	graphics/src/main.c	/^int	error_msg(char *msg, int ret)$/;"	f	typeref:typename:int
-fclean	cub3D/Makefile	/^fclean:	clean$/;"	t
-fclean	cub3D/libft/Makefile	/^fclean:	clean$/;"	t
-fclean	graphics/Makefile	/^fclean: clean$/;"	t
-fclean	graphics/lib/libft/Makefile	/^fclean: clean$/;"	t
-fillvec	cub3D/libft/ft_split.c	/^void	fillvec(char *s, char **str, char c)$/;"	f	typeref:typename:void
-flood_fill	cub3D/src/checker.c	/^int	flood_fill(t_gs *gs, int x, int y, char **map)$/;"	f	typeref:typename:int
-floor	cub3D/cub3d.h	/^	int			floor[3];$/;"	m	struct:s_gs	typeref:typename:int[3]
-floor	graphics/include/cub3d.h	/^	int		floor[3];$/;"	m	struct:s_graphics	typeref:typename:int[3]
-free_array_of_ints	graphics/lib/libft/free_array_of_ints.c	/^void	free_array_of_ints(int **array, int size)$/;"	f	typeref:typename:void
-free_array_of_strings	graphics/lib/libft/free_array_of_strings.c	/^void	free_array_of_strings(char **str)$/;"	f	typeref:typename:void
-ft_abs_value	graphics/lib/libft/ft_abs_value.c	/^int	ft_abs_value(int n)$/;"	f	typeref:typename:int
-ft_atoi	cub3D/libft/ft_atoi.c	/^int	ft_atoi(const char *nptr)$/;"	f	typeref:typename:int
-ft_atoi	graphics/lib/libft/ft_atoi.c	/^int	ft_atoi(const char *nptr)$/;"	f	typeref:typename:int
-ft_atol	cub3D/libft/ft_atol.c	/^long	ft_atol(const char *str)$/;"	f	typeref:typename:long
-ft_atol	graphics/lib/libft/ft_atol.c	/^long long	ft_atol(const char *nptr)$/;"	f	typeref:typename:long long
-ft_av	cub3D/libft/ft_av.c	/^int	ft_av(int n)$/;"	f	typeref:typename:int
-ft_bzero	cub3D/libft/ft_bzero.c	/^void	ft_bzero(void *s, size_t n)$/;"	f	typeref:typename:void
-ft_bzero	graphics/lib/libft/ft_bzero.c	/^void	ft_bzero(void *b, size_t len)$/;"	f	typeref:typename:void
-ft_calloc	cub3D/libft/ft_calloc.c	/^void	*ft_calloc(size_t nmemb, size_t size)$/;"	f	typeref:typename:void *
-ft_calloc	graphics/lib/libft/ft_calloc.c	/^void	*ft_calloc(size_t number, size_t size)$/;"	f	typeref:typename:void *
-ft_dup_array_of_strings	graphics/lib/libft/ft_dup_array_of_strings.c	/^char	**ft_dup_array_of_strings(char **array)$/;"	f	typeref:typename:char **
-ft_gnlstrjoin	cub3D/libft/get_next_line_utils.c	/^char	*ft_gnlstrjoin(char *s1, char *s2)$/;"	f	typeref:typename:char *
-ft_is_special_char	graphics/lib/libft/ft_is_special_char.c	/^int	ft_is_special_char(char c)$/;"	f	typeref:typename:int
-ft_isalnum	cub3D/libft/ft_isalnum.c	/^int	ft_isalnum(int c)$/;"	f	typeref:typename:int
-ft_isalnum	graphics/lib/libft/ft_isalnum.c	/^int	ft_isalnum(int c)$/;"	f	typeref:typename:int
-ft_isalpha	cub3D/libft/ft_isalpha.c	/^int	ft_isalpha(int c)$/;"	f	typeref:typename:int
-ft_isalpha	graphics/lib/libft/ft_isalpha.c	/^int	ft_isalpha(int c)$/;"	f	typeref:typename:int
-ft_isascii	cub3D/libft/ft_isascii.c	/^int	ft_isascii(int c)$/;"	f	typeref:typename:int
-ft_isascii	graphics/lib/libft/ft_isascii.c	/^int	ft_isascii(int c)$/;"	f	typeref:typename:int
-ft_ischar	cub3D/libft/printfaux1.c	/^int	ft_ischar(char c)$/;"	f	typeref:typename:int
-ft_isdigit	cub3D/libft/ft_isdigit.c	/^int	ft_isdigit(int c)$/;"	f	typeref:typename:int
-ft_isdigit	graphics/lib/libft/ft_isdigit.c	/^int	ft_isdigit(int c)$/;"	f	typeref:typename:int
-ft_isint	cub3D/libft/printfaux1.c	/^int	ft_isint(int n)$/;"	f	typeref:typename:int
-ft_isint	graphics/lib/libft/ft_isint.c	/^int	ft_isint(const char *str)$/;"	f	typeref:typename:int
-ft_ispointer	cub3D/libft/printfaux3.c	/^int	ft_ispointer(unsigned long long n)$/;"	f	typeref:typename:int
-ft_isprint	cub3D/libft/ft_isprint.c	/^int	ft_isprint(int c)$/;"	f	typeref:typename:int
-ft_isprint	graphics/lib/libft/ft_isprint.c	/^int	ft_isprint(int c)$/;"	f	typeref:typename:int
-ft_isspace	graphics/lib/libft/ft_isspace.c	/^int	ft_isspace(char c)$/;"	f	typeref:typename:int
-ft_isstring	cub3D/libft/printfaux1.c	/^int	ft_isstring(char *str)$/;"	f	typeref:typename:int
-ft_isu	cub3D/libft/ft_isu.c	/^int	ft_isu(unsigned int n)$/;"	f	typeref:typename:int
-ft_itoa	cub3D/libft/ft_itoa.c	/^char	*ft_itoa(int n)$/;"	f	typeref:typename:char *
-ft_itoa	graphics/lib/libft/ft_itoa.c	/^char	*ft_itoa(int n)$/;"	f	typeref:typename:char *
-ft_lstadd_back	cub3D/libft/ft_lstadd_back.c	/^void	ft_lstadd_back(t_list **lst, t_list *new)$/;"	f	typeref:typename:void
-ft_lstadd_back	graphics/lib/libft/ft_lstadd_back.c	/^void	ft_lstadd_back(t_list **lst, t_list *novel)$/;"	f	typeref:typename:void
-ft_lstadd_front	cub3D/libft/ft_lstadd_front.c	/^void	ft_lstadd_front(t_list **lst, t_list *new)$/;"	f	typeref:typename:void
-ft_lstadd_front	graphics/lib/libft/ft_lstadd_front.c	/^void	ft_lstadd_front(t_list **lst, t_list *novel)$/;"	f	typeref:typename:void
-ft_lstclear	cub3D/libft/ft_lstclear.c	/^void	ft_lstclear(t_list **lst, void (*del)(void *))$/;"	f	typeref:typename:void
-ft_lstclear	graphics/lib/libft/ft_lstclear.c	/^void	ft_lstclear(t_list **lst, void (*del)(void *))$/;"	f	typeref:typename:void
-ft_lstdelone	cub3D/libft/ft_lstdelone.c	/^void	ft_lstdelone(t_list *lst, void (*del)(void *))$/;"	f	typeref:typename:void
-ft_lstdelone	graphics/lib/libft/ft_lstdelone.c	/^void	ft_lstdelone(t_list **head, t_list *lst, void (*del)(void *))$/;"	f	typeref:typename:void
-ft_lstdup	graphics/lib/libft/ft_lstdup.c	/^t_list	*ft_lstdup(t_list *lst)$/;"	f	typeref:typename:t_list *
-ft_lstiter	cub3D/libft/ft_lstiter.c	/^void	ft_lstiter(t_list *lst, void (*f)(void *))$/;"	f	typeref:typename:void
-ft_lstiter	graphics/lib/libft/ft_lstiter.c	/^void	ft_lstiter(t_list *lst, void (*f)(void *))$/;"	f	typeref:typename:void
-ft_lstlast	cub3D/libft/ft_lstlast.c	/^t_list	*ft_lstlast(t_list *lst)$/;"	f	typeref:typename:t_list *
-ft_lstlast	graphics/lib/libft/ft_lstlast.c	/^t_list	*ft_lstlast(t_list *lst)$/;"	f	typeref:typename:t_list *
-ft_lstmap	cub3D/libft/ft_lstmap.c	/^t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))$/;"	f	typeref:typename:t_list *
-ft_lstmap	graphics/lib/libft/ft_lstmap.c	/^t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))$/;"	f	typeref:typename:t_list *
-ft_lstnew	cub3D/libft/ft_lstnew.c	/^t_list	*ft_lstnew(void *content)$/;"	f	typeref:typename:t_list *
-ft_lstnew	graphics/lib/libft/ft_lstnew.c	/^t_list	*ft_lstnew(void *content)$/;"	f	typeref:typename:t_list *
-ft_lstsize	cub3D/libft/ft_lstsize.c	/^int	ft_lstsize(t_list *lst)$/;"	f	typeref:typename:int
-ft_lstsize	graphics/lib/libft/ft_lstsize.c	/^int	ft_lstsize(t_list *lst)$/;"	f	typeref:typename:int
-ft_lstswap	graphics/lib/libft/ft_lstswap.c	/^void	ft_lstswap(t_list *lst1, t_list *lst2)$/;"	f	typeref:typename:void
-ft_matlen	cub3D/libft/ft_strlen.c	/^size_t	ft_matlen(char **s)$/;"	f	typeref:typename:size_t
-ft_matrixlen	graphics/lib/libft/ft_matrixlen.c	/^int	ft_matrixlen(void **matrix)$/;"	f	typeref:typename:int
-ft_memchr	cub3D/libft/ft_memchr.c	/^void	*ft_memchr(const void *s, int c, size_t n)$/;"	f	typeref:typename:void *
-ft_memchr	graphics/lib/libft/ft_memchr.c	/^void	*ft_memchr(const void *b, int c, size_t len)$/;"	f	typeref:typename:void *
-ft_memcmp	cub3D/libft/ft_memcmp.c	/^int	ft_memcmp(const void *s1, const void *s2, size_t n)$/;"	f	typeref:typename:int
-ft_memcmp	graphics/lib/libft/ft_memcmp.c	/^int	ft_memcmp(const void *b1, const void *b2, size_t len)$/;"	f	typeref:typename:int
-ft_memcpy	cub3D/libft/ft_memcpy.c	/^void	*ft_memcpy(void *dest, const void *src, size_t n)$/;"	f	typeref:typename:void *
-ft_memcpy	graphics/lib/libft/ft_memcpy.c	/^void	*ft_memcpy(void *dst, const void *src, size_t len)$/;"	f	typeref:typename:void *
-ft_memmove	cub3D/libft/ft_memmove.c	/^void	*ft_memmove(void *dest, const void *src, size_t n)$/;"	f	typeref:typename:void *
-ft_memmove	graphics/lib/libft/ft_memmove.c	/^void	*ft_memmove(void *dst, const void *src, size_t len)$/;"	f	typeref:typename:void *
-ft_memset	cub3D/libft/ft_memset.c	/^void	*ft_memset(void *s, int c, size_t n)$/;"	f	typeref:typename:void *
-ft_memset	graphics/lib/libft/ft_memset.c	/^void	*ft_memset(void *dest, int c, size_t len)$/;"	f	typeref:typename:void *
-ft_nothing	graphics/lib/libft/ft_lstclear.c	/^void	ft_nothing(void *content)$/;"	f	typeref:typename:void
-ft_perror	cub3D/src/main.c	/^void	ft_perror(char *str, int fd)$/;"	f	typeref:typename:void
-ft_printf	cub3D/libft/ft_printf.c	/^int	ft_printf(const char *str, ...)$/;"	f	typeref:typename:int
-ft_printf	graphics/lib/libft/ft_printf.c	/^int	ft_printf(const char *str, ...)$/;"	f	typeref:typename:int
-ft_putchar	cub3D/libft/printfaux2.c	/^static void	ft_putchar(char c)$/;"	f	typeref:typename:void	file:
-ft_putchar	cub3D/libft/printfaux3.c	/^static void	ft_putchar(char c)$/;"	f	typeref:typename:void	file:
-ft_putchar_fd	cub3D/libft/ft_putchar_fd.c	/^void	ft_putchar_fd(char c, int fd)$/;"	f	typeref:typename:void
-ft_putchar_fd	graphics/lib/libft/ft_putchar_fd.c	/^int	ft_putchar_fd(char c, int fd)$/;"	f	typeref:typename:int
-ft_putendl_fd	cub3D/libft/ft_putendl_fd.c	/^void	ft_putendl_fd(char *s, int fd)$/;"	f	typeref:typename:void
-ft_putendl_fd	graphics/lib/libft/ft_putendl_fd.c	/^void	ft_putendl_fd(char *s, int fd)$/;"	f	typeref:typename:void
-ft_puthex	cub3D/libft/printfaux2.c	/^int	ft_puthex(unsigned int nb, char *base)$/;"	f	typeref:typename:int
-ft_putnbr_base_fd	graphics/lib/libft/ft_putnbr_base_fd.c	/^int	ft_putnbr_base_fd(unsigned long decimal, char *base, int fd)$/;"	f	typeref:typename:int
-ft_putnbr_fd	cub3D/libft/ft_putnbr_fd.c	/^void	ft_putnbr_fd(int n, int fd)$/;"	f	typeref:typename:void
-ft_putnbr_fd	graphics/lib/libft/ft_putnbr_fd.c	/^int	ft_putnbr_fd(int n, int fd)$/;"	f	typeref:typename:int
-ft_putp	cub3D/libft/printfaux3.c	/^int	ft_putp(unsigned long long n)$/;"	f	typeref:typename:int
-ft_putstr_fd	cub3D/libft/ft_putstr_fd.c	/^void	ft_putstr_fd(char *s, int fd)$/;"	f	typeref:typename:void
-ft_putstr_fd	graphics/lib/libft/ft_putstr_fd.c	/^int	ft_putstr_fd(char *s, int fd)$/;"	f	typeref:typename:int
-ft_quote_count	graphics/lib/libft/ft_splitquote.c	/^int	ft_quote_count(char *str)$/;"	f	typeref:typename:int
-ft_remove_quotes	graphics/lib/libft/ft_splitquote.c	/^char	*ft_remove_quotes(char *str)$/;"	f	typeref:typename:char *
-ft_remove_quotes_aux	graphics/lib/libft/ft_splitquote.c	/^static void	ft_remove_quotes_aux(char *str, char *new)$/;"	f	typeref:typename:void	file:
-ft_split	cub3D/libft/ft_split.c	/^char	**ft_split(char const *s, char c)$/;"	f	typeref:typename:char **
-ft_split	graphics/lib/libft/ft_split.c	/^char	**ft_split(char const *s, char c)$/;"	f	typeref:typename:char **
-ft_split_if_not_in_quote	graphics/lib/libft/ft_split_if_not_in_quote.c	/^char	**ft_split_if_not_in_quote(char *s, char c)$/;"	f	typeref:typename:char **
-ft_splitquote	graphics/lib/libft/ft_splitquote.c	/^char	**ft_splitquote(char *s, char c)$/;"	f	typeref:typename:char **
-ft_splitquote_nulls	graphics/lib/libft/quotes_utils.c	/^char	**ft_splitquote_nulls(char *s, char c)$/;"	f	typeref:typename:char **
-ft_splitstr	graphics/lib/libft/ft_splitstr.c	/^char	**ft_splitstr(char *str, char *split)$/;"	f	typeref:typename:char **
-ft_strchr	cub3D/libft/ft_strchr.c	/^char	*ft_strchr(const char *s, int c)$/;"	f	typeref:typename:char *
-ft_strchr	graphics/lib/libft/ft_strchr.c	/^char	*ft_strchr(const char *s, int c)$/;"	f	typeref:typename:char *
-ft_strchrnum	graphics/lib/libft/get_next_line_utils.c	/^int	ft_strchrnum(const char *s, int c)$/;"	f	typeref:typename:int
-ft_strcmp	graphics/lib/libft/ft_strcmp.c	/^int	ft_strcmp(const char *str1, const char *str2)$/;"	f	typeref:typename:int
-ft_strdup	cub3D/libft/ft_strdup.c	/^char	*ft_strdup(const char *s)$/;"	f	typeref:typename:char *
-ft_strdup	graphics/lib/libft/ft_strdup.c	/^char	*ft_strdup(const char *str)$/;"	f	typeref:typename:char *
-ft_striteri	cub3D/libft/ft_striteri.c	/^void	ft_striteri(char *s, void (*f)(unsigned int, char *))$/;"	f	typeref:typename:void
-ft_striteri	graphics/lib/libft/ft_striteri.c	/^void	ft_striteri(char *s, void (*f)(unsigned int, char *))$/;"	f	typeref:typename:void
-ft_strjoin	cub3D/libft/ft_strjoin.c	/^char	*ft_strjoin(char const *s1, char const *s2)$/;"	f	typeref:typename:char *
-ft_strjoin	graphics/lib/libft/ft_strjoin.c	/^char	*ft_strjoin(char const *s1, char const *s2)$/;"	f	typeref:typename:char *
-ft_strjoinfree	cub3D/libft/ft_strjoin.c	/^char	*ft_strjoinfree(char *s1, char *s2, int type)$/;"	f	typeref:typename:char *
-ft_strjoinfree	graphics/lib/libft/get_next_line_utils.c	/^char	*ft_strjoinfree(char *s1, char *s2)$/;"	f	typeref:typename:char *
-ft_strjoinfree2	graphics/lib/libft/ft_strjoin.c	/^char	*ft_strjoinfree2(char *s1, char *s2)$/;"	f	typeref:typename:char *
-ft_strjoinfreeall	graphics/lib/libft/ft_strjoin.c	/^char	*ft_strjoinfreeall(char *s1, char *s2)$/;"	f	typeref:typename:char *
-ft_strlcat	cub3D/libft/ft_strlcat.c	/^size_t	ft_strlcat(char *dst, const char *src, size_t size)$/;"	f	typeref:typename:size_t
-ft_strlcat	graphics/lib/libft/ft_strlcat.c	/^size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)$/;"	f	typeref:typename:size_t
-ft_strlcpy	cub3D/libft/ft_strlcpy.c	/^size_t	ft_strlcpy(char *dst, const char *src, size_t size)$/;"	f	typeref:typename:size_t
-ft_strlcpy	graphics/lib/libft/ft_strlcpy.c	/^size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)$/;"	f	typeref:typename:size_t
-ft_strlen	cub3D/libft/ft_strlen.c	/^size_t	ft_strlen(const char *s)$/;"	f	typeref:typename:size_t
-ft_strlen	graphics/lib/libft/ft_strlen.c	/^size_t	ft_strlen(const char *s)$/;"	f	typeref:typename:size_t
-ft_strlenplus	cub3D/libft/get_next_line_utils.c	/^int	ft_strlenplus(char *s, char c)$/;"	f	typeref:typename:int
-ft_strmapi	cub3D/libft/ft_strmapi.c	/^char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))$/;"	f	typeref:typename:char *
-ft_strmapi	graphics/lib/libft/ft_strmapi.c	/^char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))$/;"	f	typeref:typename:char *
-ft_strncmp	cub3D/libft/ft_strncmp.c	/^int	ft_strncmp(const char *s1, const char *s2, size_t n)$/;"	f	typeref:typename:int
-ft_strncmp	graphics/lib/libft/ft_strncmp.c	/^int	ft_strncmp(const char *s1, const char *s2, size_t len)$/;"	f	typeref:typename:int
-ft_strnstr	cub3D/libft/ft_strnstr.c	/^char	*ft_strnstr(const char *big, const char *little, size_t len)$/;"	f	typeref:typename:char *
-ft_strnstr	graphics/lib/libft/ft_strnstr.c	/^char	*ft_strnstr(const char *big, const char *little, size_t len)$/;"	f	typeref:typename:char *
-ft_strrchr	cub3D/libft/ft_strrchr.c	/^char	*ft_strrchr(const char *s, int c)$/;"	f	typeref:typename:char *
-ft_strrchr	graphics/lib/libft/ft_strrchr.c	/^char	*ft_strrchr(const char *s, int c)$/;"	f	typeref:typename:char *
-ft_strstr	cub3D/libft/ft_strstr.c	/^char	*ft_strstr(char *str, char *to_find)$/;"	f	typeref:typename:char *
-ft_strtrim	cub3D/libft/ft_strtrim.c	/^char	*ft_strtrim(char const *s1, char const *set)$/;"	f	typeref:typename:char *
-ft_strtrim	graphics/lib/libft/ft_strtrim.c	/^char	*ft_strtrim(char const *s1, char const *set)$/;"	f	typeref:typename:char *
-ft_strtrimfree	graphics/lib/libft/ft_strtrim.c	/^char	*ft_strtrimfree(char const *s1, char const *set)$/;"	f	typeref:typename:char *
-ft_substr	cub3D/libft/ft_substr.c	/^char	*ft_substr(char const *s, unsigned int start, size_t len)$/;"	f	typeref:typename:char *
-ft_substr	graphics/lib/libft/ft_substr.c	/^char	*ft_substr(char const *s, unsigned int start, size_t len)$/;"	f	typeref:typename:char *
-ft_tolower	cub3D/libft/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f	typeref:typename:int
-ft_tolower	graphics/lib/libft/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f	typeref:typename:int
-ft_toupper	cub3D/libft/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f	typeref:typename:int
-ft_toupper	graphics/lib/libft/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f	typeref:typename:int
-ft_wc	cub3D/libft/ft_split.c	/^int	ft_wc(char *str, char c)$/;"	f	typeref:typename:int
-ft_ws	cub3D/libft/ft_split.c	/^int	ft_ws(char *s, char c, int *jj)$/;"	f	typeref:typename:int
-get_dir	graphics/src/main.c	/^double	get_dir(char c)$/;"	f	typeref:typename:double
-get_line	cub3D/libft/get_next_line.c	/^static char	*get_line(char *stash, int eof)$/;"	f	typeref:typename:char *	file:
-get_line	graphics/lib/libft/get_next_line.c	/^static char	*get_line(char *stash)$/;"	f	typeref:typename:char *	file:
-get_next_line	cub3D/libft/get_next_line.c	/^char	*get_next_line(int fd)$/;"	f	typeref:typename:char *
-get_next_line	graphics/lib/libft/get_next_line.c	/^char	*get_next_line(int fd)$/;"	f	typeref:typename:char *
-get_player_dir	graphics/src/main.c	/^void	get_player_dir(t_game *game)$/;"	f	typeref:typename:void
-get_player_position	graphics/src/main.c	/^void	get_player_position(t_game *game)$/;"	f	typeref:typename:void
-get_rgb	cub3D/src/parse.c	/^static void	get_rgb(char *full, t_gs *gs)$/;"	f	typeref:typename:void	file:
-get_side	graphics/src/main.c	/^int	get_side(char c)$/;"	f	typeref:typename:int
-get_stash	cub3D/libft/get_next_line.c	/^static char	*get_stash(int fd, char *stash, int *eof)$/;"	f	typeref:typename:char *	file:
-get_stash	graphics/lib/libft/get_next_line.c	/^static char	*get_stash(int fd, char *stash)$/;"	f	typeref:typename:char *	file:
-get_textures	cub3D/src/parse.c	/^static void	get_textures(char *full, t_gs *gs)$/;"	f	typeref:typename:void	file:
-graphics	graphics/include/cub3d.h	/^	t_graphics	graphics;$/;"	m	struct:s_game	typeref:typename:t_graphics
-gs_init	cub3D/src/main.c	/^static t_gs	*gs_init(void)$/;"	f	typeref:typename:t_gs *	file:
-has_open_quote	graphics/lib/libft/quotes_utils.c	/^char	has_open_quote(char *s, int index)$/;"	f	typeref:typename:char
-height	graphics/include/cub3d.h	/^	int		height;$/;"	m	struct:s_map	typeref:typename:int
-info_write	cub3D/src/parse.c	/^static int	info_write(char *f, t_gs *gs)$/;"	f	typeref:typename:int	file:
-inquote	graphics/lib/libft/quotes.c	/^char	inquote(char *s, int index)$/;"	f	typeref:typename:char
-is_beginning_quote	graphics/lib/libft/quotes.c	/^int	is_beginning_quote(char *s, int index)$/;"	f	typeref:typename:int
-is_beginning_wordquote	graphics/lib/libft/quotes_utils.c	/^int	is_beginning_wordquote(char *s, int index, char c)$/;"	f	typeref:typename:int
-is_c_not_in_quotes	graphics/lib/libft/quotes_utils.c	/^int	is_c_not_in_quotes(char *s, int index, char c)$/;"	f	typeref:typename:int
-is_end_quote	graphics/lib/libft/quotes.c	/^int	is_end_quote(char *s, int index)$/;"	f	typeref:typename:int
-is_end_wordquote	graphics/lib/libft/quotes_utils.c	/^int	is_end_wordquote(char *s, int index, char c)$/;"	f	typeref:typename:int
-is_just_quotes	graphics/lib/libft/ft_splitquote.c	/^int	is_just_quotes(char *str, int i)$/;"	f	typeref:typename:int
-is_valid	cub3D/src/main.c	/^static void	is_valid(char *f)$/;"	f	typeref:typename:void	file:
-isneg	graphics/lib/libft/ft_itoa.c	/^char	*isneg(int algcount, int n)$/;"	f	typeref:typename:char *
-isquote	graphics/lib/libft/quotes.c	/^char	isquote(char *s, int index)$/;"	f	typeref:typename:char
-key_hook	graphics/src/main.c	/^int	key_hook(int keycode, t_game *game)$/;"	f	typeref:typename:int
-length_aux	cub3D/src/parse.c	/^static int	length_aux(char *s, t_gs *gs)$/;"	f	typeref:typename:int	file:
-lowhex	cub3D/libft/printfaux2.c	/^int	lowhex(unsigned int n)$/;"	f	typeref:typename:int
-main	cub3D/src/main.c	/^int	main(int argc, char **argv)$/;"	f	typeref:typename:int
-main	graphics/src/main.c	/^int	main(int argc, char **argv)$/;"	f	typeref:typename:int
-map	cub3D/cub3d.h	/^	char		**map;$/;"	m	struct:s_gs	typeref:typename:char **
-map	graphics/include/cub3d.h	/^	char	**map;$/;"	m	struct:s_map	typeref:typename:char **
-map	graphics/include/cub3d.h	/^	t_map		map;$/;"	m	struct:s_game	typeref:typename:t_map
-map_init	cub3D/src/parse.c	/^static void	map_init(t_gs *gs)$/;"	f	typeref:typename:void	file:
-map_render	graphics/src/main.c	/^int	map_render(t_game *game)$/;"	f	typeref:typename:int
-map_write	cub3D/src/parse.c	/^static int	map_write(int fd, t_gs *gs)$/;"	f	typeref:typename:int	file:
-minimaprender	graphics/src/main.c	/^int	minimaprender(t_game *game)$/;"	f	typeref:typename:int
-mlx	graphics/include/cub3d.h	/^	void	*mlx;$/;"	m	struct:s_graphics	typeref:typename:void *
-mlx_close	graphics/src/main.c	/^int	mlx_close(t_game *game)$/;"	f	typeref:typename:int
-mlx_start	graphics/src/main.c	/^void	mlx_start(t_game *game)$/;"	f	typeref:typename:void
-module	graphics/lib/libft/ft_itoa.c	/^long int	module(int n)$/;"	f	typeref:typename:long int
-move	graphics/src/main.c	/^int	move(int keycode, t_game *game)$/;"	f	typeref:typename:int
-next	cub3D/libft/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list *
-next	graphics/lib/libft/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list *
-no_t	cub3D/cub3d.h	/^	char		*no_t;$/;"	m	struct:s_gs	typeref:typename:char *
-no_t	graphics/include/cub3d.h	/^	char	*no_t;$/;"	m	struct:s_graphics	typeref:typename:char *
-parser	cub3D/src/parse.c	/^int	parser(char *f, t_gs *gs)$/;"	f	typeref:typename:int
-player	cub3D/cub3d.h	/^	t_position	*player;$/;"	m	struct:s_gs	typeref:typename:t_position *
-player	graphics/include/cub3d.h	/^	t_player	player;$/;"	m	struct:s_game	typeref:typename:t_player
-player_check	cub3D/src/checker.c	/^static int	player_check(t_gs *gs, int i, int j)$/;"	f	typeref:typename:int	file:
-playerrender	graphics/src/main.c	/^void	playerrender(t_game *game)$/;"	f	typeref:typename:void
-prev	graphics/lib/libft/libft.h	/^	struct s_list	*prev;$/;"	m	struct:s_list	typeref:struct:s_list *
-put_line	graphics/src/main.c	/^void	put_line(t_game *game, double x, double y, double dir, int side, int i)$/;"	f	typeref:typename:void
-quote	graphics/lib/libft/quotes.c	/^char	quote(char *s, int index)$/;"	f	typeref:typename:char
-raw	cub3D/cub3d.h	/^	char		**raw;$/;"	m	struct:s_gs	typeref:typename:char **
-re	cub3D/Makefile	/^re: fclean all$/;"	t
-re	cub3D/libft/Makefile	/^re:	fclean all$/;"	t
-re	graphics/Makefile	/^re: fclean all$/;"	t
-re	graphics/lib/libft/Makefile	/^re: fclean all$/;"	t
-rgb_format	cub3D/src/parse.c	/^static void	rgb_format(char *s, t_gs *gs)$/;"	f	typeref:typename:void	file:
-rstr	cub3D/libft/ft_itoa.c	/^void	rstr(char *str, int size)$/;"	f	typeref:typename:void
+ea_t	cub3D/cub3d.h	/^	char		*ea_t;$/;"	m	struct:s_gs
+ea_t	graphics/include/cub3d.h	/^	char	*ea_t;$/;"	m	struct:s_graphics
+error_msg	graphics/src/main.c	/^int	error_msg(char *msg, int ret)$/;"	f
+fillvec	cub3D/libft/ft_split.c	/^void	fillvec(char *s, char **str, char c)$/;"	f
+flood_fill	cub3D/src/checker.c	/^int	flood_fill(t_gs *gs, int x, int y, char **map)$/;"	f
+floor	cub3D/cub3d.h	/^	int			floor[3];$/;"	m	struct:s_gs
+floor	graphics/include/cub3d.h	/^	int		floor[3];$/;"	m	struct:s_graphics
+free_array_of_ints	graphics/lib/libft/free_array_of_ints.c	/^void	free_array_of_ints(int **array, int size)$/;"	f
+free_array_of_strings	graphics/lib/libft/free_array_of_strings.c	/^void	free_array_of_strings(char **str)$/;"	f
+ft_abs_value	graphics/lib/libft/ft_abs_value.c	/^int	ft_abs_value(int n)$/;"	f
+ft_atoi	cub3D/libft/ft_atoi.c	/^int	ft_atoi(const char *nptr)$/;"	f
+ft_atoi	graphics/lib/libft/ft_atoi.c	/^int	ft_atoi(const char *nptr)$/;"	f
+ft_atol	cub3D/libft/ft_atol.c	/^long	ft_atol(const char *str)$/;"	f
+ft_atol	graphics/lib/libft/ft_atol.c	/^long long	ft_atol(const char *nptr)$/;"	f
+ft_av	cub3D/libft/ft_av.c	/^int	ft_av(int n)$/;"	f
+ft_bzero	cub3D/libft/ft_bzero.c	/^void	ft_bzero(void *s, size_t n)$/;"	f
+ft_bzero	graphics/lib/libft/ft_bzero.c	/^void	ft_bzero(void *b, size_t len)$/;"	f
+ft_calloc	cub3D/libft/ft_calloc.c	/^void	*ft_calloc(size_t nmemb, size_t size)$/;"	f
+ft_calloc	graphics/lib/libft/ft_calloc.c	/^void	*ft_calloc(size_t number, size_t size)$/;"	f
+ft_dup_array_of_strings	graphics/lib/libft/ft_dup_array_of_strings.c	/^char	**ft_dup_array_of_strings(char **array)$/;"	f
+ft_gnlstrjoin	cub3D/libft/get_next_line_utils.c	/^char	*ft_gnlstrjoin(char *s1, char *s2)$/;"	f
+ft_is_special_char	graphics/lib/libft/ft_is_special_char.c	/^int	ft_is_special_char(char c)$/;"	f
+ft_isalnum	cub3D/libft/ft_isalnum.c	/^int	ft_isalnum(int c)$/;"	f
+ft_isalnum	graphics/lib/libft/ft_isalnum.c	/^int	ft_isalnum(int c)$/;"	f
+ft_isalpha	cub3D/libft/ft_isalpha.c	/^int	ft_isalpha(int c)$/;"	f
+ft_isalpha	graphics/lib/libft/ft_isalpha.c	/^int	ft_isalpha(int c)$/;"	f
+ft_isascii	cub3D/libft/ft_isascii.c	/^int	ft_isascii(int c)$/;"	f
+ft_isascii	graphics/lib/libft/ft_isascii.c	/^int	ft_isascii(int c)$/;"	f
+ft_ischar	cub3D/libft/printfaux1.c	/^int	ft_ischar(char c)$/;"	f
+ft_isdigit	cub3D/libft/ft_isdigit.c	/^int	ft_isdigit(int c)$/;"	f
+ft_isdigit	graphics/lib/libft/ft_isdigit.c	/^int	ft_isdigit(int c)$/;"	f
+ft_isint	cub3D/libft/printfaux1.c	/^int	ft_isint(int n)$/;"	f
+ft_isint	graphics/lib/libft/ft_isint.c	/^int	ft_isint(const char *str)$/;"	f
+ft_ispointer	cub3D/libft/printfaux3.c	/^int	ft_ispointer(unsigned long long n)$/;"	f
+ft_isprint	cub3D/libft/ft_isprint.c	/^int	ft_isprint(int c)$/;"	f
+ft_isprint	graphics/lib/libft/ft_isprint.c	/^int	ft_isprint(int c)$/;"	f
+ft_isspace	graphics/lib/libft/ft_isspace.c	/^int	ft_isspace(char c)$/;"	f
+ft_isstring	cub3D/libft/printfaux1.c	/^int	ft_isstring(char *str)$/;"	f
+ft_isu	cub3D/libft/ft_isu.c	/^int	ft_isu(unsigned int n)$/;"	f
+ft_itoa	cub3D/libft/ft_itoa.c	/^char	*ft_itoa(int n)$/;"	f
+ft_itoa	graphics/lib/libft/ft_itoa.c	/^char	*ft_itoa(int n)$/;"	f
+ft_lstadd_back	cub3D/libft/ft_lstadd_back.c	/^void	ft_lstadd_back(t_list **lst, t_list *new)$/;"	f
+ft_lstadd_back	graphics/lib/libft/ft_lstadd_back.c	/^void	ft_lstadd_back(t_list **lst, t_list *novel)$/;"	f
+ft_lstadd_front	cub3D/libft/ft_lstadd_front.c	/^void	ft_lstadd_front(t_list **lst, t_list *new)$/;"	f
+ft_lstadd_front	graphics/lib/libft/ft_lstadd_front.c	/^void	ft_lstadd_front(t_list **lst, t_list *novel)$/;"	f
+ft_lstclear	cub3D/libft/ft_lstclear.c	/^void	ft_lstclear(t_list **lst, void (*del)(void *))$/;"	f
+ft_lstclear	graphics/lib/libft/ft_lstclear.c	/^void	ft_lstclear(t_list **lst, void (*del)(void *))$/;"	f
+ft_lstdelone	cub3D/libft/ft_lstdelone.c	/^void	ft_lstdelone(t_list *lst, void (*del)(void *))$/;"	f
+ft_lstdelone	graphics/lib/libft/ft_lstdelone.c	/^void	ft_lstdelone(t_list **head, t_list *lst, void (*del)(void *))$/;"	f
+ft_lstdup	graphics/lib/libft/ft_lstdup.c	/^t_list	*ft_lstdup(t_list *lst)$/;"	f
+ft_lstiter	cub3D/libft/ft_lstiter.c	/^void	ft_lstiter(t_list *lst, void (*f)(void *))$/;"	f
+ft_lstiter	graphics/lib/libft/ft_lstiter.c	/^void	ft_lstiter(t_list *lst, void (*f)(void *))$/;"	f
+ft_lstlast	cub3D/libft/ft_lstlast.c	/^t_list	*ft_lstlast(t_list *lst)$/;"	f
+ft_lstlast	graphics/lib/libft/ft_lstlast.c	/^t_list	*ft_lstlast(t_list *lst)$/;"	f
+ft_lstmap	cub3D/libft/ft_lstmap.c	/^t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))$/;"	f
+ft_lstmap	graphics/lib/libft/ft_lstmap.c	/^t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))$/;"	f
+ft_lstnew	cub3D/libft/ft_lstnew.c	/^t_list	*ft_lstnew(void *content)$/;"	f
+ft_lstnew	graphics/lib/libft/ft_lstnew.c	/^t_list	*ft_lstnew(void *content)$/;"	f
+ft_lstsize	cub3D/libft/ft_lstsize.c	/^int	ft_lstsize(t_list *lst)$/;"	f
+ft_lstsize	graphics/lib/libft/ft_lstsize.c	/^int	ft_lstsize(t_list *lst)$/;"	f
+ft_lstswap	graphics/lib/libft/ft_lstswap.c	/^void	ft_lstswap(t_list *lst1, t_list *lst2)$/;"	f
+ft_matlen	cub3D/libft/ft_strlen.c	/^size_t	ft_matlen(char **s)$/;"	f
+ft_matrixlen	graphics/lib/libft/ft_matrixlen.c	/^int	ft_matrixlen(void **matrix)$/;"	f
+ft_memchr	cub3D/libft/ft_memchr.c	/^void	*ft_memchr(const void *s, int c, size_t n)$/;"	f
+ft_memchr	graphics/lib/libft/ft_memchr.c	/^void	*ft_memchr(const void *b, int c, size_t len)$/;"	f
+ft_memcmp	cub3D/libft/ft_memcmp.c	/^int	ft_memcmp(const void *s1, const void *s2, size_t n)$/;"	f
+ft_memcmp	graphics/lib/libft/ft_memcmp.c	/^int	ft_memcmp(const void *b1, const void *b2, size_t len)$/;"	f
+ft_memcpy	cub3D/libft/ft_memcpy.c	/^void	*ft_memcpy(void *dest, const void *src, size_t n)$/;"	f
+ft_memcpy	graphics/lib/libft/ft_memcpy.c	/^void	*ft_memcpy(void *dst, const void *src, size_t len)$/;"	f
+ft_memmove	cub3D/libft/ft_memmove.c	/^void	*ft_memmove(void *dest, const void *src, size_t n)$/;"	f
+ft_memmove	graphics/lib/libft/ft_memmove.c	/^void	*ft_memmove(void *dst, const void *src, size_t len)$/;"	f
+ft_memset	cub3D/libft/ft_memset.c	/^void	*ft_memset(void *s, int c, size_t n)$/;"	f
+ft_memset	graphics/lib/libft/ft_memset.c	/^void	*ft_memset(void *dest, int c, size_t len)$/;"	f
+ft_nothing	graphics/lib/libft/ft_lstclear.c	/^void	ft_nothing(void *content)$/;"	f
+ft_perror	cub3D/src/main.c	/^void	ft_perror(char *str, int fd)$/;"	f
+ft_printf	cub3D/libft/ft_printf.c	/^int	ft_printf(const char *str, ...)$/;"	f
+ft_printf	graphics/lib/libft/ft_printf.c	/^int	ft_printf(const char *str, ...)$/;"	f
+ft_putchar	cub3D/libft/printfaux2.c	/^static void	ft_putchar(char c)$/;"	f	file:
+ft_putchar	cub3D/libft/printfaux3.c	/^static void	ft_putchar(char c)$/;"	f	file:
+ft_putchar_fd	cub3D/libft/ft_putchar_fd.c	/^void	ft_putchar_fd(char c, int fd)$/;"	f
+ft_putchar_fd	graphics/lib/libft/ft_putchar_fd.c	/^int	ft_putchar_fd(char c, int fd)$/;"	f
+ft_putendl_fd	cub3D/libft/ft_putendl_fd.c	/^void	ft_putendl_fd(char *s, int fd)$/;"	f
+ft_putendl_fd	graphics/lib/libft/ft_putendl_fd.c	/^void	ft_putendl_fd(char *s, int fd)$/;"	f
+ft_puthex	cub3D/libft/printfaux2.c	/^int	ft_puthex(unsigned int nb, char *base)$/;"	f
+ft_putnbr_base_fd	graphics/lib/libft/ft_putnbr_base_fd.c	/^int	ft_putnbr_base_fd(unsigned long decimal, char *base, int fd)$/;"	f
+ft_putnbr_fd	cub3D/libft/ft_putnbr_fd.c	/^void	ft_putnbr_fd(int n, int fd)$/;"	f
+ft_putnbr_fd	graphics/lib/libft/ft_putnbr_fd.c	/^int	ft_putnbr_fd(int n, int fd)$/;"	f
+ft_putp	cub3D/libft/printfaux3.c	/^int	ft_putp(unsigned long long n)$/;"	f
+ft_putstr_fd	cub3D/libft/ft_putstr_fd.c	/^void	ft_putstr_fd(char *s, int fd)$/;"	f
+ft_putstr_fd	graphics/lib/libft/ft_putstr_fd.c	/^int	ft_putstr_fd(char *s, int fd)$/;"	f
+ft_quote_count	graphics/lib/libft/ft_splitquote.c	/^int	ft_quote_count(char *str)$/;"	f
+ft_remove_quotes	graphics/lib/libft/ft_splitquote.c	/^char	*ft_remove_quotes(char *str)$/;"	f
+ft_remove_quotes_aux	graphics/lib/libft/ft_splitquote.c	/^static void	ft_remove_quotes_aux(char *str, char *new)$/;"	f	file:
+ft_split	cub3D/libft/ft_split.c	/^char	**ft_split(char const *s, char c)$/;"	f
+ft_split	graphics/lib/libft/ft_split.c	/^char	**ft_split(char const *s, char c)$/;"	f
+ft_split_if_not_in_quote	graphics/lib/libft/ft_split_if_not_in_quote.c	/^char	**ft_split_if_not_in_quote(char *s, char c)$/;"	f
+ft_splitquote	graphics/lib/libft/ft_splitquote.c	/^char	**ft_splitquote(char *s, char c)$/;"	f
+ft_splitquote_nulls	graphics/lib/libft/quotes_utils.c	/^char	**ft_splitquote_nulls(char *s, char c)$/;"	f
+ft_splitstr	graphics/lib/libft/ft_splitstr.c	/^char	**ft_splitstr(char *str, char *split)$/;"	f
+ft_strchr	cub3D/libft/ft_strchr.c	/^char	*ft_strchr(const char *s, int c)$/;"	f
+ft_strchr	graphics/lib/libft/ft_strchr.c	/^char	*ft_strchr(const char *s, int c)$/;"	f
+ft_strchrnum	graphics/lib/libft/get_next_line_utils.c	/^int	ft_strchrnum(const char *s, int c)$/;"	f
+ft_strcmp	graphics/lib/libft/ft_strcmp.c	/^int	ft_strcmp(const char *str1, const char *str2)$/;"	f
+ft_strdup	cub3D/libft/ft_strdup.c	/^char	*ft_strdup(const char *s)$/;"	f
+ft_strdup	graphics/lib/libft/ft_strdup.c	/^char	*ft_strdup(const char *str)$/;"	f
+ft_striteri	cub3D/libft/ft_striteri.c	/^void	ft_striteri(char *s, void (*f)(unsigned int, char *))$/;"	f
+ft_striteri	graphics/lib/libft/ft_striteri.c	/^void	ft_striteri(char *s, void (*f)(unsigned int, char *))$/;"	f
+ft_strjoin	cub3D/libft/ft_strjoin.c	/^char	*ft_strjoin(char const *s1, char const *s2)$/;"	f
+ft_strjoin	graphics/lib/libft/ft_strjoin.c	/^char	*ft_strjoin(char const *s1, char const *s2)$/;"	f
+ft_strjoinfree	cub3D/libft/ft_strjoin.c	/^char	*ft_strjoinfree(char *s1, char *s2, int type)$/;"	f
+ft_strjoinfree	graphics/lib/libft/get_next_line_utils.c	/^char	*ft_strjoinfree(char *s1, char *s2)$/;"	f
+ft_strjoinfree2	graphics/lib/libft/ft_strjoin.c	/^char	*ft_strjoinfree2(char *s1, char *s2)$/;"	f
+ft_strjoinfreeall	graphics/lib/libft/ft_strjoin.c	/^char	*ft_strjoinfreeall(char *s1, char *s2)$/;"	f
+ft_strlcat	cub3D/libft/ft_strlcat.c	/^size_t	ft_strlcat(char *dst, const char *src, size_t size)$/;"	f
+ft_strlcat	graphics/lib/libft/ft_strlcat.c	/^size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)$/;"	f
+ft_strlcpy	cub3D/libft/ft_strlcpy.c	/^size_t	ft_strlcpy(char *dst, const char *src, size_t size)$/;"	f
+ft_strlcpy	graphics/lib/libft/ft_strlcpy.c	/^size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)$/;"	f
+ft_strlen	cub3D/libft/ft_strlen.c	/^size_t	ft_strlen(const char *s)$/;"	f
+ft_strlen	graphics/lib/libft/ft_strlen.c	/^size_t	ft_strlen(const char *s)$/;"	f
+ft_strlenplus	cub3D/libft/get_next_line_utils.c	/^int	ft_strlenplus(char *s, char c)$/;"	f
+ft_strmapi	cub3D/libft/ft_strmapi.c	/^char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))$/;"	f
+ft_strmapi	graphics/lib/libft/ft_strmapi.c	/^char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))$/;"	f
+ft_strncmp	cub3D/libft/ft_strncmp.c	/^int	ft_strncmp(const char *s1, const char *s2, size_t n)$/;"	f
+ft_strncmp	graphics/lib/libft/ft_strncmp.c	/^int	ft_strncmp(const char *s1, const char *s2, size_t len)$/;"	f
+ft_strnstr	cub3D/libft/ft_strnstr.c	/^char	*ft_strnstr(const char *big, const char *little, size_t len)$/;"	f
+ft_strnstr	graphics/lib/libft/ft_strnstr.c	/^char	*ft_strnstr(const char *big, const char *little, size_t len)$/;"	f
+ft_strrchr	cub3D/libft/ft_strrchr.c	/^char	*ft_strrchr(const char *s, int c)$/;"	f
+ft_strrchr	graphics/lib/libft/ft_strrchr.c	/^char	*ft_strrchr(const char *s, int c)$/;"	f
+ft_strstr	cub3D/libft/ft_strstr.c	/^char	*ft_strstr(char *str, char *to_find)$/;"	f
+ft_strtrim	cub3D/libft/ft_strtrim.c	/^char	*ft_strtrim(char const *s1, char const *set)$/;"	f
+ft_strtrim	graphics/lib/libft/ft_strtrim.c	/^char	*ft_strtrim(char const *s1, char const *set)$/;"	f
+ft_strtrimfree	graphics/lib/libft/ft_strtrim.c	/^char	*ft_strtrimfree(char const *s1, char const *set)$/;"	f
+ft_substr	cub3D/libft/ft_substr.c	/^char	*ft_substr(char const *s, unsigned int start, size_t len)$/;"	f
+ft_substr	graphics/lib/libft/ft_substr.c	/^char	*ft_substr(char const *s, unsigned int start, size_t len)$/;"	f
+ft_tolower	cub3D/libft/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f
+ft_tolower	graphics/lib/libft/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f
+ft_toupper	cub3D/libft/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f
+ft_toupper	graphics/lib/libft/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f
+ft_wc	cub3D/libft/ft_split.c	/^int	ft_wc(char *str, char c)$/;"	f
+ft_ws	cub3D/libft/ft_split.c	/^int	ft_ws(char *s, char c, int *jj)$/;"	f
+get_dir	graphics/src/main.c	/^double	get_dir(char c)$/;"	f
+get_line	cub3D/libft/get_next_line.c	/^static char	*get_line(char *stash, int eof)$/;"	f	file:
+get_line	graphics/lib/libft/get_next_line.c	/^static char	*get_line(char *stash)$/;"	f	file:
+get_next_line	cub3D/libft/get_next_line.c	/^char	*get_next_line(int fd)$/;"	f
+get_next_line	graphics/lib/libft/get_next_line.c	/^char	*get_next_line(int fd)$/;"	f
+get_player_dir	graphics/src/main.c	/^void	get_player_dir(t_game *game)$/;"	f
+get_player_position	graphics/src/main.c	/^void	get_player_position(t_game *game)$/;"	f
+get_rgb	cub3D/src/parse.c	/^static void	get_rgb(char *full, t_gs *gs)$/;"	f	file:
+get_side	graphics/src/main.c	/^int	get_side(char c)$/;"	f
+get_stash	cub3D/libft/get_next_line.c	/^static char	*get_stash(int fd, char *stash, int *eof)$/;"	f	file:
+get_stash	graphics/lib/libft/get_next_line.c	/^static char	*get_stash(int fd, char *stash)$/;"	f	file:
+get_textures	cub3D/src/parse.c	/^static void	get_textures(char *full, t_gs *gs)$/;"	f	file:
+graphics	graphics/include/cub3d.h	/^	t_graphics	graphics;$/;"	m	struct:s_game
+gs_init	cub3D/src/main.c	/^static t_gs	*gs_init(void)$/;"	f	file:
+has_open_quote	graphics/lib/libft/quotes_utils.c	/^char	has_open_quote(char *s, int index)$/;"	f
+height	graphics/include/cub3d.h	/^	int		height;$/;"	m	struct:s_map
+info_write	cub3D/src/parse.c	/^static int	info_write(char *f, t_gs *gs)$/;"	f	file:
+inquote	graphics/lib/libft/quotes.c	/^char	inquote(char *s, int index)$/;"	f
+is_beginning_quote	graphics/lib/libft/quotes.c	/^int	is_beginning_quote(char *s, int index)$/;"	f
+is_beginning_wordquote	graphics/lib/libft/quotes_utils.c	/^int	is_beginning_wordquote(char *s, int index, char c)$/;"	f
+is_c_not_in_quotes	graphics/lib/libft/quotes_utils.c	/^int	is_c_not_in_quotes(char *s, int index, char c)$/;"	f
+is_end_quote	graphics/lib/libft/quotes.c	/^int	is_end_quote(char *s, int index)$/;"	f
+is_end_wordquote	graphics/lib/libft/quotes_utils.c	/^int	is_end_wordquote(char *s, int index, char c)$/;"	f
+is_just_quotes	graphics/lib/libft/ft_splitquote.c	/^int	is_just_quotes(char *str, int i)$/;"	f
+is_valid	cub3D/src/main.c	/^static void	is_valid(char *f)$/;"	f	file:
+isneg	graphics/lib/libft/ft_itoa.c	/^char	*isneg(int algcount, int n)$/;"	f
+isquote	graphics/lib/libft/quotes.c	/^char	isquote(char *s, int index)$/;"	f
+key_hook	graphics/src/main.c	/^int	key_hook(int keycode, t_game *game)$/;"	f
+length_aux	cub3D/src/parse.c	/^static int	length_aux(char *s, t_gs *gs)$/;"	f	file:
+lowhex	cub3D/libft/printfaux2.c	/^int	lowhex(unsigned int n)$/;"	f
+main	cub3D/src/main.c	/^int	main(int argc, char **argv)$/;"	f
+main	graphics/src/main.c	/^int	main(int argc, char **argv)$/;"	f
+map	cub3D/cub3d.h	/^	char		**map;$/;"	m	struct:s_gs
+map	graphics/include/cub3d.h	/^	char	**map;$/;"	m	struct:s_map
+map	graphics/include/cub3d.h	/^	t_map		map;$/;"	m	struct:s_game
+map_init	cub3D/src/parse.c	/^static void	map_init(t_gs *gs)$/;"	f	file:
+map_render	graphics/src/main.c	/^int	map_render(t_game *game)$/;"	f
+map_write	cub3D/src/parse.c	/^static int	map_write(int fd, t_gs *gs)$/;"	f	file:
+minimaprender	graphics/src/main.c	/^int	minimaprender(t_game *game)$/;"	f
+mlx	graphics/include/cub3d.h	/^	void	*mlx;$/;"	m	struct:s_graphics
+mlx_close	graphics/src/main.c	/^int	mlx_close(t_game *game)$/;"	f
+mlx_start	graphics/src/main.c	/^void	mlx_start(t_game *game)$/;"	f
+module	graphics/lib/libft/ft_itoa.c	/^long int	module(int n)$/;"	f
+move	graphics/src/main.c	/^int	move(int keycode, t_game *game)$/;"	f
+next	cub3D/libft/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list
+next	graphics/lib/libft/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list
+no_t	cub3D/cub3d.h	/^	char		*no_t;$/;"	m	struct:s_gs
+no_t	graphics/include/cub3d.h	/^	char	*no_t;$/;"	m	struct:s_graphics
+parser	cub3D/src/parse.c	/^int	parser(char *f, t_gs *gs)$/;"	f
+player	cub3D/cub3d.h	/^	t_position	*player;$/;"	m	struct:s_gs
+player	graphics/include/cub3d.h	/^	t_player	player;$/;"	m	struct:s_game
+player_check	cub3D/src/checker.c	/^static int	player_check(t_gs *gs, int i, int j)$/;"	f	file:
+playerrender	graphics/src/main.c	/^void	playerrender(t_game *game)$/;"	f
+prev	graphics/lib/libft/libft.h	/^	struct s_list	*prev;$/;"	m	struct:s_list	typeref:struct:s_list::s_list
+put_line	graphics/src/main.c	/^void	put_line(t_game *game, double x, double y, double dir, int side, int i)$/;"	f
+quote	graphics/lib/libft/quotes.c	/^char	quote(char *s, int index)$/;"	f
+raw	cub3D/cub3d.h	/^	char		**raw;$/;"	m	struct:s_gs
+rgb_format	cub3D/src/parse.c	/^static void	rgb_format(char *s, t_gs *gs)$/;"	f	file:
+rstr	cub3D/libft/ft_itoa.c	/^void	rstr(char *str, int size)$/;"	f
 s_game	graphics/include/cub3d.h	/^typedef struct s_game$/;"	s
 s_graphics	graphics/include/cub3d.h	/^typedef struct s_graphics$/;"	s
 s_gs	cub3D/cub3d.h	/^typedef struct s_gs$/;"	s
@@ -337,16 +302,16 @@ s_list	graphics/lib/libft/libft.h	/^typedef struct s_list$/;"	s
 s_map	graphics/include/cub3d.h	/^typedef struct s_map$/;"	s
 s_player	graphics/include/cub3d.h	/^typedef struct s_player$/;"	s
 s_position	cub3D/cub3d.h	/^typedef struct s_position$/;"	s
-side	graphics/include/cub3d.h	/^	int		side;$/;"	m	struct:s_player	typeref:typename:int
-smaller	graphics/lib/libft/int_size_utils.c	/^int	smaller(int a, int b)$/;"	f	typeref:typename:int
-so_t	cub3D/cub3d.h	/^	char		*so_t;$/;"	m	struct:s_gs	typeref:typename:char *
-so_t	graphics/include/cub3d.h	/^	char	*so_t;$/;"	m	struct:s_graphics	typeref:typename:char *
-strfill	cub3D/src/parse.c	/^static void	strfill(char c, char *tofill, int len)$/;"	f	typeref:typename:void	file:
-strfiller	graphics/lib/libft/ft_split.c	/^static void	strfiller(char *s, char **str, char c)$/;"	f	typeref:typename:void	file:
-strfiller	graphics/lib/libft/ft_split_if_not_in_quote.c	/^static void	strfiller(char *s, char **str, char c)$/;"	f	typeref:typename:void	file:
-strmalloc	graphics/lib/libft/ft_split.c	/^static void	strmalloc(int *j, char ***str, int *k)$/;"	f	typeref:typename:void	file:
-strmalloc	graphics/lib/libft/ft_split_if_not_in_quote.c	/^static void	strmalloc(int *j, char ***str, int *k)$/;"	f	typeref:typename:void	file:
-t_format	cub3D/src/parse.c	/^static void	t_format(char *s, t_gs *gs)$/;"	f	typeref:typename:void	file:
+side	graphics/include/cub3d.h	/^	int		side;$/;"	m	struct:s_player
+smaller	graphics/lib/libft/int_size_utils.c	/^int	smaller(int a, int b)$/;"	f
+so_t	cub3D/cub3d.h	/^	char		*so_t;$/;"	m	struct:s_gs
+so_t	graphics/include/cub3d.h	/^	char	*so_t;$/;"	m	struct:s_graphics
+strfill	cub3D/src/parse.c	/^static void	strfill(char c, char *tofill, int len)$/;"	f	file:
+strfiller	graphics/lib/libft/ft_split.c	/^static void	strfiller(char *s, char **str, char c)$/;"	f	file:
+strfiller	graphics/lib/libft/ft_split_if_not_in_quote.c	/^static void	strfiller(char *s, char **str, char c)$/;"	f	file:
+strmalloc	graphics/lib/libft/ft_split.c	/^static void	strmalloc(int *j, char ***str, int *k)$/;"	f	file:
+strmalloc	graphics/lib/libft/ft_split_if_not_in_quote.c	/^static void	strmalloc(int *j, char ***str, int *k)$/;"	f	file:
+t_format	cub3D/src/parse.c	/^static void	t_format(char *s, t_gs *gs)$/;"	f	file:
 t_game	graphics/include/cub3d.h	/^}	t_game;$/;"	t	typeref:struct:s_game
 t_graphics	graphics/include/cub3d.h	/^}	t_graphics;$/;"	t	typeref:struct:s_graphics
 t_gs	cub3D/cub3d.h	/^}				t_gs;$/;"	t	typeref:struct:s_gs
@@ -356,20 +321,20 @@ t_list	graphics/lib/libft/libft.h	/^}					t_list;$/;"	t	typeref:struct:s_list
 t_map	graphics/include/cub3d.h	/^}	t_map;$/;"	t	typeref:struct:s_map
 t_player	graphics/include/cub3d.h	/^}	t_player;$/;"	t	typeref:struct:s_player
 t_position	cub3D/cub3d.h	/^}				t_position;$/;"	t	typeref:struct:s_position
-typeconversor1	graphics/lib/libft/ft_printf.c	/^int	typeconversor1(char ch, va_list args)$/;"	f	typeref:typename:int
-typeconversor2	graphics/lib/libft/ft_printf.c	/^int	typeconversor2(char ch, va_list args)$/;"	f	typeref:typename:int
-wall_check	cub3D/src/checker.c	/^static int	wall_check(t_gs *gs)$/;"	f	typeref:typename:int	file:
-we_t	cub3D/cub3d.h	/^	char		*we_t;$/;"	m	struct:s_gs	typeref:typename:char *
-we_t	graphics/include/cub3d.h	/^	char	*we_t;$/;"	m	struct:s_graphics	typeref:typename:char *
-width	graphics/include/cub3d.h	/^	int		width;$/;"	m	struct:s_map	typeref:typename:int
-win	graphics/include/cub3d.h	/^	void	*win;$/;"	m	struct:s_graphics	typeref:typename:void *
-wordcounter	graphics/lib/libft/ft_split.c	/^static int	wordcounter(char const *s, char c)$/;"	f	typeref:typename:int	file:
-wordcounter	graphics/lib/libft/ft_split_if_not_in_quote.c	/^static int	wordcounter(char *s, char c)$/;"	f	typeref:typename:int	file:
-wordfiller	graphics/lib/libft/ft_split.c	/^static void	wordfiller(char *j, char *str, char c)$/;"	f	typeref:typename:void	file:
-wordfiller	graphics/lib/libft/ft_split_if_not_in_quote.c	/^static void	wordfiller(char *j, char *str, char c)$/;"	f	typeref:typename:void	file:
-x	cub3D/cub3d.h	/^	int			x;$/;"	m	struct:s_position	typeref:typename:int
-x	graphics/include/cub3d.h	/^	double	x;$/;"	m	struct:s_player	typeref:typename:double
-xlen	cub3D/cub3d.h	/^	int			xlen;$/;"	m	struct:s_gs	typeref:typename:int
-y	cub3D/cub3d.h	/^	int			y;$/;"	m	struct:s_position	typeref:typename:int
-y	graphics/include/cub3d.h	/^	double	y;$/;"	m	struct:s_player	typeref:typename:double
-ylen	cub3D/cub3d.h	/^	int			ylen;$/;"	m	struct:s_gs	typeref:typename:int
+typeconversor1	graphics/lib/libft/ft_printf.c	/^int	typeconversor1(char ch, va_list args)$/;"	f
+typeconversor2	graphics/lib/libft/ft_printf.c	/^int	typeconversor2(char ch, va_list args)$/;"	f
+wall_check	cub3D/src/checker.c	/^static int	wall_check(t_gs *gs)$/;"	f	file:
+we_t	cub3D/cub3d.h	/^	char		*we_t;$/;"	m	struct:s_gs
+we_t	graphics/include/cub3d.h	/^	char	*we_t;$/;"	m	struct:s_graphics
+width	graphics/include/cub3d.h	/^	int		width;$/;"	m	struct:s_map
+win	graphics/include/cub3d.h	/^	void	*win;$/;"	m	struct:s_graphics
+wordcounter	graphics/lib/libft/ft_split.c	/^static int	wordcounter(char const *s, char c)$/;"	f	file:
+wordcounter	graphics/lib/libft/ft_split_if_not_in_quote.c	/^static int	wordcounter(char *s, char c)$/;"	f	file:
+wordfiller	graphics/lib/libft/ft_split.c	/^static void	wordfiller(char *j, char *str, char c)$/;"	f	file:
+wordfiller	graphics/lib/libft/ft_split_if_not_in_quote.c	/^static void	wordfiller(char *j, char *str, char c)$/;"	f	file:
+x	cub3D/cub3d.h	/^	int			x;$/;"	m	struct:s_position
+x	graphics/include/cub3d.h	/^	double	x;$/;"	m	struct:s_player
+xlen	cub3D/cub3d.h	/^	int			xlen;$/;"	m	struct:s_gs
+y	cub3D/cub3d.h	/^	int			y;$/;"	m	struct:s_position
+y	graphics/include/cub3d.h	/^	double	y;$/;"	m	struct:s_player
+ylen	cub3D/cub3d.h	/^	int			ylen;$/;"	m	struct:s_gs
