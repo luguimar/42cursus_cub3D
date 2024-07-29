@@ -6,7 +6,7 @@
 /*   By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:24:58 by jduraes-          #+#    #+#             */
-/*   Updated: 2024/07/26 19:25:26 by jduraes-         ###   ########.fr       */
+/*   Updated: 2024/07/29 21:01:27 by jduraes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,17 @@ static void	deinitialize(t_gs *gs)
 	if (gs)
 	{
 		if(gs->map)
-		    free(gs->map);
+		    doublefree(gs->map);
 		if(gs->player)
 			free(gs->player);
 		if(gs->no_t)
 			free(gs->no_t);
+		if(gs->so_t)
+		    free(gs->so_t);
+		if(gs->we_t)
+		    free(gs->we_t);
+		if(gs->ea_t)
+		    free(gs->ea_t);
 	}
 	if(gs)
 	    free(gs);
@@ -76,8 +82,13 @@ int	main(int argc, char **argv)
 	if (!parser(argv[1], gs))
 	{
 		deinitialize(gs);
+		ft_perror("Invalid map", 1);
 	}
-	//if (!checker(gs))
-	//	ft_perror("Invalid map format", 1);
+	if (!checker(gs))
+	{
+		deinitialize(gs);
+		ft_perror("Invalid map", 1);
+	}
+	deinitialize(gs);
 	return (0);
 }

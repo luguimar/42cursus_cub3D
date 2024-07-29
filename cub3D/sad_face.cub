@@ -1,16 +1,21 @@
 NO ./include/assets/textures/eagle.xpm
-SO ./include/assets/textures/greystone.xpm
-WE ./include/assets/textures/red.xpm
+
+WE                    ./include/assets/textures/red.xpm
+
 EA ./include/assets/textures/purplestone.xpm
 
-C 53,41,34
+C 53,41               ,34
 F 205,33,27
+
+
+
+SO ./include/assets/textures/greystone.xpm
 
 1111111111111111
 111100011111111
 111110000011111
 111100000001111
-1110000000N0111
+111000000N0111
 1100000000000011
 10000111110010001
 110000111001 1101

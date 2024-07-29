@@ -6,7 +6,7 @@
 /*   By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:01:45 by jduraes-          #+#    #+#             */
-/*   Updated: 2024/07/23 20:24:53 by jduraes-         ###   ########.fr       */
+/*   Updated: 2024/07/29 20:17:14 by jduraes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,9 @@ typedef struct	s_gs
 {
 	char	**raw;
 	char	**map;
-	int        xlen;
-	int        ylen;
+	int		xlen;
+	int		ylen;
+	int		tl;
 	int	floor[3];
 	int	ceiling[3];
 	char	*no_t;
