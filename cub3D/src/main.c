@@ -12,17 +12,17 @@
 
 #include "../cub3d.h"
 
-void    ft_perror(char *str, int fd)
+void	ft_perror(char *str, int fd)
 {
-    ft_putstr_fd("Error: ", fd);
-    ft_putstr_fd(str, fd);
-    ft_putstr_fd("\n", fd);
-    exit(EXIT_FAILURE);
+	ft_putstr_fd("Error: ", fd);
+	ft_putstr_fd(str, fd);
+	ft_putstr_fd("\n", fd);
+	exit(EXIT_FAILURE);
 }
 
 static t_gs	*gs_init(void)
 {
-	t_gs    *gs;
+	t_gs	*gs;
 
 	gs = (t_gs *)ft_calloc(1, sizeof(t_gs));
 	if (!gs)
@@ -37,21 +37,21 @@ static void	deinitialize(t_gs *gs)
 {
 	if (gs)
 	{
-		if(gs->map)
-		    doublefree(gs->map);
-		if(gs->player)
+		if (gs->map)
+			doublefree(gs->map);
+		if (gs->player)
 			free(gs->player);
-		if(gs->no_t)
+		if (gs->no_t)
 			free(gs->no_t);
-		if(gs->so_t)
-		    free(gs->so_t);
-		if(gs->we_t)
-		    free(gs->we_t);
-		if(gs->ea_t)
-		    free(gs->ea_t);
+		if (gs->so_t)
+			free(gs->so_t);
+		if (gs->we_t)
+			free(gs->we_t);
+		if (gs->ea_t)
+			free(gs->ea_t);
 	}
-	if(gs)
-	    free(gs);
+	if (gs)
+		free(gs);
 }
 
 static void	is_valid(char *f)
@@ -63,7 +63,7 @@ static void	is_valid(char *f)
 	while (f[++i] != '.' && f[i] != '\0')
 	{
 		if (f[i] == '\0')
-		    ft_perror("Invalid map format", 1);
+			ft_perror("Invalid map format", 1);
 	}
 	if (ft_strncmp(f + i, ".cub", 4))
 		ft_perror("Invalid map format", 1);
@@ -74,7 +74,7 @@ static void	is_valid(char *f)
 
 int	main(int argc, char **argv)
 {
-	t_gs	*gs;
+	t_gs *gs;
 	if (argc != 2)
 		ft_perror("wrong number of arguments", 1);
 	is_valid(argv[1]);
