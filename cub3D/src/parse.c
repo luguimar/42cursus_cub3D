@@ -6,7 +6,7 @@
 /*   By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 22:41:14 by jduraes-          #+#    #+#             */
-/*   Updated: 2024/07/29 21:47:42 by jduraes-         ###   ########.fr       */
+/*   Updated: 2024/07/30 18:34:11 by jduraes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -175,8 +175,6 @@ static int	length_aux(char *s, t_gs *gs)
 	gs->ylen++;
 	if (gs->xlen < (int)ft_strlen(s) - 1)
 		gs->xlen = ft_strlen(s) - 1;
-	if (ft_strlen(s) < 3)
-		return (0);
 	return (1);
 }
 
@@ -202,6 +200,8 @@ static int	map_start(int fd, t_gs *gs, char *f)
 	}
 	if (l)
 		free(l);
+	if (gs->xlen < 3 || gs->ylen < 3)
+		return (0);
 	return (map_write(gs, f));
 }
 
