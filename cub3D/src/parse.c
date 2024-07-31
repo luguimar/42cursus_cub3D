@@ -6,7 +6,7 @@
 /*   By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 22:41:14 by jduraes-          #+#    #+#             */
-/*   Updated: 2024/07/30 18:34:11 by jduraes-         ###   ########.fr       */
+/*   Updated: 2024/07/31 19:42:49 by jduraes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,7 +132,6 @@ static void	runitdown(int fd, char *line)
 
 static int	map_write(t_gs *gs, char *f)
 {
-	char	*temp;
 	char	*line;
 	int		i;
 	int		fd;
@@ -148,7 +147,6 @@ static int	map_write(t_gs *gs, char *f)
 		free(line);
 		line = get_next_line(fd);
 	}
-	temp = NULL;
 	i = -1;
 	while (line && ++i < gs->ylen)
 	{
@@ -156,7 +154,6 @@ static int	map_write(t_gs *gs, char *f)
 		free(line);
 		line = get_next_line(fd);
 	}
-	free(temp);
 	runitdown(fd, line);
 	return (1);
 }
@@ -208,10 +205,17 @@ static int	map_start(int fd, t_gs *gs, char *f)
 static int	t_access(char *s, char **d)
 {
 	char	*t;
+	int	fd;
 
 	t = ft_substr(s, 3, ft_strlen(s) - 3);
 	*d = ft_strtrimfree(t, " ");
 	free(s);
+	fd = open(*d, O_RDONLY);
+	if (fd == -1)
+	{
+		ft_putstr_fd("texture file not found\n", 1);
+        return (0);
+	}
 	if (!(*d))
 		return (0);
 	return (1);
@@ -220,25 +224,13 @@ static int	t_access(char *s, char **d)
 static int	t_format(char *s, t_gs *gs)
 {
 	if (!ft_strncmp(s, "NO ", 3) && gs->no_t == NULL)
-	{
-		t_access(s, &gs->no_t);
-		return (1);
-	}
+		return (t_access(s, &gs->no_t));
 	else if (!ft_strncmp(s, "SO ", 3) && gs->so_t == NULL)
-	{
-		t_access(s, &gs->so_t);
-		return (1);
-	}
+		return (t_access(s, &gs->so_t));
 	else if (!ft_strncmp(s, "WE ", 3) && gs->we_t == NULL)
-	{
-		t_access(s, &gs->we_t);
-		return (1);
-	}
+		return (t_access(s, &gs->we_t));
 	else if (!ft_strncmp(s, "EA ", 3) && gs->ea_t == NULL)
-	{
-		t_access(s, &gs->ea_t);
-		return (1);
-	}
+		return (t_access(s, &gs->ea_t));
 	free(s);
 	return (0);
 }
@@ -348,7 +340,6 @@ int	parser(char *f, t_gs *gs)
 		if (!check_format(line, gs) && ft_strncmp(line, "\n", ft_strlen(line)))
 		{
 			runitdown(fd, line);
-			;
 			return (0);
 		}
 		free(line);

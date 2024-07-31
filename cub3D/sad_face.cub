@@ -1,8 +1,8 @@
-NO ./include/assets/textures/eagle.xpm
+NO ./assets/mossy_wall.xpm
 
-WE                    ./include/assets/textures/red.xpm
+WE                    ./assets/mossy_wall_b.xpm
 
-EA ./include/assets/textures/purplestone.xpm
+EA ./assets/mossy_wall.xpm
 
 
 C 53,41               ,34
@@ -10,9 +10,9 @@ F 255,33,27
 
 
 
-SO ./include/assets/textures/greystone.xpm
+SO ./assets/mossy_wall_night.xpm
 
-11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+1111111111111111111111111111111111111111111111111111111111111111111111111111
 111100011111111
 111110000011111                11111
 111100000001111                1    1

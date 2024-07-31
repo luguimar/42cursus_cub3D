@@ -6,7 +6,7 @@
 /*   By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:24:58 by jduraes-          #+#    #+#             */
-/*   Updated: 2024/07/29 21:01:27 by jduraes-         ###   ########.fr       */
+/*   Updated: 2024/07/31 19:33:50 by jduraes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,8 @@ static void	deinitialize(t_gs *gs)
 			free(gs->we_t);
 		if (gs->ea_t)
 			free(gs->ea_t);
-	}
-	if (gs)
 		free(gs);
+	}
 }
 
 static void	is_valid(char *f)
