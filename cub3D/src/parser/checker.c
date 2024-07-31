@@ -6,43 +6,23 @@
 /*   By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 21:58:45 by jduraes-          #+#    #+#             */
-/*   Updated: 2024/07/23 20:26:41 by jduraes-         ###   ########.fr       */
+/*   Updated: 2024/07/31 21:37:36 by jduraes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../cub3d.h"
 
-static int	player_check(t_gs *gs, int i, int j)
-{
-	int	c;
-
-	c = 0;
-	while(gs->map[++i] != NULL)
-	{
-		j = -1;
-        while(gs->map[i][++j] != '\0')
-        {
-            if (gs->map[i][j] == 'N' || gs->map[i][j] == 'S' ||
-				gs->map[i][j] == 'E' || gs->map[i][j] == 'W')
-			{
-				c++;
-				gs->player->x = j;
-				gs->player->y = i;
-			}
-        }
-	}
-	if (c != 1)
-		return (0);
-	return (1);
-}
-
-int	flood_fill(t_gs *gs, int x, int y, char **map)
+static int	flood_fill(t_gs *gs, int x, int y, char **map)
 {
 	static int	c;
+
 	if (map[x][y] == '1')
 		return (1);
 	else if (map[x][y] == ' ')
+	{
 		c++;
+		return (0);
+	}
 	map[x][y] = '1';
 	flood_fill(gs, x + 1, y, map);
 	flood_fill(gs, x - 1, y, map);
@@ -56,7 +36,7 @@ int	flood_fill(t_gs *gs, int x, int y, char **map)
 static int	wall_check(t_gs *gs)
 {
 	char	**tmap;
-	int	i;
+	int		i;
 
 	i = -1;
 	tmap = calloc(gs->ylen + 1, sizeof(char **));
@@ -70,6 +50,30 @@ static int	wall_check(t_gs *gs)
 	}
 	else
 		doublefree(tmap);
+	return (1);
+}
+
+static int	player_check(t_gs *gs, int i, int j)
+{
+	int	c;
+
+	c = 0;
+	while (gs->map[++i] != NULL)
+	{
+		j = -1;
+		while (gs->map[i][++j] != '\0')
+		{
+			if (gs->map[i][j] == 'N' || gs->map[i][j] == 'S'
+				|| gs->map[i][j] == 'E' || gs->map[i][j] == 'W')
+			{
+				c++;
+				gs->player->x = j;
+				gs->player->y = i;
+			}
+		}
+	}
+	if (c != 1)
+		return (0);
 	return (1);
 }
 

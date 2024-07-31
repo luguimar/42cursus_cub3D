@@ -74,6 +74,7 @@ static void	is_valid(char *f)
 int	main(int argc, char **argv)
 {
 	t_gs *gs;
+
 	if (argc != 2)
 		ft_perror("wrong number of arguments", 1);
 	is_valid(argv[1]);

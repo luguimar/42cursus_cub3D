@@ -6,7 +6,7 @@
 /*   By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:01:45 by jduraes-          #+#    #+#             */
-/*   Updated: 2024/07/29 20:17:14 by jduraes-         ###   ########.fr       */
+/*   Updated: 2024/07/31 21:39:09 by jduraes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <sys/time.h>
-#include "libft/libft.h"
+#include "../libft/libft.h"
 
 typedef struct s_position
 {
@@ -44,7 +44,11 @@ typedef struct	s_gs
 
 int	parser(char *f, t_gs *gs);
 int	checker(t_gs *gs);
-int	flood_fill(t_gs *gs, int x, int y, char **map);
 void    ft_perror(char *str, int fd);
+void	runitdown(int fd, char *line);
+int	check_info(t_gs *gs);
+int	copyconvert(char **s, int *a);
+int	t_access(char *s, char **d);
+int	map_start(int fd, t_gs *gs, char *f);
 
 #endif

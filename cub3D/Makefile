@@ -6,14 +6,14 @@
 #    By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/15 20:48:16 by jduraes-          #+#    #+#              #
-#    Updated: 2024/07/18 17:29:54 by jduraes-         ###   ########.fr        #
+#    Updated: 2024/07/31 21:40:16 by jduraes-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = cub3d
-SRC = src/main.c src/parse.c src/checker.c
+SRC = src/parser/main.c src/parser/parse.c src/parser/checker.c src/parser/map_parse.c src/parser/parse_utils.c
 OBJS = $(SRC:.c=.o)
-HEADER = cub3d.h
+HEADER = src/cub3d.h
 CC = cc -g
 RM = rm -f
 INCLUDE = -I .
