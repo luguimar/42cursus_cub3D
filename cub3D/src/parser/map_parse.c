@@ -6,7 +6,7 @@
 /*   By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 21:12:35 by jduraes-          #+#    #+#             */
-/*   Updated: 2024/07/31 21:29:22 by jduraes-         ###   ########.fr       */
+/*   Updated: 2024/08/02 19:21:00 by jduraes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	strfill(char c, char *tofill, int len)
 {
-	int i;
+	int	i;
 
 	i = -1;
 	while (++i < len)
@@ -111,4 +111,3 @@ int	map_start(int fd, t_gs *gs, char *f)
 		return (0);
 	return (map_write(gs, f));
 }
-

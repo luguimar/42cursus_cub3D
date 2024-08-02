@@ -6,11 +6,16 @@
 /*   By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 21:13:57 by jduraes-          #+#    #+#             */
-/*   Updated: 2024/07/31 21:29:09 by jduraes-         ###   ########.fr       */
+/*   Updated: 2024/08/02 17:55:54 by jduraes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../cub3d.h"
+
+unsigned int	rgbtohex(int *rgb)
+{
+	return ((rgb[0] << 16) + (rgb[1] << 8) + rgb[2]);
+}
 
 void	runitdown(int fd, char *line)
 {
@@ -45,7 +50,7 @@ int	copyconvert(char **s, int *a)
 int	t_access(char *s, char **d)
 {
 	char	*t;
-	int	fd;
+	int		fd;
 
 	t = ft_substr(s, 3, ft_strlen(s) - 3);
 	*d = ft_strtrimfree(t, " \n");
@@ -59,7 +64,7 @@ int	t_access(char *s, char **d)
 	if (fd == -1)
 	{
 		ft_putstr_fd("texture file not found\n", 1);
-        return (0);
+		return (0);
 	}
 	if (!(*d))
 		return (0);

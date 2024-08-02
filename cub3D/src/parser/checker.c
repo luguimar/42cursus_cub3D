@@ -6,7 +6,7 @@
 /*   By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 21:58:45 by jduraes-          #+#    #+#             */
-/*   Updated: 2024/07/31 21:37:36 by jduraes-         ###   ########.fr       */
+/*   Updated: 2024/08/02 18:59:24 by jduraes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static int	wall_check(t_gs *gs)
 	tmap[gs->ylen] = NULL;
 	while (++i < gs->ylen)
 		tmap[i] = ft_strdup(gs->map[i]);
-	if (!flood_fill(gs, gs->player->y, gs->player->x, tmap))
+	if (!flood_fill(gs, gs->playerp->y, gs->playerp->x, tmap))
 	{
 		doublefree(tmap);
 		return (0);
@@ -67,8 +67,8 @@ static int	player_check(t_gs *gs, int i, int j)
 				|| gs->map[i][j] == 'E' || gs->map[i][j] == 'W')
 			{
 				c++;
-				gs->player->x = j;
-				gs->player->y = i;
+				gs->playerp->x = j;
+				gs->playerp->y = i;
 			}
 		}
 	}
