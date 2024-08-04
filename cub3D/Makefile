@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+         #
+#    By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/10 22:33:22 by luguimar          #+#    #+#              #
-#    Updated: 2024/07/25 02:35:43 by luguimar         ###   ########.fr        #
+#    Updated: 2024/08/04 19:11:21 by jduraes-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ MOVE = mv
 REMOVE = rm -f
 EXTRACT = tar -xvf
 DOWNLOAD = wget -O
-CFLAGS = -Wall -Wextra -Werror -O3
+CFLAGS = -Wall -Wextra -Werror -O3 #-fsanitize=address
 INCLUDE = -I .
 MAKE = make -C
 LIBRARIES = lib
