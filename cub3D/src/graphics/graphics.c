@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   gaphics.c                                          :+:      :+:    :+:   */
+/*   graphics.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 01:45:06 by luguimar          #+#    #+#             */
-/*   Updated: 2024/08/02 19:30:50 by jduraes-         ###   ########.fr       */
+/*   Updated: 2024/08/04 19:02:30 by jduraes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,42 +89,13 @@ static int	minimaprender(t_gs *game)
 	return (1);
 }
 
-static int	error_msg(char *msg, int ret)
-{
-	ft_putstr_fd(msg, 2);
-	return (ret);
-}
-
 static int	mlx_close(t_gs *game)
 {
 	mlx_destroy_window(game->graphics.mlx, game->graphics.win);
 	mlx_destroy_display(game->graphics.mlx);
 	free(game->graphics.mlx);
-	free_array_of_strings(game->map);
+	doublefree(game->map);
 	exit(0);
-}
-
-static int	check_extension(char *str, char *ext)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	j = 0;
-	while (str[i])
-		i++;
-	while (ext[j])
-		j++;
-	if (i < j)
-		return (0);
-	while (j >= 0)
-	{
-		if (str[i] != ext[j])
-			return (0);
-		i--;
-		j--;
-	}
-	return (1);
 }
 
 static int	map_render(t_gs *game)
