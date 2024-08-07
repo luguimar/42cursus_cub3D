@@ -6,11 +6,20 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 01:45:06 by luguimar          #+#    #+#             */
-/*   Updated: 2024/07/27 03:12:51 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/08/07 05:49:23 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/cub3d.h"
+
+void	my_pixel_put(t_img *img, int x, int y, int color)
+{
+	char	*dst;
+
+	dst = img->addr + (y * img->line_length + \
+		x * (img->bits_per_pixel / 8));
+	*(unsigned int *)dst = color;
+}
 
 void	playerrender(t_game *game)
 {
@@ -23,7 +32,7 @@ void	playerrender(t_game *game)
 	y = (int) game->player.y;
 	i = ((int)(game->player.x * 10)) % 10;
 	j = ((int)(game->player.y * 10)) % 10;
-	mlx_pixel_put(game->graphics.mlx, game->graphics.win, y * 10 + j, x * 10 + i, 0xFFFFFF);
+	my_pixel_put(&game->graphics.img, y * 10 + j, x * 10 + i, 0x00FFFFFF);
 }
 
 int	minimaprender(t_game *game)
@@ -47,7 +56,7 @@ int	minimaprender(t_game *game)
 					l = 0;
 					while (l < 10)
 					{
-						mlx_pixel_put(game->graphics.mlx, game->graphics.win, j * 10 + k, i * 10 + l, 0x00FFFFFF);
+						my_pixel_put(&game->graphics.img, j * 10 + k, i * 10 + l, 0x00FFFFFF);
 						l++;
 					}
 					k++;
@@ -61,7 +70,7 @@ int	minimaprender(t_game *game)
 					l = 0;
 					while (l < 10)
 					{
-						mlx_pixel_put(game->graphics.mlx, game->graphics.win, j * 10 + k, i * 10 + l, 0x00000000);
+						my_pixel_put(&game->graphics.img, j * 10 + k, i * 10 + l, 0x00000000);
 						l++;
 					}
 					k++;
@@ -75,7 +84,7 @@ int	minimaprender(t_game *game)
 					l = 0;
 					while (l < 10)
 					{
-						mlx_pixel_put(game->graphics.mlx, game->graphics.win, j * 10 + k, i * 10 + l, 0x00FF0000);
+						my_pixel_put(&game->graphics.img, j * 10 + k, i * 10 + l, 0x00FF0000);
 						l++;
 					}
 					k++;
@@ -139,9 +148,9 @@ int	map_render(t_game *game)
 		while (++j < 600)
 		{
 			if (j < 300)
-				mlx_pixel_put(game->graphics.mlx, game->graphics.win, i, j, 0x00FF0000);
+				my_pixel_put(&game->graphics.img, i, j, 0x00FF0000);
 			else
-				mlx_pixel_put(game->graphics.mlx, game->graphics.win, i, j, 0x0000FF00);
+				my_pixel_put(&game->graphics.img, i, j, 0x0000FF00);
 		}
 	}
 	return (1);
@@ -318,7 +327,7 @@ void	put_line(t_game *game, double x, double y, double dir, int side, int i)
 	j = 0;
 	while (j < line_size)
 	{
-		mlx_pixel_put(game->graphics.mlx, game->graphics.win, i, j + 300 - line_size / 2, 0x00FFFFFF);
+		my_pixel_put(&game->graphics.img, i, j + 300 - line_size / 2, 0x00FFFFFF);
 		j++;
 	}
 }
@@ -610,7 +619,17 @@ int	key_hook(int keycode, t_game *game)
 	map_render(game);
 	cube_render(game);
 	minimaprender(game);
+	mlx_clear_window(game->graphics.mlx, game->graphics.win);
+	mlx_put_image_to_window(game->graphics.mlx, game->graphics.win, \
+		game->graphics.img.img, 0, 0);
 	return (0);
+}
+
+void	init_img(t_img *img, void *mlx, int width, int height)
+{
+	img->img = mlx_new_image(mlx, width, height);
+	img->addr = mlx_get_data_addr(img->img, &img->bits_per_pixel, \
+		&img->line_length, &img->endian);
 }
 
 void	mlx_start(t_game *game)
@@ -630,9 +649,14 @@ void	mlx_start(t_game *game)
 	}
 	//set_mlx_images(game);
 	get_player_position(game);
+	init_img(&game->graphics.img, game->graphics.mlx, 800, 600);
+	my_pixel_put(&game->graphics.img, 400, 300, 0x00FFFFFF);
 	map_render(game);
 	cube_render(game);
 	minimaprender(game);
+	mlx_clear_window(game->graphics.mlx, game->graphics.win);
+	mlx_put_image_to_window(game->graphics.mlx, game->graphics.win, \
+		game->graphics.img.img, 0, 0);
 	mlx_hook(game->graphics.win, 2, 1L << 0, key_hook, game);
 	mlx_hook(game->graphics.win, 17, 0, mlx_close, game);
 	//mlx_loop_hook(game->graphics.mlx, map_render, game);

@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 01:46:50 by luguimar          #+#    #+#             */
-/*   Updated: 2024/07/25 20:36:35 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/08/07 05:05:05 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,20 @@ typedef struct s_player
 	int		side;
 }	t_player;
 
+typedef struct s_img
+{
+	void	*img;
+	char	*addr;
+	int		bits_per_pixel;
+	int		line_length;
+	int		endian;
+}	t_img;
+
 typedef struct s_graphics
 {
 	void	*mlx;
 	void	*win;
+	t_img	img;
 	int		floor[3];
 	int		ceiling[3];
 	char	*no_t;
