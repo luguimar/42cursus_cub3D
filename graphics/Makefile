@@ -6,13 +6,13 @@
 #    By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/10 22:33:22 by luguimar          #+#    #+#              #
-#    Updated: 2024/07/25 02:35:43 by luguimar         ###   ########.fr        #
+#    Updated: 2024/08/08 01:07:01 by luguimar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = cub3D
 
-SRC = src/main.c
+SRC = src/main.c src/moves.c src/renders.c src/positions.c
 
 OBJS = ${SRC:.c=.o}
 
@@ -21,7 +21,7 @@ MOVE = mv
 REMOVE = rm -f
 EXTRACT = tar -xvf
 DOWNLOAD = wget -O
-CFLAGS = -Wall -Wextra -Werror -O3
+CFLAGS = -Wall -Wextra -Werror -O0
 INCLUDE = -I .
 MAKE = make -C
 LIBRARIES = lib

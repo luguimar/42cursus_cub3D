@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 01:46:50 by luguimar          #+#    #+#             */
-/*   Updated: 2024/08/07 05:05:05 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/08/08 01:09:20 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,20 @@ typedef struct s_game
 	t_map		map;
 	t_player	player;
 }	t_game;
+
+int		move(int keycode, t_game *game);
+int		key_hook(int keycode, t_game *game);
+int		map_render(t_game *game);
+void	playerrender(t_game *game);
+int		minimaprender(t_game *game);
+void	put_line(t_game *game, double x, double y, double dir, int side, int i);
+void	cube_render(t_game *game);
+double	get_dir(char c);
+int		get_side(char c);
+void	get_player_dir(t_game *game);
+void	get_player_position(t_game *game);
+int		mlx_close(t_game *game);
+void	my_pixel_put(t_img *img, int x, int y, int color);
+int		error_msg(char *msg, int ret);
 
 #endif
