@@ -1,5 +1,7 @@
 cube_render	graphics/src/renders.c	/^void	cube_render(t_game *game)$/;"	f	typeref:typename:void
+key_hook	graphics/src/moves.c	/^int	key_hook(int keycode, t_game *game)$/;"	f	typeref:typename:int
 map_render	graphics/src/renders.c	/^int	map_render(t_game *game)$/;"	f	typeref:typename:int
 minimaprender	graphics/src/renders.c	/^int	minimaprender(t_game *game)$/;"	f	typeref:typename:int
+move	graphics/src/moves.c	/^int	move(int keycode, t_game *game)$/;"	f	typeref:typename:int
 playerrender	graphics/src/renders.c	/^void	playerrender(t_game *game)$/;"	f	typeref:typename:void
 put_line	graphics/src/renders.c	/^void	put_line(t_game *game, double x, double y, double dir, int side, int i)$/;"	f	typeref:typename:void

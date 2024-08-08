@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 01:02:23 by luguimar          #+#    #+#             */
-/*   Updated: 2024/08/08 07:41:44 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/08/08 08:21:41 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,6 @@ void	put_line(t_game *game, double x, double y, double dir, int side, int i)
 		while (game->map.map[(int)x][(int)y] != '1')
 		{
 			decimal = modf(x, &integer);
-			decimal = 1 - decimal;
 			if (decimal == 0)
 				decimal = 0.9999999999999999;
 			delta_x = decimal / cos(dir);

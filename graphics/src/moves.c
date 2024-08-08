@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 00:59:50 by luguimar          #+#    #+#             */
-/*   Updated: 2024/08/08 01:00:04 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/08/08 08:37:03 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,8 +74,8 @@ int	move(int keycode, t_game *game)
 		}
 		else if (game->player.side == 1)
 		{
-			new_x -= 0.1 * cos(game->player.dir);
-			new_y -= 0.1 * sin(game->player.dir);
+			new_x -= 0.1 * sin(game->player.dir);
+			new_y -= 0.1 * cos(game->player.dir);
 		}
 		else if (game->player.side == 2)
 		{
@@ -97,8 +97,8 @@ int	move(int keycode, t_game *game)
 		}
 		else if (game->player.side == 1)
 		{
-			new_x += 0.1 * cos(game->player.dir);
-			new_y += 0.1 * sin(game->player.dir);
+			new_x += 0.1 * sin(game->player.dir);
+			new_y += 0.1 * cos(game->player.dir);
 		}
 		else if (game->player.side == 2)
 		{
