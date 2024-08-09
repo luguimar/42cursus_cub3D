@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 01:02:23 by luguimar          #+#    #+#             */
-/*   Updated: 2024/08/08 08:21:41 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/08/09 07:05:54 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,38 @@ void	put_line(t_game *game, double x, double y, double dir, int side, int i)
 	double	decimal;
 	double	delta_x;
 	double	delta_y;
+	double	perp_dir;
+	double	perp_slope;
+	double	perp_side;
+	double	perp_oo;
+	double	parallel_dir;
+	double	parallel_slope;
+	double	parallel_side;
+	double	parallel_oo;
+	double	intercept_x;
+	double	intercept_y;
 
 	dist2wall = 0;
+	perp_dir = game->player.dir;
+	perp_side = game->player.side;
+	perp_dir += M_PI_2;
+	perp_dir = M_PI_2 - perp_dir + M_PI_2;
+	if (perp_side == 2)
+		perp_side = 0;
+	if (perp_side == 3)
+		perp_side = 1;
+	if (perp_side == 0)
+		perp_side = 1;
+	else if (perp_side == 1)
+		perp_side = 0;
+	if (perp_side == 0)
+		perp_dir = perp_dir + M_PI;
+	else if (perp_side == 1)
+		perp_dir = perp_dir - M_PI_2;
+	if (perp_dir < 0)
+		perp_dir = -perp_dir;
+	perp_slope = tan(perp_dir);
+	perp_oo = -perp_slope * x + y;
 	if (side == 0)
 	{
 		while (game->map.map[(int)x][(int)y] != '1')
@@ -147,6 +177,27 @@ void	put_line(t_game *game, double x, double y, double dir, int side, int i)
 			}
 		}
 	}
+	parallel_dir = game->player.dir;
+	parallel_side = game->player.side;
+	if (parallel_side == 2)
+		parallel_side = 0;
+	if (parallel_side == 3)
+		parallel_side = 1;
+	if (parallel_side == 0)
+		parallel_side = 1;
+	else if (parallel_side == 1)
+		parallel_side = 0;
+	if (parallel_side == 0)
+		parallel_dir = parallel_dir + M_PI;
+	else if (parallel_side == 1)
+		parallel_dir = parallel_dir - M_PI_2;
+	if (parallel_dir < 0)
+		parallel_dir = -parallel_dir;
+	parallel_slope = tan(parallel_dir);
+	parallel_oo = -parallel_slope * x + y;
+	intercept_x = (parallel_oo - perp_oo) / (perp_slope - parallel_slope);
+	intercept_y = perp_slope * intercept_x + perp_oo;
+	dist2wall = sqrt(pow(intercept_x - x, 2) + pow(intercept_y - y, 2));
 	line_size = 1 / dist2wall * 600 * (45.0 / 70.0);
 	if (line_size > 600)
 		line_size = 600;
