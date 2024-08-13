@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 01:02:23 by luguimar          #+#    #+#             */
-/*   Updated: 2024/08/09 15:39:59 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/08/14 00:47:57 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ void	put_line(t_game *game, double x, double y, double dir, int side, int i)
 	if (perp_side == 1)
 		perp_dir = M_PI_2 - perp_dir + M_PI_2;
 	perp_slope = tan(perp_dir);
+	if (perp_slope > 1000 || perp_slope < -1000)
+		perp_slope = 1000;
 	perp_oo = -perp_slope * x + y;
 	if (side == 0)
 	{
@@ -186,11 +188,13 @@ void	put_line(t_game *game, double x, double y, double dir, int side, int i)
 	if (parallel_side == 1)
 		parallel_dir = M_PI_2 - parallel_dir + M_PI_2;
 	parallel_slope = tan(parallel_dir);
+	if (parallel_slope > 1000 || parallel_slope < -1000)
+		parallel_slope = 1000;
 	parallel_oo = -parallel_slope * x + y;
 	intercept_x = (parallel_oo - perp_oo) / (perp_slope - parallel_slope);
 	intercept_y = perp_slope * intercept_x + perp_oo;
 	dist2wall = sqrt(pow(intercept_x - x, 2) + pow(intercept_y - y, 2));
-	line_size = 1 / dist2wall * 600 * (45.0 / 70.0);
+	line_size = 1 / dist2wall * 600;
 	if (line_size > 600)
 		line_size = 600;
 	j = 0;
