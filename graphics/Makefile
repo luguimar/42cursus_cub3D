@@ -6,7 +6,7 @@
 #    By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/10 22:33:22 by luguimar          #+#    #+#              #
-#    Updated: 2024/08/08 01:07:01 by luguimar         ###   ########.fr        #
+#    Updated: 2024/08/14 06:22:17 by luguimar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ MOVE = mv
 REMOVE = rm -f
 EXTRACT = tar -xvf
 DOWNLOAD = wget -O
-CFLAGS = -Wall -Wextra -Werror -O0
+CFLAGS = -Wall -Wextra -Werror
 INCLUDE = -I .
 MAKE = make -C
 LIBRARIES = lib

@@ -6,7 +6,7 @@
 /*   By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:24:58 by jduraes-          #+#    #+#             */
-/*   Updated: 2024/07/25 00:42:02 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/08/14 03:50:34 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,30 @@ static t_gs	*gs_init(void)
 	gs = (t_gs *)ft_calloc(1, sizeof(t_gs));
 	if (!gs)
 		ft_perror("gamestate init error", 1);
-	gs->player = calloc(1, sizeof(t_position));
+	gs->playerp = ft_calloc(1, sizeof(t_position));
+	gs->floor[0] = -1;
+	gs->ceiling[0] = -1;
 	return (gs);
+}
+
+static void	deinitialize(t_gs *gs)
+{
+	if (gs)
+	{
+		if (gs->map)
+			doublefree(gs->map);
+		if (gs->playerp)
+			free(gs->playerp);
+		if (gs->no_t)
+			free(gs->no_t);
+		if (gs->so_t)
+			free(gs->so_t);
+		if (gs->we_t)
+			free(gs->we_t);
+		if (gs->ea_t)
+			free(gs->ea_t);
+		free(gs);
+	}
 }
 
 static void	is_valid(char *f)
@@ -57,8 +79,17 @@ int	main(int argc, char **argv)
 		ft_perror("wrong number of arguments", 1);
 	is_valid(argv[1]);
 	gs = gs_init();
-	parser(argv[1], gs);
+	if (!parser(argv[1], gs))
+	{
+		deinitialize(gs);
+		ft_perror("Invalid map", 1);
+	}
 	if (!checker(gs))
-		ft_perror("Invalid map format", 1);
+	{
+		deinitialize(gs);
+		ft_perror("Invalid map", 1);
+	}
+	mlx_start(gs);
+	deinitialize(gs);
 	return (0);
 }
