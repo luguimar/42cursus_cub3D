@@ -6,7 +6,7 @@
 #    By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/10 22:33:22 by luguimar          #+#    #+#              #
-#    Updated: 2024/08/14 01:54:02 by luguimar         ###   ########.fr        #
+#    Updated: 2024/08/14 21:12:58 by luguimar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ MOVE = mv
 REMOVE = rm -f
 EXTRACT = tar -xvf
 DOWNLOAD = wget -O
-CFLAGS = -Wall -Wextra -Werror -O3 #-fsanitize=address
+CFLAGS = -Wall -Wextra -Werror #-fsanitize=address
 INCLUDE = -I .
 MAKE = make -C
 LIBRARIES = lib

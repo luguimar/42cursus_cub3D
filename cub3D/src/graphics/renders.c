@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 01:02:23 by luguimar          #+#    #+#             */
-/*   Updated: 2024/08/14 07:04:14 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/08/14 23:15:15 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,22 +22,22 @@ int	get_color(t_gs *game, double x, double y, double z, int orientation)
 	if (orientation == 0)
 	{
 		decimal = modf(x, &integer);
-		color = game->graphics.no.addr[((int)(game->graphics.no.width * game->graphics.no.height * z) + (int)(game->graphics.no.width * decimal)) * 32 / 8];
+		color = game->graphics.no.addr[((int)(game->graphics.no.width * game->graphics.no.height * z) + (int)(game->graphics.no.width * decimal)) * game->graphics.no.bits_per_pixel / 8];
 	}
 	else if (orientation == 1)
 	{
 		decimal = modf(y, &integer);
-		color = game->graphics.so.addr[((int)(game->graphics.so.width * game->graphics.so.height * z) + (int)(game->graphics.so.width * (1 - decimal))) * 32 / 8];
+		color = game->graphics.so.addr[((int)(game->graphics.so.width * game->graphics.so.height * z) + (int)(game->graphics.so.width * (1 - decimal))) * game->graphics.so.bits_per_pixel / 8];
 	}
 	else if (orientation == 2)
 	{
 		decimal = modf(y, &integer);
-		color = game->graphics.we.addr[((int)(game->graphics.we.width * game->graphics.we.height * z) + (int)(game->graphics.we.width * (1 - decimal))) * 32 / 8];
+		color = game->graphics.we.addr[((int)(game->graphics.we.width * game->graphics.we.height * z) + (int)(game->graphics.we.width * (1 - decimal))) * game->graphics.we.bits_per_pixel / 8];
 	}
 	else if (orientation == 3)
 	{
 		decimal = modf(x, &integer);
-		color = game->graphics.ea.addr[((int)(game->graphics.ea.width * game->graphics.ea.height * z) + (int)(game->graphics.ea.width * decimal)) * 32 / 8];
+		color = game->graphics.ea.addr[((int)(game->graphics.ea.width * game->graphics.ea.height * z) + (int)(game->graphics.ea.width * decimal)) * game->graphics.ea.bits_per_pixel / 8];
 	}
 	else
 	{
