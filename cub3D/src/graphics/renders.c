@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 01:02:23 by luguimar          #+#    #+#             */
-/*   Updated: 2024/08/14 23:15:15 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/08/15 04:59:46 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,27 +21,27 @@ int	get_color(t_gs *game, double x, double y, double z, int orientation)
 	(void)z;
 	if (orientation == 0)
 	{
-		decimal = modf(x, &integer);
-		color = game->graphics.no.addr[((int)(game->graphics.no.width * game->graphics.no.height * z) + (int)(game->graphics.no.width * decimal)) * game->graphics.no.bits_per_pixel / 8];
+		decimal = modf(y, &integer);
+		color = (*(int *)(game->graphics.no.addr + (game->graphics.no.width * ((int)(game->graphics.no.height * z)) + ((int)(game->graphics.no.width * decimal))) * game->graphics.no.bits_per_pixel / 8));
 	}
 	else if (orientation == 1)
 	{
 		decimal = modf(y, &integer);
-		color = game->graphics.so.addr[((int)(game->graphics.so.width * game->graphics.so.height * z) + (int)(game->graphics.so.width * (1 - decimal))) * game->graphics.so.bits_per_pixel / 8];
+		color = (*(int *)(game->graphics.so.addr + (game->graphics.so.width * ((int)(game->graphics.so.height * z)) + ((int)(game->graphics.so.width * (1 - decimal)))) * game->graphics.so.bits_per_pixel / 8));
 	}
 	else if (orientation == 2)
 	{
-		decimal = modf(y, &integer);
-		color = game->graphics.we.addr[((int)(game->graphics.we.width * game->graphics.we.height * z) + (int)(game->graphics.we.width * (1 - decimal))) * game->graphics.we.bits_per_pixel / 8];
+		decimal = modf(x, &integer);
+		color = (*(int *)(game->graphics.we.addr + (game->graphics.we.width * ((int)(game->graphics.we.height * z)) + ((int)(game->graphics.we.width * (1 - decimal)))) * game->graphics.we.bits_per_pixel / 8));
 	}
 	else if (orientation == 3)
 	{
 		decimal = modf(x, &integer);
-		color = game->graphics.ea.addr[((int)(game->graphics.ea.width * game->graphics.ea.height * z) + (int)(game->graphics.ea.width * decimal)) * game->graphics.ea.bits_per_pixel / 8];
+		color = (*(int *)(game->graphics.ea.addr + (game->graphics.ea.width * ((int)(game->graphics.ea.height * z)) + ((int)(game->graphics.ea.width * (1 - decimal)))) * game->graphics.ea.bits_per_pixel / 8));
 	}
 	else
 	{
-		color = 0x00FF00FF;
+		color = 0x00000000;
 	}
 	return (color);
 }
@@ -230,48 +230,47 @@ void	put_line(t_gs *game, double x, double y, double dir, int side, int i)
 	intercept_y = perp_slope * intercept_x + perp_oo;
 	dist2wall = sqrt(pow(intercept_x - x, 2) + pow(intercept_y - y, 2));
 	line_size = 1 / dist2wall * 600;
-	if (line_size > 600)
-		line_size = 600;
 	if (side == 0)
 	{
 		decimal = modf(x, &integer);
-		if (decimal < 0.0001 || decimal > 0.9999)
+		if (decimal == 0)
 			orientation = 1;
 		decimal = modf(y, &integer);
-		if (decimal < 0.0001 || decimal > 0.9999)
+		if (decimal == 0)
 			orientation = 3;
 	}
 	else if (side == 1)
 	{
 		decimal = modf(x, &integer);
-		if (decimal < 0.0001 || decimal > 0.9999)
+		if (decimal == 0)
 			orientation = 0;
 		decimal = modf(y, &integer);
-		if (decimal < 0.0001 || decimal > 0.9999)
+		if (decimal == 0)
 			orientation = 3;
 	}
 	else if (side == 2)
 	{
 		decimal = modf(x, &integer);
-		if (decimal < 0.0001 || decimal > 0.9999)
+		if (decimal == 0)
 			orientation = 0;
 		decimal = modf(y, &integer);
-		if (decimal < 0.0001 || decimal > 0.9999)
+		if (decimal == 0)
 			orientation = 2;
 	}
 	else if (side == 3)
 	{
 		decimal = modf(x, &integer);
-		if (decimal < 0.0001 || decimal > 0.9999)
+		if (decimal == 0)
 			orientation = 1;
 		decimal = modf(y, &integer);
-		if (decimal < 0.0001 || decimal > 0.9999)
+		if (decimal == 0)
 			orientation = 2;
 	}
 	j = 0;
 	while (j < line_size)
 	{
-		my_pixel_put(&game->graphics.img, i, j + 300 - line_size / 2, get_color(game, x, y, (double)j / (double)line_size, orientation));
+		if (line_size <= 600 || (line_size > 600 && (j > (line_size - 600) / 2) && j < line_size - (line_size - 600) / 2))
+			my_pixel_put(&game->graphics.img, i, j + 300 - line_size / 2, get_color(game, x, y, (double)j / (double)line_size, orientation));
 		j++;
 	}
 }
@@ -458,9 +457,9 @@ int	map_render(t_gs *game)
 		while (++j < 600)
 		{
 			if (j < 300)
-				my_pixel_put(&game->graphics.img, i, j, 0x00FF0000);
+				my_pixel_put(&game->graphics.img, i, j, rgbtohex(game->ceiling));
 			else
-				my_pixel_put(&game->graphics.img, i, j, 0x0000FF00);
+				my_pixel_put(&game->graphics.img, i, j, rgbtohex(game->floor));
 		}
 	}
 	return (1);

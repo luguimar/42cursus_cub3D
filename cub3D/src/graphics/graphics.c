@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 01:45:06 by luguimar          #+#    #+#             */
-/*   Updated: 2024/08/14 06:41:59 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/08/15 02:04:42 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,13 +68,13 @@ int	set_image(t_gs *game, char *path, int i)
 
 int	set_mlx_images(t_gs *game)
 {
-	if (set_image(game, "textures/NO.xpm", 0))
+	if (set_image(game, game->no_t, 0))
 		return (1);
-	if (set_image(game, "textures/SO.xpm", 1))
+	if (set_image(game, game->so_t, 1))
 		return (1);
-	if (set_image(game, "textures/EA.xpm", 2))
+	if (set_image(game, game->ea_t, 2))
 		return (1);
-	if (set_image(game, "textures/WE.xpm", 3))
+	if (set_image(game, game->we_t, 3))
 		return (1);
 	return (0);
 }

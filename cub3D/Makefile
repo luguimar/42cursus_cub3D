@@ -20,7 +20,7 @@ CC = cc -g
 MOVE = mv
 REMOVE = rm -f
 EXTRACT = tar -xvf
-DOWNLOAD = wget -O
+DOWNLOAD = wget -O3
 CFLAGS = -Wall -Wextra -Werror #-fsanitize=address
 INCLUDE = -I .
 MAKE = make -C

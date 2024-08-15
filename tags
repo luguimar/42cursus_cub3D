@@ -1,16 +1,56 @@
 !_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
-!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
-!_TAG_PROGRAM_NAME	Exuberant Ctags	//
-!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/luguimar/Documents/42cursus_cub3D/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+$(LIBFT)	cub3D/Makefile	/^$(LIBFT):$/;"	t
+$(LIBFT)	graphics/Makefile	/^$(LIBFT):$/;"	t
+$(MLX)	cub3D/Makefile	/^$(MLX): download-and-extract-mlx$/;"	t
+$(MLX)	graphics/Makefile	/^$(MLX): download-and-extract-mlx$/;"	t
+$(NAME)	cub3D/Makefile	/^$(NAME): $(MLX) ${OBJS} ${LIBFT}$/;"	t
+$(NAME)	cub3D/lib/mlx/Makefile.mk	/^$(NAME)	: $(OBJ)$/;"	t
+$(NAME)	cub3D/lib/mlx/test/Makefile.mk	/^$(NAME): $(OBJ)$/;"	t
+$(NAME)	graphics/Makefile	/^$(NAME): $(MLX) ${OBJS} ${LIBFT}$/;"	t
+$(NAME)	graphics/lib/libft/Makefile	/^$(NAME): ${OBJS}$/;"	t
+$(OBJ_DIR)/%.o	cub3D/lib/mlx/Makefile.mk	/^$(OBJ_DIR)\/%.o: %.c$/;"	t
+${NAME}	cub3D/lib/libft/Makefile	/^${NAME}:	${OBJS}$/;"	t
+.c.o	graphics/lib/libft/Makefile	/^.c.o:$/;"	t
+.o	cub3D/lib/libft/Makefile	/^.o:.c$/;"	t
+0	cub3D/.vscode/launch.json	/^                {$/;"	o	array:configurations.0.setupCommands
+0	cub3D/.vscode/launch.json	/^            "args": ["sad_face.cub"],$/;"	s	array:configurations.0.args
+0	cub3D/.vscode/launch.json	/^        {$/;"	o	array:configurations
+0	cub3D/.vscode/tasks.json	/^                "$gcc"$/;"	s	array:tasks.1.problemMatcher
+0	cub3D/.vscode/tasks.json	/^                "-fdiagnostics-color=always",$/;"	s	array:tasks.1.args
+0	cub3D/.vscode/tasks.json	/^        {$/;"	o	array:tasks
+1	cub3D/.vscode/tasks.json	/^                "-g",$/;"	s	array:tasks.1.args
+1	cub3D/.vscode/tasks.json	/^        {$/;"	o	array:tasks
+2	cub3D/.vscode/tasks.json	/^                "${file}",$/;"	s	array:tasks.1.args
+3	cub3D/.vscode/tasks.json	/^                "-o",$/;"	s	array:tasks.1.args
+4	cub3D/.vscode/tasks.json	/^                "${fileDirname}\/${fileBasenameNoExtension}"$/;"	s	array:tasks.1.args
+42cursus_cub3d	README.md	/^# 42cursus_cub3d$/;"	c
 A	cub3D/src/cub3d.h	/^	A = 97,$/;"	e	enum:e_key
 A	graphics/include/cub3d.h	/^	A = 97,$/;"	e	enum:e_key
-BONUS	graphics/lib/libft/Makefile	/^BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c ft_lstsize.c ft_lstlast.c$/;"	m
-BONUSFUNCTIONS	cub3D/lib/libft/Makefile	/^BONUSFUNCTIONS =	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c$/;"	m
+AUTHOR	cub3D/lib/mlx/man/man1/mlx.1	/^.SH AUTHOR$/;"	s	title:MiniLibX
+AUTHOR	cub3D/lib/mlx/man/man1/mlx_loop.1	/^.SH AUTHOR$/;"	s	title:MiniLibX
+AUTHOR	cub3D/lib/mlx/man/man1/mlx_new_image.1	/^.SH AUTHOR$/;"	s	title:MiniLibX
+AUTHOR	cub3D/lib/mlx/man/man1/mlx_new_window.1	/^.SH AUTHOR$/;"	s	title:MiniLibX
+AUTHOR	cub3D/lib/mlx/man/man1/mlx_pixel_put.1	/^.SH AUTHOR$/;"	s	title:MiniLibX
+AUTHOR	cub3D/lib/mlx/man/man3/mlx.3	/^.SH AUTHOR$/;"	s	title:MiniLibX
+AUTHOR	cub3D/lib/mlx/man/man3/mlx_loop.3	/^.SH AUTHOR$/;"	s	title:MiniLibX
+AUTHOR	cub3D/lib/mlx/man/man3/mlx_new_image.3	/^.SH AUTHOR$/;"	s	title:MiniLibX
+AUTHOR	cub3D/lib/mlx/man/man3/mlx_new_window.3	/^.SH AUTHOR$/;"	s	title:MiniLibX
+AUTHOR	cub3D/lib/mlx/man/man3/mlx_pixel_put.3	/^.SH AUTHOR$/;"	s	title:MiniLibX
+BONUS	graphics/lib/libft/Makefile	/^BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c/;"	m
+BONUSFUNCTIONS	cub3D/lib/libft/Makefile	/^BONUSFUNCTIONS =	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lst/;"	m
 BONUSOBJS	cub3D/lib/libft/Makefile	/^BONUSOBJS =	${BONUSFUNCTIONS:.c=.o}$/;"	m
-BUFFER_SIZE	cub3D/lib/libft/libft.h	25;"	d
-BUFFER_SIZE	graphics/lib/libft/libft.h	23;"	d
+BUFFER_SIZE	cub3D/lib/libft/libft.h	/^#  define BUFFER_SIZE /;"	d
+BUFFER_SIZE	graphics/lib/libft/libft.h	/^#  define BUFFER_SIZE /;"	d
 CC	cub3D/Makefile	/^CC = cc -g$/;"	m
 CC	cub3D/lib/libft/Makefile	/^CC =	cc -g$/;"	m
 CC	cub3D/lib/mlx/Makefile.mk	/^	CC = clang$/;"	m
@@ -25,31 +65,48 @@ CFLAGS	cub3D/lib/mlx/Makefile.mk	/^CFLAGS	= -O3 -I$(INC)$/;"	m
 CFLAGS	cub3D/lib/mlx/test/Makefile.mk	/^CFLAGS= -I$(INC) -O3 -I.. -g$/;"	m
 CFLAGS	graphics/Makefile	/^CFLAGS = -Wall -Wextra -Werror$/;"	m
 CFLAGS	graphics/lib/libft/Makefile	/^CFLAGS = -Wall -Wextra -Werror$/;"	m
-CUB3D_H	cub3D/src/cub3d.h	14;"	d
-CUB3D_H	graphics/include/cub3d.h	14;"	d
+COLOR	cub3D/lib/mlx/man/man1/mlx_pixel_put.1	/^.SH COLOR MANAGEMENT$/;"	s	title:MiniLibX
+COLOR	cub3D/lib/mlx/man/man3/mlx_pixel_put.3	/^.SH COLOR MANAGEMENT$/;"	s	title:MiniLibX
+CUB3D_H	cub3D/src/cub3d.h	/^# define CUB3D_H$/;"	d
+CUB3D_H	graphics/include/cub3d.h	/^# define CUB3D_H$/;"	d
 D	cub3D/src/cub3d.h	/^	D = 100,$/;"	e	enum:e_key
 D	graphics/include/cub3d.h	/^	D = 100,$/;"	e	enum:e_key
+DESCRIPTION	cub3D/lib/mlx/man/man1/mlx.1	/^.SH DESCRIPTION$/;"	s	title:MiniLibX
+DESCRIPTION	cub3D/lib/mlx/man/man1/mlx_loop.1	/^.SH DESCRIPTION$/;"	s	title:MiniLibX
+DESCRIPTION	cub3D/lib/mlx/man/man1/mlx_new_image.1	/^.SH DESCRIPTION$/;"	s	title:MiniLibX
+DESCRIPTION	cub3D/lib/mlx/man/man1/mlx_new_window.1	/^.SH DESCRIPTION$/;"	s	title:MiniLibX
+DESCRIPTION	cub3D/lib/mlx/man/man1/mlx_pixel_put.1	/^.SH DESCRIPTION$/;"	s	title:MiniLibX
+DESCRIPTION	cub3D/lib/mlx/man/man3/mlx.3	/^.SH DESCRIPTION$/;"	s	title:MiniLibX
+DESCRIPTION	cub3D/lib/mlx/man/man3/mlx_loop.3	/^.SH DESCRIPTION$/;"	s	title:MiniLibX
+DESCRIPTION	cub3D/lib/mlx/man/man3/mlx_new_image.3	/^.SH DESCRIPTION$/;"	s	title:MiniLibX
+DESCRIPTION	cub3D/lib/mlx/man/man3/mlx_new_window.3	/^.SH DESCRIPTION$/;"	s	title:MiniLibX
+DESCRIPTION	cub3D/lib/mlx/man/man3/mlx_pixel_put.3	/^.SH DESCRIPTION$/;"	s	title:MiniLibX
 DOWNLOAD	cub3D/Makefile	/^DOWNLOAD = wget -O$/;"	m
 DOWNLOAD	graphics/Makefile	/^DOWNLOAD = wget -O$/;"	m
-ENV_DISPLAY	cub3D/lib/mlx/mlx_int.h	43;"	d
-ERR_NO_TRUECOLOR	cub3D/lib/mlx/mlx_int.h	45;"	d
+ENV_DISPLAY	cub3D/lib/mlx/mlx_int.h	/^# define ENV_DISPLAY /;"	d
+EOF	cub3D/lib/mlx/configure	/^cat <<EOF$/;"	h
+ERR_NO_TRUECOLOR	cub3D/lib/mlx/mlx_int.h	/^# define ERR_NO_TRUECOLOR /;"	d
 ESC	cub3D/src/cub3d.h	/^	ESC = 65307,$/;"	e	enum:e_key
 ESC	graphics/include/cub3d.h	/^	ESC = 65307,$/;"	e	enum:e_key
-EXTRA	cub3D/lib/libft/Makefile	/^EXTRA = ft_printf.c ft_isu.c printfaux1.c printfaux2.c printfaux3.c get_next_line_utils.c ft_strstr.c get_next_line.c doublefree.c ft_atol.c ft_av.c$/;"	m
-EXTRA	graphics/lib/libft/Makefile	/^EXTRA = ft_putnbr_base_fd.c ft_printf.c get_next_line.c get_next_line_utils.c free_array_of_strings.c ft_splitquote.c quotes.c quotes_utils.c ft_matrixlen.c ft_abs_value.c ft_atol.c ft_strcmp.c int_size_utils.c ft_split_if_not_in_quote.c ft_isint.c free_array_of_ints.c ft_dup_array_of_strings.c ft_is_special_char.c ft_splitstr.c ft_lstswap.c ft_lstdup.c ft_isspace.c$/;"	m
+EXTRA	cub3D/lib/libft/Makefile	/^EXTRA = ft_printf.c ft_isu.c printfaux1.c printfaux2.c printfaux3.c get_next_line_utils.c ft_str/;"	m
+EXTRA	graphics/lib/libft/Makefile	/^EXTRA = ft_putnbr_base_fd.c ft_printf.c get_next_line.c get_next_line_utils.c free_array_of_stri/;"	m
 EXTRACT	cub3D/Makefile	/^EXTRACT = tar -xvf$/;"	m
 EXTRACT	graphics/Makefile	/^EXTRACT = tar -xvf$/;"	m
-FT_PRINTF_H	cub3D/lib/libft/ft_printf.h	14;"	d
+FT_PRINTF_H	cub3D/lib/libft/ft_printf.h	/^# define FT_PRINTF_H$/;"	d
+GOING	cub3D/lib/mlx/man/man1/mlx_loop.1	/^.SH GOING FURTHER WITH EVENTS$/;"	s	title:MiniLibX
+GOING	cub3D/lib/mlx/man/man3/mlx_loop.3	/^.SH GOING FURTHER WITH EVENTS$/;"	s	title:MiniLibX
 HEADER	cub3D/lib/libft/Makefile	/^HEADER =	libft.h$/;"	m
-IM1_SX	cub3D/lib/mlx/test/main.c	7;"	d	file:
-IM1_SY	cub3D/lib/mlx/test/main.c	8;"	d	file:
-IM3_SX	cub3D/lib/mlx/test/main.c	9;"	d	file:
-IM3_SY	cub3D/lib/mlx/test/main.c	10;"	d	file:
+IM1_SX	cub3D/lib/mlx/test/main.c	/^#define	IM1_SX	/;"	d	file:
+IM1_SY	cub3D/lib/mlx/test/main.c	/^#define	IM1_SY	/;"	d	file:
+IM3_SX	cub3D/lib/mlx/test/main.c	/^#define	IM3_SX	/;"	d	file:
+IM3_SY	cub3D/lib/mlx/test/main.c	/^#define	IM3_SY	/;"	d	file:
 INC	cub3D/lib/mlx/Makefile.mk	/^INC	=%%%%$/;"	m
 INC	cub3D/lib/mlx/test/Makefile.mk	/^INC=%%%%$/;"	m
 INCLIB	cub3D/lib/mlx/test/Makefile.mk	/^INCLIB=$(INC)\/..\/lib$/;"	m
 INCLUDE	cub3D/Makefile	/^INCLUDE = -I .$/;"	m
 INCLUDE	cub3D/lib/libft/Makefile	/^INCLUDE =	-I .$/;"	m
+INCLUDE	cub3D/lib/mlx/man/man1/mlx.1	/^.SH INCLUDE FILE$/;"	s	title:MiniLibX
+INCLUDE	cub3D/lib/mlx/man/man3/mlx.3	/^.SH INCLUDE FILE$/;"	s	title:MiniLibX
 INCLUDE	graphics/Makefile	/^INCLUDE = -I .$/;"	m
 INCLUDE	graphics/lib/libft/Makefile	/^INCLUDE = -I .$/;"	m
 LEFT	cub3D/src/cub3d.h	/^	LEFT = 65361,$/;"	e	enum:e_key
@@ -57,34 +114,59 @@ LEFT	graphics/include/cub3d.h	/^	LEFT = 65361,$/;"	e	enum:e_key
 LFLAGS	cub3D/lib/mlx/test/Makefile.mk	/^LFLAGS = -L.. -lmlx -L$(INCLIB) -lXext -lX11 -lm$/;"	m
 LIBFT	cub3D/Makefile	/^LIBFT = ${LIBFT_PATH}\/libft.a$/;"	m
 LIBFT	graphics/Makefile	/^LIBFT = ${LIBFT_PATH}\/libft.a$/;"	m
-LIBFT_H	cub3D/lib/libft/libft.h	14;"	d
-LIBFT_H	graphics/lib/libft/libft.h	14;"	d
+LIBFT_H	cub3D/lib/libft/libft.h	/^# define LIBFT_H$/;"	d
+LIBFT_H	graphics/lib/libft/libft.h	/^# define LIBFT_H$/;"	d
 LIBFT_PATH	cub3D/Makefile	/^LIBFT_PATH = lib\/libft$/;"	m
 LIBFT_PATH	graphics/Makefile	/^LIBFT_PATH = lib\/libft$/;"	m
 LIBRARIES	cub3D/Makefile	/^LIBRARIES = lib$/;"	m
 LIBRARIES	graphics/Makefile	/^LIBRARIES = lib$/;"	m
-LOCALHOST	cub3D/lib/mlx/mlx_int.h	44;"	d
+LIBRARY	cub3D/lib/mlx/man/man1/mlx.1	/^.SH LIBRARY FUNCTIONS$/;"	s	title:MiniLibX
+LIBRARY	cub3D/lib/mlx/man/man3/mlx.3	/^.SH LIBRARY FUNCTIONS$/;"	s	title:MiniLibX
+LINKING	cub3D/lib/mlx/man/man1/mlx.1	/^.SH LINKING MiniLibX$/;"	s	title:MiniLibX
+LINKING	cub3D/lib/mlx/man/man3/mlx.3	/^.SH LINKING MiniLibX$/;"	s	title:MiniLibX
+LOCALHOST	cub3D/lib/mlx/mlx_int.h	/^# define LOCALHOST /;"	d
 MAKE	cub3D/Makefile	/^MAKE = make -C$/;"	m
 MAKE	graphics/Makefile	/^MAKE = make -C$/;"	m
+MIMode	cub3D/.vscode/launch.json	/^            "MIMode": "gdb",$/;"	s	object:configurations.0
 MINILIBX_FILE	cub3D/Makefile	/^MINILIBX_FILE = minilibx-linux.tgz$/;"	m
 MINILIBX_FILE	graphics/Makefile	/^MINILIBX_FILE = minilibx-linux.tgz$/;"	m
 MINILIBX_URL	cub3D/Makefile	/^MINILIBX_URL = https:\/\/cdn.intra.42.fr\/document\/document\/25858\/minilibx-linux.tgz$/;"	m
 MINILIBX_URL	graphics/Makefile	/^MINILIBX_URL = https:\/\/cdn.intra.42.fr\/document\/document\/25858\/minilibx-linux.tgz$/;"	m
 MLX	cub3D/Makefile	/^MLX = -L ${MLX_PATH} -lmlx -Ilmlx -lXext -lX11 -lm$/;"	m
 MLX	graphics/Makefile	/^MLX = -L ${MLX_PATH} -lmlx -Ilmlx -lXext -lX11 -lm$/;"	m
-MLX_H	cub3D/lib/mlx/mlx.h	32;"	d
-MLX_INT_H	cub3D/lib/mlx/mlx_int.h	19;"	d
-MLX_MAX_EVENT	cub3D/lib/mlx/mlx_int.h	40;"	d
+MLX_H	cub3D/lib/mlx/mlx.h	/^#define	MLX_H$/;"	d
+MLX_INT_H	cub3D/lib/mlx/mlx_int.h	/^# define MLX_INT_H$/;"	d
+MLX_MAX_EVENT	cub3D/lib/mlx/mlx_int.h	/^# define MLX_MAX_EVENT /;"	d
 MLX_PATH	cub3D/Makefile	/^MLX_PATH = lib\/mlx$/;"	m
 MLX_PATH	graphics/Makefile	/^MLX_PATH = lib\/mlx$/;"	m
-MLX_TYPE_SHM	cub3D/lib/mlx/mlx_int.h	37;"	d
-MLX_TYPE_SHM_PIXMAP	cub3D/lib/mlx/mlx_int.h	36;"	d
-MLX_TYPE_XIMAGE	cub3D/lib/mlx/mlx_int.h	38;"	d
+MLX_TYPE_SHM	cub3D/lib/mlx/mlx_int.h	/^# define MLX_TYPE_SHM /;"	d
+MLX_TYPE_SHM_PIXMAP	cub3D/lib/mlx/mlx_int.h	/^# define MLX_TYPE_SHM_PIXMAP /;"	d
+MLX_TYPE_XIMAGE	cub3D/lib/mlx/mlx_int.h	/^# define MLX_TYPE_XIMAGE /;"	d
 MOVE	cub3D/Makefile	/^MOVE = mv$/;"	m
 MOVE	graphics/Makefile	/^MOVE = mv$/;"	m
+MiniLibX	cub3D/lib/mlx/man/man1/mlx.1	/^.TH MiniLibX 3 "September 19, 2002"$/;"	t
+MiniLibX	cub3D/lib/mlx/man/man1/mlx_loop.1	/^.TH MiniLibX 3 "September 19, 2002"$/;"	t
+MiniLibX	cub3D/lib/mlx/man/man1/mlx_new_image.1	/^.TH MiniLibX 3 "September 19, 2002"$/;"	t
+MiniLibX	cub3D/lib/mlx/man/man1/mlx_new_window.1	/^.TH MiniLibX 3 "September 19, 2002"$/;"	t
+MiniLibX	cub3D/lib/mlx/man/man1/mlx_pixel_put.1	/^.TH MiniLibX 3 "September 19, 2002"$/;"	t
+MiniLibX	cub3D/lib/mlx/man/man3/mlx.3	/^.TH MiniLibX 3 "September 19, 2002"$/;"	t
+MiniLibX	cub3D/lib/mlx/man/man3/mlx_loop.3	/^.TH MiniLibX 3 "September 19, 2002"$/;"	t
+MiniLibX	cub3D/lib/mlx/man/man3/mlx_new_image.3	/^.TH MiniLibX 3 "September 19, 2002"$/;"	t
+MiniLibX	cub3D/lib/mlx/man/man3/mlx_new_window.3	/^.TH MiniLibX 3 "September 19, 2002"$/;"	t
+MiniLibX	cub3D/lib/mlx/man/man3/mlx_pixel_put.3	/^.TH MiniLibX 3 "September 19, 2002"$/;"	t
 NAME	cub3D/Makefile	/^NAME = cub3D$/;"	m
 NAME	cub3D/lib/libft/Makefile	/^NAME =	libft.a$/;"	m
 NAME	cub3D/lib/mlx/Makefile.mk	/^NAME		= libmlx.a$/;"	m
+NAME	cub3D/lib/mlx/man/man1/mlx.1	/^.SH NAME$/;"	s	title:MiniLibX
+NAME	cub3D/lib/mlx/man/man1/mlx_loop.1	/^.SH NAME$/;"	s	title:MiniLibX
+NAME	cub3D/lib/mlx/man/man1/mlx_new_image.1	/^.SH NAME$/;"	s	title:MiniLibX
+NAME	cub3D/lib/mlx/man/man1/mlx_new_window.1	/^.SH NAME$/;"	s	title:MiniLibX
+NAME	cub3D/lib/mlx/man/man1/mlx_pixel_put.1	/^.SH NAME$/;"	s	title:MiniLibX
+NAME	cub3D/lib/mlx/man/man3/mlx.3	/^.SH NAME$/;"	s	title:MiniLibX
+NAME	cub3D/lib/mlx/man/man3/mlx_loop.3	/^.SH NAME$/;"	s	title:MiniLibX
+NAME	cub3D/lib/mlx/man/man3/mlx_new_image.3	/^.SH NAME$/;"	s	title:MiniLibX
+NAME	cub3D/lib/mlx/man/man3/mlx_new_window.3	/^.SH NAME$/;"	s	title:MiniLibX
+NAME	cub3D/lib/mlx/man/man3/mlx_pixel_put.3	/^.SH NAME$/;"	s	title:MiniLibX
 NAME	cub3D/lib/mlx/test/Makefile.mk	/^NAME= mlx-test$/;"	m
 NAME	graphics/Makefile	/^NAME = cub3D$/;"	m
 NAME	graphics/lib/libft/Makefile	/^NAME = libft.a$/;"	m
@@ -96,450 +178,542 @@ OBJS	cub3D/lib/libft/Makefile	/^OBJS =	${SRC:.c=.o}$/;"	m
 OBJS	graphics/Makefile	/^OBJS = ${SRC:.c=.o}$/;"	m
 OBJS	graphics/lib/libft/Makefile	/^OBJS = ${SRC:.c=.o}$/;"	m
 OBJ_DIR	cub3D/lib/mlx/Makefile.mk	/^OBJ_DIR = obj$/;"	m
-PART1	cub3D/lib/libft/Makefile	/^PART1 =	ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_memset.c ft_strlen.c ft_tolower.c ft_toupper.c ft_memcpy.c ft_memmove.c ft_memchr.c ft_memcmp.c ft_atoi.c ft_strchr.c ft_strdup.c ft_strlcat.c ft_strlcpy.c ft_strncmp.c ft_strnstr.c ft_strrchr.c$/;"	m
-PART1	graphics/lib/libft/Makefile	/^PART1 = ft_tolower.c ft_toupper.c ft_isprint.c ft_isascii.c ft_isalnum.c ft_isdigit.c ft_isalpha.c ft_atoi.c ft_strlen.c ft_strlcat.c ft_strncmp.c ft_strdup.c ft_calloc.c ft_memcpy.c ft_strchr.c ft_strrchr.c ft_strnstr.c ft_bzero.c ft_memchr.c ft_memcmp.c ft_memset.c ft_memmove.c ft_strlcpy.c$/;"	m
-PART2	cub3D/lib/libft/Makefile	/^PART2 =	ft_itoa.c ft_split.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c$/;"	m
-PART2	graphics/lib/libft/Makefile	/^PART2 = ft_itoa.c ft_strjoin.c ft_split.c ft_striteri.c ft_strmapi.c ft_substr.c ft_strtrim.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c$/;"	m
+PART1	cub3D/lib/libft/Makefile	/^PART1 =	ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c /;"	m
+PART1	graphics/lib/libft/Makefile	/^PART1 = ft_tolower.c ft_toupper.c ft_isprint.c ft_isascii.c ft_isalnum.c ft_isdigit.c ft_isalpha/;"	m
+PART2	cub3D/lib/libft/Makefile	/^PART2 =	ft_itoa.c ft_split.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_strmapi.c ft_striteri.c ft/;"	m
+PART2	graphics/lib/libft/Makefile	/^PART2 = ft_itoa.c ft_strjoin.c ft_split.c ft_striteri.c ft_strmapi.c ft_substr.c ft_strtrim.c ft/;"	m
 REMOVE	cub3D/Makefile	/^REMOVE = rm -f$/;"	m
 REMOVE	graphics/Makefile	/^REMOVE = rm -f$/;"	m
-RETURN	cub3D/lib/mlx/mlx_xpm.c	17;"	d	file:
+RETURN	cub3D/lib/mlx/man/man1/mlx.1	/^.SH RETURN VALUES$/;"	s	title:MiniLibX
+RETURN	cub3D/lib/mlx/man/man1/mlx_new_image.1	/^.SH RETURN VALUES$/;"	s	title:MiniLibX
+RETURN	cub3D/lib/mlx/man/man1/mlx_new_window.1	/^.SH RETURN VALUES$/;"	s	title:MiniLibX
+RETURN	cub3D/lib/mlx/man/man3/mlx.3	/^.SH RETURN VALUES$/;"	s	title:MiniLibX
+RETURN	cub3D/lib/mlx/man/man3/mlx_new_image.3	/^.SH RETURN VALUES$/;"	s	title:MiniLibX
+RETURN	cub3D/lib/mlx/man/man3/mlx_new_window.3	/^.SH RETURN VALUES$/;"	s	title:MiniLibX
+RETURN	cub3D/lib/mlx/mlx_xpm.c	/^#define	RETURN	/;"	d	file:
 RIGHT	cub3D/src/cub3d.h	/^	RIGHT = 65363,$/;"	e	enum:e_key
 RIGHT	graphics/include/cub3d.h	/^	RIGHT = 65363,$/;"	e	enum:e_key
 RM	cub3D/lib/libft/Makefile	/^RM =	rm -f$/;"	m
 RM	graphics/lib/libft/Makefile	/^RM = rm -f$/;"	m
 S	cub3D/src/cub3d.h	/^	S = 115,$/;"	e	enum:e_key
 S	graphics/include/cub3d.h	/^	S = 115,$/;"	e	enum:e_key
-SRC	cub3D/Makefile	/^SRC = src\/parser\/main.c src\/parser\/parse.c src\/parser\/checker.c src\/parser\/map_parse.c src\/parser\/parse_utils.c src\/graphics\/graphics.c src\/graphics\/moves.c src\/graphics\/positions.c src\/graphics\/renders.c$/;"	m
+SEE	cub3D/lib/mlx/man/man1/mlx.1	/^.SH SEE ALSO$/;"	s	title:MiniLibX
+SEE	cub3D/lib/mlx/man/man1/mlx_loop.1	/^.SH SEE ALSO$/;"	s	title:MiniLibX
+SEE	cub3D/lib/mlx/man/man1/mlx_new_image.1	/^.SH SEE ALSO$/;"	s	title:MiniLibX
+SEE	cub3D/lib/mlx/man/man1/mlx_new_window.1	/^.SH SEE ALSO$/;"	s	title:MiniLibX
+SEE	cub3D/lib/mlx/man/man1/mlx_pixel_put.1	/^.SH SEE ALSO$/;"	s	title:MiniLibX
+SEE	cub3D/lib/mlx/man/man3/mlx.3	/^.SH SEE ALSO$/;"	s	title:MiniLibX
+SEE	cub3D/lib/mlx/man/man3/mlx_loop.3	/^.SH SEE ALSO$/;"	s	title:MiniLibX
+SEE	cub3D/lib/mlx/man/man3/mlx_new_image.3	/^.SH SEE ALSO$/;"	s	title:MiniLibX
+SEE	cub3D/lib/mlx/man/man3/mlx_new_window.3	/^.SH SEE ALSO$/;"	s	title:MiniLibX
+SEE	cub3D/lib/mlx/man/man3/mlx_pixel_put.3	/^.SH SEE ALSO$/;"	s	title:MiniLibX
+SRC	cub3D/Makefile	/^SRC = src\/parser\/main.c src\/parser\/parse.c src\/parser\/checker.c src\/parser\/map_parse.c s/;"	m
 SRC	cub3D/lib/libft/Makefile	/^SRC =	${PART1} ${PART2} $(EXTRA)$/;"	m
 SRC	cub3D/lib/mlx/Makefile.mk	/^SRC	= mlx_init.c mlx_new_window.c mlx_pixel_put.c mlx_loop.c \\$/;"	m
 SRC	cub3D/lib/mlx/test/Makefile.mk	/^SRC = main.c$/;"	m
 SRC	graphics/Makefile	/^SRC = src\/main.c src\/moves.c src\/renders.c src\/positions.c$/;"	m
 SRC	graphics/lib/libft/Makefile	/^SRC = ${PART1} ${PART2} ${BONUS} ${EXTRA}$/;"	m
+STORING	cub3D/lib/mlx/man/man1/mlx_new_image.1	/^.SH STORING COLOR INSIDE IMAGES$/;"	s	title:MiniLibX
+STORING	cub3D/lib/mlx/man/man3/mlx_new_image.3	/^.SH STORING COLOR INSIDE IMAGES$/;"	s	title:MiniLibX
+SYNOPSYS	cub3D/lib/mlx/man/man1/mlx.1	/^.SH SYNOPSYS$/;"	s	title:MiniLibX
+SYNOPSYS	cub3D/lib/mlx/man/man1/mlx_loop.1	/^.SH SYNOPSYS$/;"	s	title:MiniLibX
+SYNOPSYS	cub3D/lib/mlx/man/man1/mlx_new_image.1	/^.SH SYNOPSYS$/;"	s	title:MiniLibX
+SYNOPSYS	cub3D/lib/mlx/man/man1/mlx_new_window.1	/^.SH SYNOPSYS$/;"	s	title:MiniLibX
+SYNOPSYS	cub3D/lib/mlx/man/man1/mlx_pixel_put.1	/^.SH SYNOPSYS$/;"	s	title:MiniLibX
+SYNOPSYS	cub3D/lib/mlx/man/man3/mlx.3	/^.SH SYNOPSYS$/;"	s	title:MiniLibX
+SYNOPSYS	cub3D/lib/mlx/man/man3/mlx_loop.3	/^.SH SYNOPSYS$/;"	s	title:MiniLibX
+SYNOPSYS	cub3D/lib/mlx/man/man3/mlx_new_image.3	/^.SH SYNOPSYS$/;"	s	title:MiniLibX
+SYNOPSYS	cub3D/lib/mlx/man/man3/mlx_new_window.3	/^.SH SYNOPSYS$/;"	s	title:MiniLibX
+SYNOPSYS	cub3D/lib/mlx/man/man3/mlx_pixel_put.3	/^.SH SYNOPSYS$/;"	s	title:MiniLibX
 UNAME	cub3D/lib/mlx/Makefile.mk	/^UNAME = $(shell uname)$/;"	m
 UNAME	cub3D/lib/mlx/test/Makefile.mk	/^UNAME := $(shell uname)$/;"	m
 W	cub3D/src/cub3d.h	/^	W = 119,$/;"	e	enum:e_key
 W	graphics/include/cub3d.h	/^	W = 119,$/;"	e	enum:e_key
-WARN_SHM_ATTACH	cub3D/lib/mlx/mlx_int.h	46;"	d
-WIN1_SX	cub3D/lib/mlx/test/main.c	5;"	d	file:
-WIN1_SY	cub3D/lib/mlx/test/main.c	6;"	d	file:
-X_ShmAttach	cub3D/lib/mlx/mlx_new_image.c	20;"	d	file:
-addr	cub3D/src/cub3d.h	/^	char	*addr;$/;"	m	struct:s_img
-addr	graphics/include/cub3d.h	/^	char	*addr;$/;"	m	struct:s_img
-algcount	cub3D/lib/libft/ft_isu.c	/^static int	algcount(unsigned int x)$/;"	f	file:
-algcount	cub3D/lib/libft/ft_itoa.c	/^static int	algcount(long int n, int isnega)$/;"	f	file:
-algcount	cub3D/lib/libft/ft_putnbr_fd.c	/^static int	algcount(int n)$/;"	f	file:
-algcount	cub3D/lib/libft/printfaux2.c	/^static int	algcount(unsigned int n)$/;"	f	file:
-algcount	cub3D/lib/libft/printfaux3.c	/^static int	algcount(unsigned long long n)$/;"	f	file:
-algcounter	graphics/lib/libft/ft_itoa.c	/^int	algcounter(int n)$/;"	f
+WARN_SHM_ATTACH	cub3D/lib/mlx/mlx_int.h	/^# define WARN_SHM_ATTACH /;"	d
+WIN1_SX	cub3D/lib/mlx/test/main.c	/^#define	WIN1_SX	/;"	d	file:
+WIN1_SY	cub3D/lib/mlx/test/main.c	/^#define	WIN1_SY	/;"	d	file:
+X-WINDOW	cub3D/lib/mlx/man/man1/mlx.1	/^.SH X-WINDOW CONCEPT$/;"	s	title:MiniLibX
+X-WINDOW	cub3D/lib/mlx/man/man1/mlx_loop.1	/^.SH X-WINDOW EVENTS$/;"	s	title:MiniLibX
+X-WINDOW	cub3D/lib/mlx/man/man3/mlx.3	/^.SH X-WINDOW CONCEPT$/;"	s	title:MiniLibX
+X-WINDOW	cub3D/lib/mlx/man/man3/mlx_loop.3	/^.SH X-WINDOW EVENTS$/;"	s	title:MiniLibX
+XPM	cub3D/lib/mlx/man/man1/mlx_new_image.1	/^.SH XPM IMAGES$/;"	s	title:MiniLibX
+XPM	cub3D/lib/mlx/man/man3/mlx_new_image.3	/^.SH XPM IMAGES$/;"	s	title:MiniLibX
+X_ShmAttach	cub3D/lib/mlx/mlx_new_image.c	/^#define	X_ShmAttach	/;"	d	file:
+addr	cub3D/src/cub3d.h	/^	char	*addr;$/;"	m	struct:s_img	typeref:typename:char *
+addr	graphics/include/cub3d.h	/^	char	*addr;$/;"	m	struct:s_img	typeref:typename:char *
+algcount	cub3D/lib/libft/ft_isu.c	/^static int	algcount(unsigned int x)$/;"	f	typeref:typename:int	file:
+algcount	cub3D/lib/libft/ft_itoa.c	/^static int	algcount(long int n, int isnega)$/;"	f	typeref:typename:int	file:
+algcount	cub3D/lib/libft/ft_putnbr_fd.c	/^static int	algcount(int n)$/;"	f	typeref:typename:int	file:
+algcount	cub3D/lib/libft/printfaux2.c	/^static int	algcount(unsigned int n)$/;"	f	typeref:typename:int	file:
+algcount	cub3D/lib/libft/printfaux3.c	/^static int	algcount(unsigned long long n)$/;"	f	typeref:typename:int	file:
+algcounter	graphics/lib/libft/ft_itoa.c	/^int	algcounter(int n)$/;"	f	typeref:typename:int
+all	cub3D/Makefile	/^all: ${NAME}$/;"	t
+all	cub3D/lib/libft/Makefile	/^all:	${NAME}$/;"	t
+all	cub3D/lib/mlx/Makefile	/^all	: do_configure$/;"	t
+all	cub3D/lib/mlx/Makefile.mk	/^all	: $(NAME)$/;"	t
+all	cub3D/lib/mlx/test/Makefile.mk	/^all: $(NAME)$/;"	t
+all	graphics/Makefile	/^all: ${NAME}$/;"	t
+all	graphics/lib/libft/Makefile	/^all:	${NAME}$/;"	t
+args	cub3D/.vscode/launch.json	/^            "args": ["sad_face.cub"],$/;"	a	object:configurations.0
+args	cub3D/.vscode/tasks.json	/^            "args": [$/;"	a	object:tasks.1
 at_exit	cub3D/lib/mlx/test/run_tests.sh	/^at_exit() {$/;"	f
-bigger	graphics/lib/libft/int_size_utils.c	/^int	bigger(int a, int b)$/;"	f
-bits_per_pixel	cub3D/src/cub3d.h	/^	int		bits_per_pixel;$/;"	m	struct:s_img
-bits_per_pixel	graphics/include/cub3d.h	/^	int		bits_per_pixel;$/;"	m	struct:s_img
-bpp	cub3D/lib/mlx/mlx_int.h	/^	int				bpp;$/;"	m	struct:s_img
-bpp1	cub3D/lib/mlx/test/main.c	/^int	bpp1;$/;"	v
-bpp2	cub3D/lib/mlx/test/main.c	/^int	bpp2;$/;"	v
-bpp3	cub3D/lib/mlx/test/main.c	/^int	bpp3;$/;"	v
-bpp4	cub3D/lib/mlx/test/main.c	/^int	bpp4;$/;"	v
-caphex	cub3D/lib/libft/printfaux2.c	/^int	caphex(unsigned int n)$/;"	f
-ceiling	cub3D/src/cub3d.h	/^	int			ceiling[3];$/;"	m	struct:s_gs
-ceiling	cub3D/src/cub3d.h	/^	int		ceiling[3];$/;"	m	struct:s_graphics
-ceiling	graphics/include/cub3d.h	/^	int		ceiling[3];$/;"	m	struct:s_graphics
-check_extension	graphics/src/main.c	/^static int	check_extension(char *str, char *ext)$/;"	f	file:
-check_format	cub3D/src/parser/parse.c	/^static int	check_format(char *line, t_gs *gs)$/;"	f	file:
-check_info	cub3D/src/parser/parse_utils.c	/^int	check_info(t_gs *gs)$/;"	f
-check_map	graphics/src/main.c	/^int	check_map(char *file, t_game *game)$/;"	f
-checkend	cub3D/lib/libft/ft_strtrim.c	/^int	checkend(char *str, char *set)$/;"	f
-checker	cub3D/src/parser/checker.c	/^int	checker(t_gs *gs)$/;"	f
-checkstart	cub3D/lib/libft/ft_strtrim.c	/^int	checkstart(char *str, char *set)$/;"	f
-checktype	cub3D/lib/libft/ft_printf.c	/^int	checktype(int i, va_list args)$/;"	f
-checktype	graphics/lib/libft/ft_printf.c	/^int	checktype(int ch, va_list args)$/;"	f
-checkvalues	cub3D/src/parser/parse.c	/^static int	checkvalues(char **s, t_gs *gs, char c)$/;"	f	file:
+bigger	graphics/lib/libft/int_size_utils.c	/^int	bigger(int a, int b)$/;"	f	typeref:typename:int
+bits_per_pixel	cub3D/src/cub3d.h	/^	int		bits_per_pixel;$/;"	m	struct:s_img	typeref:typename:int
+bits_per_pixel	graphics/include/cub3d.h	/^	int		bits_per_pixel;$/;"	m	struct:s_img	typeref:typename:int
+bonus	cub3D/lib/libft/Makefile	/^bonus:	$(BONUSOBJS) $(OBJS)$/;"	t
+bpp	cub3D/lib/mlx/mlx_int.h	/^	int				bpp;$/;"	m	struct:s_img	typeref:typename:int
+bpp1	cub3D/lib/mlx/test/main.c	/^int	bpp1;$/;"	v	typeref:typename:int
+bpp2	cub3D/lib/mlx/test/main.c	/^int	bpp2;$/;"	v	typeref:typename:int
+bpp3	cub3D/lib/mlx/test/main.c	/^int	bpp3;$/;"	v	typeref:typename:int
+bpp4	cub3D/lib/mlx/test/main.c	/^int	bpp4;$/;"	v	typeref:typename:int
+caphex	cub3D/lib/libft/printfaux2.c	/^int	caphex(unsigned int n)$/;"	f	typeref:typename:int
+ceiling	cub3D/src/cub3d.h	/^	int			ceiling[3];$/;"	m	struct:s_gs	typeref:typename:int[3]
+ceiling	cub3D/src/cub3d.h	/^	int		ceiling[3];$/;"	m	struct:s_graphics	typeref:typename:int[3]
+ceiling	graphics/include/cub3d.h	/^	int		ceiling[3];$/;"	m	struct:s_graphics	typeref:typename:int[3]
+check	cub3D/lib/mlx/Makefile.mk	/^check: all$/;"	t
+check_extension	graphics/src/main.c	/^static int	check_extension(char *str, char *ext)$/;"	f	typeref:typename:int	file:
+check_format	cub3D/src/parser/parse.c	/^static int	check_format(char *line, t_gs *gs)$/;"	f	typeref:typename:int	file:
+check_info	cub3D/src/parser/parse_utils.c	/^int	check_info(t_gs *gs)$/;"	f	typeref:typename:int
+check_map	graphics/src/main.c	/^int	check_map(char *file, t_game *game)$/;"	f	typeref:typename:int
+checkend	cub3D/lib/libft/ft_strtrim.c	/^int	checkend(char *str, char *set)$/;"	f	typeref:typename:int
+checker	cub3D/src/parser/checker.c	/^int	checker(t_gs *gs)$/;"	f	typeref:typename:int
+checkstart	cub3D/lib/libft/ft_strtrim.c	/^int	checkstart(char *str, char *set)$/;"	f	typeref:typename:int
+checktype	cub3D/lib/libft/ft_printf.c	/^int	checktype(int i, va_list args)$/;"	f	typeref:typename:int
+checktype	graphics/lib/libft/ft_printf.c	/^int	checktype(int ch, va_list args)$/;"	f	typeref:typename:int
+checkvalues	cub3D/src/parser/parse.c	/^static int	checkvalues(char **s, t_gs *gs, char c)$/;"	f	typeref:typename:int	file:
+clean	cub3D/Makefile	/^clean:$/;"	t
+clean	cub3D/lib/libft/Makefile	/^clean:$/;"	t
+clean	cub3D/lib/mlx/Makefile	/^clean	:$/;"	t
+clean	cub3D/lib/mlx/Makefile.mk	/^clean	:$/;"	t
 clean	cub3D/lib/mlx/configure	/^clean(){$/;"	f
-clean_stash	cub3D/lib/libft/get_next_line.c	/^static char	*clean_stash(char *stash)$/;"	f	file:
-clean_stash	graphics/lib/libft/get_next_line.c	/^static char	*clean_stash(char *stash)$/;"	f	file:
-cmap	cub3D/lib/mlx/mlx_int.h	/^	Colormap	cmap;$/;"	m	struct:s_xvar
-col	cub3D/lib/mlx/mlx_int.h	/^	int		col;$/;"	m	struct:s_xpm_col
-color	cub3D/lib/mlx/mlx_int.h	/^	int		color;$/;"	m	struct:s_col_name
-color_map_1	cub3D/lib/mlx/test/main.c	/^int	color_map_1(void *win,int w,int h)$/;"	f
-color_map_2	cub3D/lib/mlx/test/main.c	/^int	color_map_2(unsigned char *data,int bpp,int sl,int w,int h,int endian, int type)$/;"	f
-content	cub3D/lib/libft/libft.h	/^	void			*content;$/;"	m	struct:s_list
-content	graphics/lib/libft/libft.h	/^	void			*content;$/;"	m	struct:s_list
-convert	cub3D/lib/libft/ft_itoa.c	/^void	convert(char *str, long int n, int isnega)$/;"	f
-copyconvert	cub3D/src/parser/parse_utils.c	/^int	copyconvert(char **s, int *a)$/;"	f
-cube_render	cub3D/src/graphics/renders.c	/^void	cube_render(t_gs *game)$/;"	f
-cube_render	graphics/src/renders.c	/^void	cube_render(t_game *game)$/;"	f
-data	cub3D/lib/mlx/mlx_int.h	/^	char			*data;$/;"	m	struct:s_img
-data1	cub3D/lib/mlx/test/main.c	/^char	*data1;$/;"	v
-data2	cub3D/lib/mlx/test/main.c	/^char	*data2;$/;"	v
-data3	cub3D/lib/mlx/test/main.c	/^char	*data3;$/;"	v
-data4	cub3D/lib/mlx/test/main.c	/^char	*data4;$/;"	v
-decrgb	cub3D/lib/mlx/mlx_int.h	/^	int			decrgb[6];$/;"	m	struct:s_xvar
-deinitialize	cub3D/src/parser/main.c	/^static void	deinitialize(t_gs *gs)$/;"	f	file:
-depth	cub3D/lib/mlx/mlx_int.h	/^	int			depth;$/;"	m	struct:s_xvar
-dir	cub3D/src/cub3d.h	/^	double	dir;$/;"	m	struct:s_player
-dir	graphics/include/cub3d.h	/^	double	dir;$/;"	m	struct:s_player
-display	cub3D/lib/mlx/mlx_int.h	/^	Display		*display;$/;"	m	struct:s_xvar
-do_flush	cub3D/lib/mlx/mlx_int.h	/^	int			do_flush;$/;"	m	struct:s_xvar
-doublefree	cub3D/lib/libft/doublefree.c	/^void	doublefree(char **str)$/;"	f
+clean	cub3D/lib/mlx/test/Makefile.mk	/^clean:$/;"	t
+clean	graphics/Makefile	/^clean:$/;"	t
+clean	graphics/lib/libft/Makefile	/^clean:$/;"	t
+clean_stash	cub3D/lib/libft/get_next_line.c	/^static char	*clean_stash(char *stash)$/;"	f	typeref:typename:char *	file:
+clean_stash	graphics/lib/libft/get_next_line.c	/^static char	*clean_stash(char *stash)$/;"	f	typeref:typename:char *	file:
+cmap	cub3D/lib/mlx/mlx_int.h	/^	Colormap	cmap;$/;"	m	struct:s_xvar	typeref:typename:Colormap
+col	cub3D/lib/mlx/mlx_int.h	/^	int		col;$/;"	m	struct:s_xpm_col	typeref:typename:int
+color	cub3D/lib/mlx/mlx_int.h	/^	int		color;$/;"	m	struct:s_col_name	typeref:typename:int
+color_map_1	cub3D/lib/mlx/test/main.c	/^int	color_map_1(void *win,int w,int h)$/;"	f	typeref:typename:int
+color_map_2	cub3D/lib/mlx/test/main.c	/^int	color_map_2(unsigned char *data,int bpp,int sl,int w,int h,int endian, int type)$/;"	f	typeref:typename:int
+command	cub3D/.vscode/tasks.json	/^            "command": "\/usr\/bin\/gcc",$/;"	s	object:tasks.1
+command	cub3D/.vscode/tasks.json	/^            "command": "make re",$/;"	s	object:tasks.0
+configurations	cub3D/.vscode/launch.json	/^    "configurations": [$/;"	a
+content	cub3D/lib/libft/libft.h	/^	void			*content;$/;"	m	struct:s_list	typeref:typename:void *
+content	graphics/lib/libft/libft.h	/^	void			*content;$/;"	m	struct:s_list	typeref:typename:void *
+convert	cub3D/lib/libft/ft_itoa.c	/^void	convert(char *str, long int n, int isnega)$/;"	f	typeref:typename:void
+copyconvert	cub3D/src/parser/parse_utils.c	/^int	copyconvert(char **s, int *a)$/;"	f	typeref:typename:int
+cube_render	cub3D/src/graphics/renders.c	/^void	cube_render(t_gs *game)$/;"	f	typeref:typename:void
+cube_render	graphics/src/renders.c	/^void	cube_render(t_game *game)$/;"	f	typeref:typename:void
+cwd	cub3D/.vscode/launch.json	/^            "cwd": "${workspaceFolder}",$/;"	s	object:configurations.0
+cwd	cub3D/.vscode/tasks.json	/^                "cwd": "${fileDirname}"$/;"	s	object:tasks.1.options
+data	cub3D/lib/mlx/mlx_int.h	/^	char			*data;$/;"	m	struct:s_img	typeref:typename:char *
+data1	cub3D/lib/mlx/test/main.c	/^char	*data1;$/;"	v	typeref:typename:char *
+data2	cub3D/lib/mlx/test/main.c	/^char	*data2;$/;"	v	typeref:typename:char *
+data3	cub3D/lib/mlx/test/main.c	/^char	*data3;$/;"	v	typeref:typename:char *
+data4	cub3D/lib/mlx/test/main.c	/^char	*data4;$/;"	v	typeref:typename:char *
+decrgb	cub3D/lib/mlx/mlx_int.h	/^	int			decrgb[6];$/;"	m	struct:s_xvar	typeref:typename:int[6]
+deinitialize	cub3D/src/parser/main.c	/^static void	deinitialize(t_gs *gs)$/;"	f	typeref:typename:void	file:
+depth	cub3D/lib/mlx/mlx_int.h	/^	int			depth;$/;"	m	struct:s_xvar	typeref:typename:int
+description	cub3D/.vscode/launch.json	/^                    "description": "Enable pretty-printing for gdb",$/;"	s	object:configurations.0.setupCommands.0
+detail	cub3D/.vscode/tasks.json	/^            "detail": "Task generated by Debugger."$/;"	s	object:tasks.1
+dir	cub3D/src/cub3d.h	/^	double	dir;$/;"	m	struct:s_player	typeref:typename:double
+dir	graphics/include/cub3d.h	/^	double	dir;$/;"	m	struct:s_player	typeref:typename:double
+display	cub3D/lib/mlx/mlx_int.h	/^	Display		*display;$/;"	m	struct:s_xvar	typeref:typename:Display *
+do_configure	cub3D/lib/mlx/Makefile	/^do_configure	:$/;"	t
+do_flush	cub3D/lib/mlx/mlx_int.h	/^	int			do_flush;$/;"	m	struct:s_xvar	typeref:typename:int
+doublefree	cub3D/lib/libft/doublefree.c	/^void	doublefree(char **str)$/;"	f	typeref:typename:void
+download-and-extract-mlx	cub3D/Makefile	/^download-and-extract-mlx:$/;"	t
+download-and-extract-mlx	graphics/Makefile	/^download-and-extract-mlx:$/;"	t
 e_key	cub3D/src/cub3d.h	/^typedef enum e_key$/;"	g
 e_key	graphics/include/cub3d.h	/^typedef enum e_key$/;"	g
-ea	cub3D/src/cub3d.h	/^	t_img	ea;$/;"	m	struct:s_graphics
-ea_t	cub3D/src/cub3d.h	/^	char		*ea_t;$/;"	m	struct:s_gs
-ea_t	graphics/include/cub3d.h	/^	char	*ea_t;$/;"	m	struct:s_graphics
-end_loop	cub3D/lib/mlx/mlx_int.h	/^	int 		end_loop;$/;"	m	struct:s_xvar
-endian	cub3D/src/cub3d.h	/^	int		endian;$/;"	m	struct:s_img
-endian	graphics/include/cub3d.h	/^	int		endian;$/;"	m	struct:s_img
-endian1	cub3D/lib/mlx/test/main.c	/^int	endian1;$/;"	v
-endian2	cub3D/lib/mlx/test/main.c	/^int	endian2;$/;"	v
-endian3	cub3D/lib/mlx/test/main.c	/^int	endian3;$/;"	v
-endian4	cub3D/lib/mlx/test/main.c	/^int	endian4;$/;"	v
-error_msg	cub3D/src/graphics/graphics.c	/^int	error_msg(char *msg, int ret)$/;"	f
-error_msg	graphics/src/main.c	/^int	error_msg(char *msg, int ret)$/;"	f
-expose_hook	cub3D/lib/mlx/mlx_int.h	/^	int					(*expose_hook)();$/;"	m	struct:s_win_list
-expose_param	cub3D/lib/mlx/mlx_int.h	/^	void				*expose_param;$/;"	m	struct:s_win_list
-expose_win1	cub3D/lib/mlx/test/main.c	/^int	expose_win1(void *p)$/;"	f
-expose_win2	cub3D/lib/mlx/test/main.c	/^int	expose_win2(void *p)$/;"	f
-fillvec	cub3D/lib/libft/ft_split.c	/^void	fillvec(char *s, char **str, char c)$/;"	f
-flood_fill	cub3D/src/parser/checker.c	/^static int	flood_fill(t_gs *gs, int x, int y, char **map)$/;"	f	file:
-floor	cub3D/src/cub3d.h	/^	int			floor[3];$/;"	m	struct:s_gs
-floor	cub3D/src/cub3d.h	/^	int		floor[3];$/;"	m	struct:s_graphics
-floor	graphics/include/cub3d.h	/^	int		floor[3];$/;"	m	struct:s_graphics
-format	cub3D/lib/mlx/mlx_int.h	/^	int				format;$/;"	m	struct:s_img
-free_array_of_ints	graphics/lib/libft/free_array_of_ints.c	/^void	free_array_of_ints(int **array, int size)$/;"	f
-free_array_of_strings	graphics/lib/libft/free_array_of_strings.c	/^void	free_array_of_strings(char **str)$/;"	f
-ft_abs_value	graphics/lib/libft/ft_abs_value.c	/^int	ft_abs_value(int n)$/;"	f
-ft_atoi	cub3D/lib/libft/ft_atoi.c	/^int	ft_atoi(const char *nptr)$/;"	f
-ft_atoi	graphics/lib/libft/ft_atoi.c	/^int	ft_atoi(const char *nptr)$/;"	f
-ft_atol	cub3D/lib/libft/ft_atol.c	/^long	ft_atol(const char *str)$/;"	f
-ft_atol	graphics/lib/libft/ft_atol.c	/^long long	ft_atol(const char *nptr)$/;"	f
-ft_av	cub3D/lib/libft/ft_av.c	/^int	ft_av(int n)$/;"	f
-ft_bzero	cub3D/lib/libft/ft_bzero.c	/^void	ft_bzero(void *s, size_t n)$/;"	f
-ft_bzero	graphics/lib/libft/ft_bzero.c	/^void	ft_bzero(void *b, size_t len)$/;"	f
-ft_calloc	cub3D/lib/libft/ft_calloc.c	/^void	*ft_calloc(size_t nmemb, size_t size)$/;"	f
-ft_calloc	graphics/lib/libft/ft_calloc.c	/^void	*ft_calloc(size_t number, size_t size)$/;"	f
-ft_dup_array_of_strings	graphics/lib/libft/ft_dup_array_of_strings.c	/^char	**ft_dup_array_of_strings(char **array)$/;"	f
-ft_gnlstrjoin	cub3D/lib/libft/get_next_line_utils.c	/^char	*ft_gnlstrjoin(char *s1, char *s2)$/;"	f
-ft_is_special_char	graphics/lib/libft/ft_is_special_char.c	/^int	ft_is_special_char(char c)$/;"	f
-ft_isalnum	cub3D/lib/libft/ft_isalnum.c	/^int	ft_isalnum(int c)$/;"	f
-ft_isalnum	graphics/lib/libft/ft_isalnum.c	/^int	ft_isalnum(int c)$/;"	f
-ft_isalpha	cub3D/lib/libft/ft_isalpha.c	/^int	ft_isalpha(int c)$/;"	f
-ft_isalpha	graphics/lib/libft/ft_isalpha.c	/^int	ft_isalpha(int c)$/;"	f
-ft_isascii	cub3D/lib/libft/ft_isascii.c	/^int	ft_isascii(int c)$/;"	f
-ft_isascii	graphics/lib/libft/ft_isascii.c	/^int	ft_isascii(int c)$/;"	f
-ft_ischar	cub3D/lib/libft/printfaux1.c	/^int	ft_ischar(char c)$/;"	f
-ft_isdigit	cub3D/lib/libft/ft_isdigit.c	/^int	ft_isdigit(int c)$/;"	f
-ft_isdigit	graphics/lib/libft/ft_isdigit.c	/^int	ft_isdigit(int c)$/;"	f
-ft_isint	cub3D/lib/libft/printfaux1.c	/^int	ft_isint(int n)$/;"	f
-ft_isint	graphics/lib/libft/ft_isint.c	/^int	ft_isint(const char *str)$/;"	f
-ft_ispointer	cub3D/lib/libft/printfaux3.c	/^int	ft_ispointer(unsigned long long n)$/;"	f
-ft_isprint	cub3D/lib/libft/ft_isprint.c	/^int	ft_isprint(int c)$/;"	f
-ft_isprint	graphics/lib/libft/ft_isprint.c	/^int	ft_isprint(int c)$/;"	f
-ft_isspace	graphics/lib/libft/ft_isspace.c	/^int	ft_isspace(char c)$/;"	f
-ft_isstring	cub3D/lib/libft/printfaux1.c	/^int	ft_isstring(char *str)$/;"	f
-ft_isu	cub3D/lib/libft/ft_isu.c	/^int	ft_isu(unsigned int n)$/;"	f
-ft_itoa	cub3D/lib/libft/ft_itoa.c	/^char	*ft_itoa(int n)$/;"	f
-ft_itoa	graphics/lib/libft/ft_itoa.c	/^char	*ft_itoa(int n)$/;"	f
-ft_lstadd_back	cub3D/lib/libft/ft_lstadd_back.c	/^void	ft_lstadd_back(t_list **lst, t_list *new)$/;"	f
-ft_lstadd_back	graphics/lib/libft/ft_lstadd_back.c	/^void	ft_lstadd_back(t_list **lst, t_list *novel)$/;"	f
-ft_lstadd_front	cub3D/lib/libft/ft_lstadd_front.c	/^void	ft_lstadd_front(t_list **lst, t_list *new)$/;"	f
-ft_lstadd_front	graphics/lib/libft/ft_lstadd_front.c	/^void	ft_lstadd_front(t_list **lst, t_list *novel)$/;"	f
-ft_lstclear	cub3D/lib/libft/ft_lstclear.c	/^void	ft_lstclear(t_list **lst, void (*del)(void *))$/;"	f
-ft_lstclear	graphics/lib/libft/ft_lstclear.c	/^void	ft_lstclear(t_list **lst, void (*del)(void *))$/;"	f
-ft_lstdelone	cub3D/lib/libft/ft_lstdelone.c	/^void	ft_lstdelone(t_list *lst, void (*del)(void *))$/;"	f
-ft_lstdelone	graphics/lib/libft/ft_lstdelone.c	/^void	ft_lstdelone(t_list **head, t_list *lst, void (*del)(void *))$/;"	f
-ft_lstdup	graphics/lib/libft/ft_lstdup.c	/^t_list	*ft_lstdup(t_list *lst)$/;"	f
-ft_lstiter	cub3D/lib/libft/ft_lstiter.c	/^void	ft_lstiter(t_list *lst, void (*f)(void *))$/;"	f
-ft_lstiter	graphics/lib/libft/ft_lstiter.c	/^void	ft_lstiter(t_list *lst, void (*f)(void *))$/;"	f
-ft_lstlast	cub3D/lib/libft/ft_lstlast.c	/^t_list	*ft_lstlast(t_list *lst)$/;"	f
-ft_lstlast	graphics/lib/libft/ft_lstlast.c	/^t_list	*ft_lstlast(t_list *lst)$/;"	f
-ft_lstmap	cub3D/lib/libft/ft_lstmap.c	/^t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))$/;"	f
-ft_lstmap	graphics/lib/libft/ft_lstmap.c	/^t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))$/;"	f
-ft_lstnew	cub3D/lib/libft/ft_lstnew.c	/^t_list	*ft_lstnew(void *content)$/;"	f
-ft_lstnew	graphics/lib/libft/ft_lstnew.c	/^t_list	*ft_lstnew(void *content)$/;"	f
-ft_lstsize	cub3D/lib/libft/ft_lstsize.c	/^int	ft_lstsize(t_list *lst)$/;"	f
-ft_lstsize	graphics/lib/libft/ft_lstsize.c	/^int	ft_lstsize(t_list *lst)$/;"	f
-ft_lstswap	graphics/lib/libft/ft_lstswap.c	/^void	ft_lstswap(t_list *lst1, t_list *lst2)$/;"	f
-ft_matlen	cub3D/lib/libft/ft_strlen.c	/^size_t	ft_matlen(char **s)$/;"	f
-ft_matrixlen	graphics/lib/libft/ft_matrixlen.c	/^int	ft_matrixlen(void **matrix)$/;"	f
-ft_memchr	cub3D/lib/libft/ft_memchr.c	/^void	*ft_memchr(const void *s, int c, size_t n)$/;"	f
-ft_memchr	graphics/lib/libft/ft_memchr.c	/^void	*ft_memchr(const void *b, int c, size_t len)$/;"	f
-ft_memcmp	cub3D/lib/libft/ft_memcmp.c	/^int	ft_memcmp(const void *s1, const void *s2, size_t n)$/;"	f
-ft_memcmp	graphics/lib/libft/ft_memcmp.c	/^int	ft_memcmp(const void *b1, const void *b2, size_t len)$/;"	f
-ft_memcpy	cub3D/lib/libft/ft_memcpy.c	/^void	*ft_memcpy(void *dest, const void *src, size_t n)$/;"	f
-ft_memcpy	graphics/lib/libft/ft_memcpy.c	/^void	*ft_memcpy(void *dst, const void *src, size_t len)$/;"	f
-ft_memmove	cub3D/lib/libft/ft_memmove.c	/^void	*ft_memmove(void *dest, const void *src, size_t n)$/;"	f
-ft_memmove	graphics/lib/libft/ft_memmove.c	/^void	*ft_memmove(void *dst, const void *src, size_t len)$/;"	f
-ft_memset	cub3D/lib/libft/ft_memset.c	/^void	*ft_memset(void *s, int c, size_t n)$/;"	f
-ft_memset	graphics/lib/libft/ft_memset.c	/^void	*ft_memset(void *dest, int c, size_t len)$/;"	f
-ft_nothing	graphics/lib/libft/ft_lstclear.c	/^void	ft_nothing(void *content)$/;"	f
-ft_perror	cub3D/src/parser/main.c	/^void	ft_perror(char *str, int fd)$/;"	f
-ft_printf	cub3D/lib/libft/ft_printf.c	/^int	ft_printf(const char *str, ...)$/;"	f
-ft_printf	graphics/lib/libft/ft_printf.c	/^int	ft_printf(const char *str, ...)$/;"	f
-ft_putchar	cub3D/lib/libft/printfaux2.c	/^static void	ft_putchar(char c)$/;"	f	file:
-ft_putchar	cub3D/lib/libft/printfaux3.c	/^static void	ft_putchar(char c)$/;"	f	file:
-ft_putchar_fd	cub3D/lib/libft/ft_putchar_fd.c	/^void	ft_putchar_fd(char c, int fd)$/;"	f
-ft_putchar_fd	graphics/lib/libft/ft_putchar_fd.c	/^int	ft_putchar_fd(char c, int fd)$/;"	f
-ft_putendl_fd	cub3D/lib/libft/ft_putendl_fd.c	/^void	ft_putendl_fd(char *s, int fd)$/;"	f
-ft_putendl_fd	graphics/lib/libft/ft_putendl_fd.c	/^void	ft_putendl_fd(char *s, int fd)$/;"	f
-ft_puthex	cub3D/lib/libft/printfaux2.c	/^int	ft_puthex(unsigned int nb, char *base)$/;"	f
-ft_putnbr_base_fd	graphics/lib/libft/ft_putnbr_base_fd.c	/^int	ft_putnbr_base_fd(unsigned long decimal, char *base, int fd)$/;"	f
-ft_putnbr_fd	cub3D/lib/libft/ft_putnbr_fd.c	/^void	ft_putnbr_fd(int n, int fd)$/;"	f
-ft_putnbr_fd	graphics/lib/libft/ft_putnbr_fd.c	/^int	ft_putnbr_fd(int n, int fd)$/;"	f
-ft_putp	cub3D/lib/libft/printfaux3.c	/^int	ft_putp(unsigned long long n)$/;"	f
-ft_putstr_fd	cub3D/lib/libft/ft_putstr_fd.c	/^void	ft_putstr_fd(char *s, int fd)$/;"	f
-ft_putstr_fd	graphics/lib/libft/ft_putstr_fd.c	/^int	ft_putstr_fd(char *s, int fd)$/;"	f
-ft_quote_count	graphics/lib/libft/ft_splitquote.c	/^int	ft_quote_count(char *str)$/;"	f
-ft_remove_quotes	graphics/lib/libft/ft_splitquote.c	/^char	*ft_remove_quotes(char *str)$/;"	f
-ft_remove_quotes_aux	graphics/lib/libft/ft_splitquote.c	/^static void	ft_remove_quotes_aux(char *str, char *new)$/;"	f	file:
-ft_split	cub3D/lib/libft/ft_split.c	/^char	**ft_split(char const *s, char c)$/;"	f
-ft_split	graphics/lib/libft/ft_split.c	/^char	**ft_split(char const *s, char c)$/;"	f
-ft_split_if_not_in_quote	graphics/lib/libft/ft_split_if_not_in_quote.c	/^char	**ft_split_if_not_in_quote(char *s, char c)$/;"	f
-ft_splitquote	graphics/lib/libft/ft_splitquote.c	/^char	**ft_splitquote(char *s, char c)$/;"	f
-ft_splitquote_nulls	graphics/lib/libft/quotes_utils.c	/^char	**ft_splitquote_nulls(char *s, char c)$/;"	f
-ft_splitstr	graphics/lib/libft/ft_splitstr.c	/^char	**ft_splitstr(char *str, char *split)$/;"	f
-ft_strchr	cub3D/lib/libft/ft_strchr.c	/^char	*ft_strchr(const char *s, int c)$/;"	f
-ft_strchr	graphics/lib/libft/ft_strchr.c	/^char	*ft_strchr(const char *s, int c)$/;"	f
-ft_strchrnum	graphics/lib/libft/get_next_line_utils.c	/^int	ft_strchrnum(const char *s, int c)$/;"	f
-ft_strcmp	graphics/lib/libft/ft_strcmp.c	/^int	ft_strcmp(const char *str1, const char *str2)$/;"	f
-ft_strdup	cub3D/lib/libft/ft_strdup.c	/^char	*ft_strdup(const char *s)$/;"	f
-ft_strdup	graphics/lib/libft/ft_strdup.c	/^char	*ft_strdup(const char *str)$/;"	f
-ft_striteri	cub3D/lib/libft/ft_striteri.c	/^void	ft_striteri(char *s, void (*f)(unsigned int, char *))$/;"	f
-ft_striteri	graphics/lib/libft/ft_striteri.c	/^void	ft_striteri(char *s, void (*f)(unsigned int, char *))$/;"	f
-ft_strjoin	cub3D/lib/libft/ft_strjoin.c	/^char	*ft_strjoin(char const *s1, char const *s2)$/;"	f
-ft_strjoin	graphics/lib/libft/ft_strjoin.c	/^char	*ft_strjoin(char const *s1, char const *s2)$/;"	f
-ft_strjoinfree	cub3D/lib/libft/ft_strjoin.c	/^char	*ft_strjoinfree(char *s1, char *s2, int type)$/;"	f
-ft_strjoinfree	graphics/lib/libft/get_next_line_utils.c	/^char	*ft_strjoinfree(char *s1, char *s2)$/;"	f
-ft_strjoinfree2	graphics/lib/libft/ft_strjoin.c	/^char	*ft_strjoinfree2(char *s1, char *s2)$/;"	f
-ft_strjoinfreeall	graphics/lib/libft/ft_strjoin.c	/^char	*ft_strjoinfreeall(char *s1, char *s2)$/;"	f
-ft_strlcat	cub3D/lib/libft/ft_strlcat.c	/^size_t	ft_strlcat(char *dst, const char *src, size_t size)$/;"	f
-ft_strlcat	graphics/lib/libft/ft_strlcat.c	/^size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)$/;"	f
-ft_strlcpy	cub3D/lib/libft/ft_strlcpy.c	/^size_t	ft_strlcpy(char *dst, const char *src, size_t size)$/;"	f
-ft_strlcpy	graphics/lib/libft/ft_strlcpy.c	/^size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)$/;"	f
-ft_strlen	cub3D/lib/libft/ft_strlen.c	/^size_t	ft_strlen(const char *s)$/;"	f
-ft_strlen	graphics/lib/libft/ft_strlen.c	/^size_t	ft_strlen(const char *s)$/;"	f
-ft_strlenplus	cub3D/lib/libft/get_next_line_utils.c	/^int	ft_strlenplus(char *s, char c)$/;"	f
-ft_strmapi	cub3D/lib/libft/ft_strmapi.c	/^char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))$/;"	f
-ft_strmapi	graphics/lib/libft/ft_strmapi.c	/^char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))$/;"	f
-ft_strncmp	cub3D/lib/libft/ft_strncmp.c	/^int	ft_strncmp(const char *s1, const char *s2, size_t n)$/;"	f
-ft_strncmp	graphics/lib/libft/ft_strncmp.c	/^int	ft_strncmp(const char *s1, const char *s2, size_t len)$/;"	f
-ft_strnstr	cub3D/lib/libft/ft_strnstr.c	/^char	*ft_strnstr(const char *big, const char *little, size_t len)$/;"	f
-ft_strnstr	graphics/lib/libft/ft_strnstr.c	/^char	*ft_strnstr(const char *big, const char *little, size_t len)$/;"	f
-ft_strrchr	cub3D/lib/libft/ft_strrchr.c	/^char	*ft_strrchr(const char *s, int c)$/;"	f
-ft_strrchr	graphics/lib/libft/ft_strrchr.c	/^char	*ft_strrchr(const char *s, int c)$/;"	f
-ft_strstr	cub3D/lib/libft/ft_strstr.c	/^char	*ft_strstr(char *str, char *to_find)$/;"	f
-ft_strtrim	cub3D/lib/libft/ft_strtrim.c	/^char	*ft_strtrim(char const *s1, char const *set)$/;"	f
-ft_strtrim	graphics/lib/libft/ft_strtrim.c	/^char	*ft_strtrim(char const *s1, char const *set)$/;"	f
-ft_strtrimfree	cub3D/lib/libft/ft_strtrim.c	/^char	*ft_strtrimfree(char const *s1, char const *set)$/;"	f
-ft_strtrimfree	graphics/lib/libft/ft_strtrim.c	/^char	*ft_strtrimfree(char const *s1, char const *set)$/;"	f
-ft_substr	cub3D/lib/libft/ft_substr.c	/^char	*ft_substr(char const *s, unsigned int start, size_t len)$/;"	f
-ft_substr	graphics/lib/libft/ft_substr.c	/^char	*ft_substr(char const *s, unsigned int start, size_t len)$/;"	f
-ft_tolower	cub3D/lib/libft/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f
-ft_tolower	graphics/lib/libft/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f
-ft_toupper	cub3D/lib/libft/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f
-ft_toupper	graphics/lib/libft/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f
-ft_wc	cub3D/lib/libft/ft_split.c	/^int	ft_wc(char *str, char c)$/;"	f
-ft_ws	cub3D/lib/libft/ft_split.c	/^int	ft_ws(char *s, char c, int *jj)$/;"	f
-gc	cub3D/lib/mlx/mlx_int.h	/^	GC					gc;$/;"	m	struct:s_win_list
-gc	cub3D/lib/mlx/mlx_int.h	/^	GC				gc;$/;"	m	struct:s_img
-gere_mouse	cub3D/lib/mlx/test/new_win.c	/^int gere_mouse(int x,int y,int button,void*toto)$/;"	f
-get_color	cub3D/src/graphics/renders.c	/^int	get_color(t_gs *game, double x, double y, double z, int orientation)$/;"	f
-get_dir	cub3D/src/graphics/positions.c	/^double	get_dir(char c)$/;"	f
-get_dir	graphics/src/positions.c	/^double	get_dir(char c)$/;"	f
-get_line	cub3D/lib/libft/get_next_line.c	/^static char	*get_line(char *stash, int eof)$/;"	f	file:
-get_line	graphics/lib/libft/get_next_line.c	/^static char	*get_line(char *stash)$/;"	f	file:
-get_next_line	cub3D/lib/libft/get_next_line.c	/^char	*get_next_line(int fd)$/;"	f
-get_next_line	graphics/lib/libft/get_next_line.c	/^char	*get_next_line(int fd)$/;"	f
-get_player_dir	cub3D/src/graphics/positions.c	/^void	get_player_dir(t_gs *game)$/;"	f
-get_player_dir	graphics/src/positions.c	/^void	get_player_dir(t_game *game)$/;"	f
-get_player_position	cub3D/src/graphics/positions.c	/^void	get_player_position(t_gs *game)$/;"	f
-get_player_position	graphics/src/positions.c	/^void	get_player_position(t_game *game)$/;"	f
-get_side	cub3D/src/graphics/positions.c	/^int	get_side(char c)$/;"	f
-get_side	graphics/src/positions.c	/^int	get_side(char c)$/;"	f
-get_stash	cub3D/lib/libft/get_next_line.c	/^static char	*get_stash(int fd, char *stash, int *eof)$/;"	f	file:
-get_stash	graphics/lib/libft/get_next_line.c	/^static char	*get_stash(int fd, char *stash)$/;"	f	file:
+ea	cub3D/src/cub3d.h	/^	t_img	ea;$/;"	m	struct:s_graphics	typeref:typename:t_img
+ea_t	cub3D/src/cub3d.h	/^	char		*ea_t;$/;"	m	struct:s_gs	typeref:typename:char *
+ea_t	graphics/include/cub3d.h	/^	char	*ea_t;$/;"	m	struct:s_graphics	typeref:typename:char *
+end_loop	cub3D/lib/mlx/mlx_int.h	/^	int 		end_loop;$/;"	m	struct:s_xvar	typeref:typename:int
+endian	cub3D/src/cub3d.h	/^	int		endian;$/;"	m	struct:s_img	typeref:typename:int
+endian	graphics/include/cub3d.h	/^	int		endian;$/;"	m	struct:s_img	typeref:typename:int
+endian1	cub3D/lib/mlx/test/main.c	/^int	endian1;$/;"	v	typeref:typename:int
+endian2	cub3D/lib/mlx/test/main.c	/^int	endian2;$/;"	v	typeref:typename:int
+endian3	cub3D/lib/mlx/test/main.c	/^int	endian3;$/;"	v	typeref:typename:int
+endian4	cub3D/lib/mlx/test/main.c	/^int	endian4;$/;"	v	typeref:typename:int
+error_msg	cub3D/src/graphics/graphics.c	/^int	error_msg(char *msg, int ret)$/;"	f	typeref:typename:int
+error_msg	graphics/src/main.c	/^int	error_msg(char *msg, int ret)$/;"	f	typeref:typename:int
+expose_hook	cub3D/lib/mlx/mlx_int.h	/^	int					(*expose_hook)();$/;"	m	struct:s_win_list	typeref:typename:int (*)()
+expose_param	cub3D/lib/mlx/mlx_int.h	/^	void				*expose_param;$/;"	m	struct:s_win_list	typeref:typename:void *
+expose_win1	cub3D/lib/mlx/test/main.c	/^int	expose_win1(void *p)$/;"	f	typeref:typename:int
+expose_win2	cub3D/lib/mlx/test/main.c	/^int	expose_win2(void *p)$/;"	f	typeref:typename:int
+externalConsole	cub3D/.vscode/launch.json	/^            "externalConsole": false,$/;"	b	object:configurations.0
+fclean	cub3D/Makefile	/^fclean: clean$/;"	t
+fclean	cub3D/lib/libft/Makefile	/^fclean:	clean$/;"	t
+fclean	graphics/Makefile	/^fclean: clean$/;"	t
+fclean	graphics/lib/libft/Makefile	/^fclean: clean$/;"	t
+files.associations	cub3D/src/.vscode/settings.json	/^    "files.associations": {$/;"	o
+fillvec	cub3D/lib/libft/ft_split.c	/^void	fillvec(char *s, char **str, char c)$/;"	f	typeref:typename:void
+flood_fill	cub3D/src/parser/checker.c	/^static int	flood_fill(t_gs *gs, int x, int y, char **map)$/;"	f	typeref:typename:int	file:
+floor	cub3D/src/cub3d.h	/^	int			floor[3];$/;"	m	struct:s_gs	typeref:typename:int[3]
+floor	cub3D/src/cub3d.h	/^	int		floor[3];$/;"	m	struct:s_graphics	typeref:typename:int[3]
+floor	graphics/include/cub3d.h	/^	int		floor[3];$/;"	m	struct:s_graphics	typeref:typename:int[3]
+format	cub3D/lib/mlx/mlx_int.h	/^	int				format;$/;"	m	struct:s_img	typeref:typename:int
+free_array_of_ints	graphics/lib/libft/free_array_of_ints.c	/^void	free_array_of_ints(int **array, int size)$/;"	f	typeref:typename:void
+free_array_of_strings	graphics/lib/libft/free_array_of_strings.c	/^void	free_array_of_strings(char **str)$/;"	f	typeref:typename:void
+ft_abs_value	graphics/lib/libft/ft_abs_value.c	/^int	ft_abs_value(int n)$/;"	f	typeref:typename:int
+ft_atoi	cub3D/lib/libft/ft_atoi.c	/^int	ft_atoi(const char *nptr)$/;"	f	typeref:typename:int
+ft_atoi	graphics/lib/libft/ft_atoi.c	/^int	ft_atoi(const char *nptr)$/;"	f	typeref:typename:int
+ft_atol	cub3D/lib/libft/ft_atol.c	/^long	ft_atol(const char *str)$/;"	f	typeref:typename:long
+ft_atol	graphics/lib/libft/ft_atol.c	/^long long	ft_atol(const char *nptr)$/;"	f	typeref:typename:long long
+ft_av	cub3D/lib/libft/ft_av.c	/^int	ft_av(int n)$/;"	f	typeref:typename:int
+ft_bzero	cub3D/lib/libft/ft_bzero.c	/^void	ft_bzero(void *s, size_t n)$/;"	f	typeref:typename:void
+ft_bzero	graphics/lib/libft/ft_bzero.c	/^void	ft_bzero(void *b, size_t len)$/;"	f	typeref:typename:void
+ft_calloc	cub3D/lib/libft/ft_calloc.c	/^void	*ft_calloc(size_t nmemb, size_t size)$/;"	f	typeref:typename:void *
+ft_calloc	graphics/lib/libft/ft_calloc.c	/^void	*ft_calloc(size_t number, size_t size)$/;"	f	typeref:typename:void *
+ft_dup_array_of_strings	graphics/lib/libft/ft_dup_array_of_strings.c	/^char	**ft_dup_array_of_strings(char **array)$/;"	f	typeref:typename:char **
+ft_gnlstrjoin	cub3D/lib/libft/get_next_line_utils.c	/^char	*ft_gnlstrjoin(char *s1, char *s2)$/;"	f	typeref:typename:char *
+ft_is_special_char	graphics/lib/libft/ft_is_special_char.c	/^int	ft_is_special_char(char c)$/;"	f	typeref:typename:int
+ft_isalnum	cub3D/lib/libft/ft_isalnum.c	/^int	ft_isalnum(int c)$/;"	f	typeref:typename:int
+ft_isalnum	graphics/lib/libft/ft_isalnum.c	/^int	ft_isalnum(int c)$/;"	f	typeref:typename:int
+ft_isalpha	cub3D/lib/libft/ft_isalpha.c	/^int	ft_isalpha(int c)$/;"	f	typeref:typename:int
+ft_isalpha	graphics/lib/libft/ft_isalpha.c	/^int	ft_isalpha(int c)$/;"	f	typeref:typename:int
+ft_isascii	cub3D/lib/libft/ft_isascii.c	/^int	ft_isascii(int c)$/;"	f	typeref:typename:int
+ft_isascii	graphics/lib/libft/ft_isascii.c	/^int	ft_isascii(int c)$/;"	f	typeref:typename:int
+ft_ischar	cub3D/lib/libft/printfaux1.c	/^int	ft_ischar(char c)$/;"	f	typeref:typename:int
+ft_isdigit	cub3D/lib/libft/ft_isdigit.c	/^int	ft_isdigit(int c)$/;"	f	typeref:typename:int
+ft_isdigit	graphics/lib/libft/ft_isdigit.c	/^int	ft_isdigit(int c)$/;"	f	typeref:typename:int
+ft_isint	cub3D/lib/libft/printfaux1.c	/^int	ft_isint(int n)$/;"	f	typeref:typename:int
+ft_isint	graphics/lib/libft/ft_isint.c	/^int	ft_isint(const char *str)$/;"	f	typeref:typename:int
+ft_ispointer	cub3D/lib/libft/printfaux3.c	/^int	ft_ispointer(unsigned long long n)$/;"	f	typeref:typename:int
+ft_isprint	cub3D/lib/libft/ft_isprint.c	/^int	ft_isprint(int c)$/;"	f	typeref:typename:int
+ft_isprint	graphics/lib/libft/ft_isprint.c	/^int	ft_isprint(int c)$/;"	f	typeref:typename:int
+ft_isspace	graphics/lib/libft/ft_isspace.c	/^int	ft_isspace(char c)$/;"	f	typeref:typename:int
+ft_isstring	cub3D/lib/libft/printfaux1.c	/^int	ft_isstring(char *str)$/;"	f	typeref:typename:int
+ft_isu	cub3D/lib/libft/ft_isu.c	/^int	ft_isu(unsigned int n)$/;"	f	typeref:typename:int
+ft_itoa	cub3D/lib/libft/ft_itoa.c	/^char	*ft_itoa(int n)$/;"	f	typeref:typename:char *
+ft_itoa	graphics/lib/libft/ft_itoa.c	/^char	*ft_itoa(int n)$/;"	f	typeref:typename:char *
+ft_lstadd_back	cub3D/lib/libft/ft_lstadd_back.c	/^void	ft_lstadd_back(t_list **lst, t_list *new)$/;"	f	typeref:typename:void
+ft_lstadd_back	graphics/lib/libft/ft_lstadd_back.c	/^void	ft_lstadd_back(t_list **lst, t_list *novel)$/;"	f	typeref:typename:void
+ft_lstadd_front	cub3D/lib/libft/ft_lstadd_front.c	/^void	ft_lstadd_front(t_list **lst, t_list *new)$/;"	f	typeref:typename:void
+ft_lstadd_front	graphics/lib/libft/ft_lstadd_front.c	/^void	ft_lstadd_front(t_list **lst, t_list *novel)$/;"	f	typeref:typename:void
+ft_lstclear	cub3D/lib/libft/ft_lstclear.c	/^void	ft_lstclear(t_list **lst, void (*del)(void *))$/;"	f	typeref:typename:void
+ft_lstclear	graphics/lib/libft/ft_lstclear.c	/^void	ft_lstclear(t_list **lst, void (*del)(void *))$/;"	f	typeref:typename:void
+ft_lstdelone	cub3D/lib/libft/ft_lstdelone.c	/^void	ft_lstdelone(t_list *lst, void (*del)(void *))$/;"	f	typeref:typename:void
+ft_lstdelone	graphics/lib/libft/ft_lstdelone.c	/^void	ft_lstdelone(t_list **head, t_list *lst, void (*del)(void *))$/;"	f	typeref:typename:void
+ft_lstdup	graphics/lib/libft/ft_lstdup.c	/^t_list	*ft_lstdup(t_list *lst)$/;"	f	typeref:typename:t_list *
+ft_lstiter	cub3D/lib/libft/ft_lstiter.c	/^void	ft_lstiter(t_list *lst, void (*f)(void *))$/;"	f	typeref:typename:void
+ft_lstiter	graphics/lib/libft/ft_lstiter.c	/^void	ft_lstiter(t_list *lst, void (*f)(void *))$/;"	f	typeref:typename:void
+ft_lstlast	cub3D/lib/libft/ft_lstlast.c	/^t_list	*ft_lstlast(t_list *lst)$/;"	f	typeref:typename:t_list *
+ft_lstlast	graphics/lib/libft/ft_lstlast.c	/^t_list	*ft_lstlast(t_list *lst)$/;"	f	typeref:typename:t_list *
+ft_lstmap	cub3D/lib/libft/ft_lstmap.c	/^t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))$/;"	f	typeref:typename:t_list *
+ft_lstmap	graphics/lib/libft/ft_lstmap.c	/^t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))$/;"	f	typeref:typename:t_list *
+ft_lstnew	cub3D/lib/libft/ft_lstnew.c	/^t_list	*ft_lstnew(void *content)$/;"	f	typeref:typename:t_list *
+ft_lstnew	graphics/lib/libft/ft_lstnew.c	/^t_list	*ft_lstnew(void *content)$/;"	f	typeref:typename:t_list *
+ft_lstsize	cub3D/lib/libft/ft_lstsize.c	/^int	ft_lstsize(t_list *lst)$/;"	f	typeref:typename:int
+ft_lstsize	graphics/lib/libft/ft_lstsize.c	/^int	ft_lstsize(t_list *lst)$/;"	f	typeref:typename:int
+ft_lstswap	graphics/lib/libft/ft_lstswap.c	/^void	ft_lstswap(t_list *lst1, t_list *lst2)$/;"	f	typeref:typename:void
+ft_matlen	cub3D/lib/libft/ft_strlen.c	/^size_t	ft_matlen(char **s)$/;"	f	typeref:typename:size_t
+ft_matrixlen	graphics/lib/libft/ft_matrixlen.c	/^int	ft_matrixlen(void **matrix)$/;"	f	typeref:typename:int
+ft_memchr	cub3D/lib/libft/ft_memchr.c	/^void	*ft_memchr(const void *s, int c, size_t n)$/;"	f	typeref:typename:void *
+ft_memchr	graphics/lib/libft/ft_memchr.c	/^void	*ft_memchr(const void *b, int c, size_t len)$/;"	f	typeref:typename:void *
+ft_memcmp	cub3D/lib/libft/ft_memcmp.c	/^int	ft_memcmp(const void *s1, const void *s2, size_t n)$/;"	f	typeref:typename:int
+ft_memcmp	graphics/lib/libft/ft_memcmp.c	/^int	ft_memcmp(const void *b1, const void *b2, size_t len)$/;"	f	typeref:typename:int
+ft_memcpy	cub3D/lib/libft/ft_memcpy.c	/^void	*ft_memcpy(void *dest, const void *src, size_t n)$/;"	f	typeref:typename:void *
+ft_memcpy	graphics/lib/libft/ft_memcpy.c	/^void	*ft_memcpy(void *dst, const void *src, size_t len)$/;"	f	typeref:typename:void *
+ft_memmove	cub3D/lib/libft/ft_memmove.c	/^void	*ft_memmove(void *dest, const void *src, size_t n)$/;"	f	typeref:typename:void *
+ft_memmove	graphics/lib/libft/ft_memmove.c	/^void	*ft_memmove(void *dst, const void *src, size_t len)$/;"	f	typeref:typename:void *
+ft_memset	cub3D/lib/libft/ft_memset.c	/^void	*ft_memset(void *s, int c, size_t n)$/;"	f	typeref:typename:void *
+ft_memset	graphics/lib/libft/ft_memset.c	/^void	*ft_memset(void *dest, int c, size_t len)$/;"	f	typeref:typename:void *
+ft_nothing	graphics/lib/libft/ft_lstclear.c	/^void	ft_nothing(void *content)$/;"	f	typeref:typename:void
+ft_perror	cub3D/src/parser/main.c	/^void	ft_perror(char *str, int fd)$/;"	f	typeref:typename:void
+ft_printf	cub3D/lib/libft/ft_printf.c	/^int	ft_printf(const char *str, ...)$/;"	f	typeref:typename:int
+ft_printf	graphics/lib/libft/ft_printf.c	/^int	ft_printf(const char *str, ...)$/;"	f	typeref:typename:int
+ft_putchar	cub3D/lib/libft/printfaux2.c	/^static void	ft_putchar(char c)$/;"	f	typeref:typename:void	file:
+ft_putchar	cub3D/lib/libft/printfaux3.c	/^static void	ft_putchar(char c)$/;"	f	typeref:typename:void	file:
+ft_putchar_fd	cub3D/lib/libft/ft_putchar_fd.c	/^void	ft_putchar_fd(char c, int fd)$/;"	f	typeref:typename:void
+ft_putchar_fd	graphics/lib/libft/ft_putchar_fd.c	/^int	ft_putchar_fd(char c, int fd)$/;"	f	typeref:typename:int
+ft_putendl_fd	cub3D/lib/libft/ft_putendl_fd.c	/^void	ft_putendl_fd(char *s, int fd)$/;"	f	typeref:typename:void
+ft_putendl_fd	graphics/lib/libft/ft_putendl_fd.c	/^void	ft_putendl_fd(char *s, int fd)$/;"	f	typeref:typename:void
+ft_puthex	cub3D/lib/libft/printfaux2.c	/^int	ft_puthex(unsigned int nb, char *base)$/;"	f	typeref:typename:int
+ft_putnbr_base_fd	graphics/lib/libft/ft_putnbr_base_fd.c	/^int	ft_putnbr_base_fd(unsigned long decimal, char *base, int fd)$/;"	f	typeref:typename:int
+ft_putnbr_fd	cub3D/lib/libft/ft_putnbr_fd.c	/^void	ft_putnbr_fd(int n, int fd)$/;"	f	typeref:typename:void
+ft_putnbr_fd	graphics/lib/libft/ft_putnbr_fd.c	/^int	ft_putnbr_fd(int n, int fd)$/;"	f	typeref:typename:int
+ft_putp	cub3D/lib/libft/printfaux3.c	/^int	ft_putp(unsigned long long n)$/;"	f	typeref:typename:int
+ft_putstr_fd	cub3D/lib/libft/ft_putstr_fd.c	/^void	ft_putstr_fd(char *s, int fd)$/;"	f	typeref:typename:void
+ft_putstr_fd	graphics/lib/libft/ft_putstr_fd.c	/^int	ft_putstr_fd(char *s, int fd)$/;"	f	typeref:typename:int
+ft_quote_count	graphics/lib/libft/ft_splitquote.c	/^int	ft_quote_count(char *str)$/;"	f	typeref:typename:int
+ft_remove_quotes	graphics/lib/libft/ft_splitquote.c	/^char	*ft_remove_quotes(char *str)$/;"	f	typeref:typename:char *
+ft_remove_quotes_aux	graphics/lib/libft/ft_splitquote.c	/^static void	ft_remove_quotes_aux(char *str, char *new)$/;"	f	typeref:typename:void	file:
+ft_split	cub3D/lib/libft/ft_split.c	/^char	**ft_split(char const *s, char c)$/;"	f	typeref:typename:char **
+ft_split	graphics/lib/libft/ft_split.c	/^char	**ft_split(char const *s, char c)$/;"	f	typeref:typename:char **
+ft_split_if_not_in_quote	graphics/lib/libft/ft_split_if_not_in_quote.c	/^char	**ft_split_if_not_in_quote(char *s, char c)$/;"	f	typeref:typename:char **
+ft_splitquote	graphics/lib/libft/ft_splitquote.c	/^char	**ft_splitquote(char *s, char c)$/;"	f	typeref:typename:char **
+ft_splitquote_nulls	graphics/lib/libft/quotes_utils.c	/^char	**ft_splitquote_nulls(char *s, char c)$/;"	f	typeref:typename:char **
+ft_splitstr	graphics/lib/libft/ft_splitstr.c	/^char	**ft_splitstr(char *str, char *split)$/;"	f	typeref:typename:char **
+ft_strchr	cub3D/lib/libft/ft_strchr.c	/^char	*ft_strchr(const char *s, int c)$/;"	f	typeref:typename:char *
+ft_strchr	graphics/lib/libft/ft_strchr.c	/^char	*ft_strchr(const char *s, int c)$/;"	f	typeref:typename:char *
+ft_strchrnum	graphics/lib/libft/get_next_line_utils.c	/^int	ft_strchrnum(const char *s, int c)$/;"	f	typeref:typename:int
+ft_strcmp	graphics/lib/libft/ft_strcmp.c	/^int	ft_strcmp(const char *str1, const char *str2)$/;"	f	typeref:typename:int
+ft_strdup	cub3D/lib/libft/ft_strdup.c	/^char	*ft_strdup(const char *s)$/;"	f	typeref:typename:char *
+ft_strdup	graphics/lib/libft/ft_strdup.c	/^char	*ft_strdup(const char *str)$/;"	f	typeref:typename:char *
+ft_striteri	cub3D/lib/libft/ft_striteri.c	/^void	ft_striteri(char *s, void (*f)(unsigned int, char *))$/;"	f	typeref:typename:void
+ft_striteri	graphics/lib/libft/ft_striteri.c	/^void	ft_striteri(char *s, void (*f)(unsigned int, char *))$/;"	f	typeref:typename:void
+ft_strjoin	cub3D/lib/libft/ft_strjoin.c	/^char	*ft_strjoin(char const *s1, char const *s2)$/;"	f	typeref:typename:char *
+ft_strjoin	graphics/lib/libft/ft_strjoin.c	/^char	*ft_strjoin(char const *s1, char const *s2)$/;"	f	typeref:typename:char *
+ft_strjoinfree	cub3D/lib/libft/ft_strjoin.c	/^char	*ft_strjoinfree(char *s1, char *s2, int type)$/;"	f	typeref:typename:char *
+ft_strjoinfree	graphics/lib/libft/get_next_line_utils.c	/^char	*ft_strjoinfree(char *s1, char *s2)$/;"	f	typeref:typename:char *
+ft_strjoinfree2	graphics/lib/libft/ft_strjoin.c	/^char	*ft_strjoinfree2(char *s1, char *s2)$/;"	f	typeref:typename:char *
+ft_strjoinfreeall	graphics/lib/libft/ft_strjoin.c	/^char	*ft_strjoinfreeall(char *s1, char *s2)$/;"	f	typeref:typename:char *
+ft_strlcat	cub3D/lib/libft/ft_strlcat.c	/^size_t	ft_strlcat(char *dst, const char *src, size_t size)$/;"	f	typeref:typename:size_t
+ft_strlcat	graphics/lib/libft/ft_strlcat.c	/^size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)$/;"	f	typeref:typename:size_t
+ft_strlcpy	cub3D/lib/libft/ft_strlcpy.c	/^size_t	ft_strlcpy(char *dst, const char *src, size_t size)$/;"	f	typeref:typename:size_t
+ft_strlcpy	graphics/lib/libft/ft_strlcpy.c	/^size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)$/;"	f	typeref:typename:size_t
+ft_strlen	cub3D/lib/libft/ft_strlen.c	/^size_t	ft_strlen(const char *s)$/;"	f	typeref:typename:size_t
+ft_strlen	graphics/lib/libft/ft_strlen.c	/^size_t	ft_strlen(const char *s)$/;"	f	typeref:typename:size_t
+ft_strlenplus	cub3D/lib/libft/get_next_line_utils.c	/^int	ft_strlenplus(char *s, char c)$/;"	f	typeref:typename:int
+ft_strmapi	cub3D/lib/libft/ft_strmapi.c	/^char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))$/;"	f	typeref:typename:char *
+ft_strmapi	graphics/lib/libft/ft_strmapi.c	/^char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))$/;"	f	typeref:typename:char *
+ft_strncmp	cub3D/lib/libft/ft_strncmp.c	/^int	ft_strncmp(const char *s1, const char *s2, size_t n)$/;"	f	typeref:typename:int
+ft_strncmp	graphics/lib/libft/ft_strncmp.c	/^int	ft_strncmp(const char *s1, const char *s2, size_t len)$/;"	f	typeref:typename:int
+ft_strnstr	cub3D/lib/libft/ft_strnstr.c	/^char	*ft_strnstr(const char *big, const char *little, size_t len)$/;"	f	typeref:typename:char *
+ft_strnstr	graphics/lib/libft/ft_strnstr.c	/^char	*ft_strnstr(const char *big, const char *little, size_t len)$/;"	f	typeref:typename:char *
+ft_strrchr	cub3D/lib/libft/ft_strrchr.c	/^char	*ft_strrchr(const char *s, int c)$/;"	f	typeref:typename:char *
+ft_strrchr	graphics/lib/libft/ft_strrchr.c	/^char	*ft_strrchr(const char *s, int c)$/;"	f	typeref:typename:char *
+ft_strstr	cub3D/lib/libft/ft_strstr.c	/^char	*ft_strstr(char *str, char *to_find)$/;"	f	typeref:typename:char *
+ft_strtrim	cub3D/lib/libft/ft_strtrim.c	/^char	*ft_strtrim(char const *s1, char const *set)$/;"	f	typeref:typename:char *
+ft_strtrim	graphics/lib/libft/ft_strtrim.c	/^char	*ft_strtrim(char const *s1, char const *set)$/;"	f	typeref:typename:char *
+ft_strtrimfree	cub3D/lib/libft/ft_strtrim.c	/^char	*ft_strtrimfree(char const *s1, char const *set)$/;"	f	typeref:typename:char *
+ft_strtrimfree	graphics/lib/libft/ft_strtrim.c	/^char	*ft_strtrimfree(char const *s1, char const *set)$/;"	f	typeref:typename:char *
+ft_substr	cub3D/lib/libft/ft_substr.c	/^char	*ft_substr(char const *s, unsigned int start, size_t len)$/;"	f	typeref:typename:char *
+ft_substr	graphics/lib/libft/ft_substr.c	/^char	*ft_substr(char const *s, unsigned int start, size_t len)$/;"	f	typeref:typename:char *
+ft_tolower	cub3D/lib/libft/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f	typeref:typename:int
+ft_tolower	graphics/lib/libft/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f	typeref:typename:int
+ft_toupper	cub3D/lib/libft/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f	typeref:typename:int
+ft_toupper	graphics/lib/libft/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f	typeref:typename:int
+ft_wc	cub3D/lib/libft/ft_split.c	/^int	ft_wc(char *str, char c)$/;"	f	typeref:typename:int
+ft_ws	cub3D/lib/libft/ft_split.c	/^int	ft_ws(char *s, char c, int *jj)$/;"	f	typeref:typename:int
+gc	cub3D/lib/mlx/mlx_int.h	/^	GC					gc;$/;"	m	struct:s_win_list	typeref:typename:GC
+gc	cub3D/lib/mlx/mlx_int.h	/^	GC				gc;$/;"	m	struct:s_img	typeref:typename:GC
+gere_mouse	cub3D/lib/mlx/test/new_win.c	/^int gere_mouse(int x,int y,int button,void*toto)$/;"	f	typeref:typename:int
+get_color	cub3D/src/graphics/renders.c	/^int	get_color(t_gs *game, double x, double y, double z, int orientation)$/;"	f	typeref:typename:int
+get_dir	cub3D/src/graphics/positions.c	/^double	get_dir(char c)$/;"	f	typeref:typename:double
+get_dir	graphics/src/positions.c	/^double	get_dir(char c)$/;"	f	typeref:typename:double
+get_line	cub3D/lib/libft/get_next_line.c	/^static char	*get_line(char *stash, int eof)$/;"	f	typeref:typename:char *	file:
+get_line	graphics/lib/libft/get_next_line.c	/^static char	*get_line(char *stash)$/;"	f	typeref:typename:char *	file:
+get_next_line	cub3D/lib/libft/get_next_line.c	/^char	*get_next_line(int fd)$/;"	f	typeref:typename:char *
+get_next_line	graphics/lib/libft/get_next_line.c	/^char	*get_next_line(int fd)$/;"	f	typeref:typename:char *
+get_player_dir	cub3D/src/graphics/positions.c	/^void	get_player_dir(t_gs *game)$/;"	f	typeref:typename:void
+get_player_dir	graphics/src/positions.c	/^void	get_player_dir(t_game *game)$/;"	f	typeref:typename:void
+get_player_position	cub3D/src/graphics/positions.c	/^void	get_player_position(t_gs *game)$/;"	f	typeref:typename:void
+get_player_position	graphics/src/positions.c	/^void	get_player_position(t_game *game)$/;"	f	typeref:typename:void
+get_side	cub3D/src/graphics/positions.c	/^int	get_side(char c)$/;"	f	typeref:typename:int
+get_side	graphics/src/positions.c	/^int	get_side(char c)$/;"	f	typeref:typename:int
+get_stash	cub3D/lib/libft/get_next_line.c	/^static char	*get_stash(int fd, char *stash, int *eof)$/;"	f	typeref:typename:char *	file:
+get_stash	graphics/lib/libft/get_next_line.c	/^static char	*get_stash(int fd, char *stash)$/;"	f	typeref:typename:char *	file:
 get_xlib_include_path	cub3D/lib/mlx/configure	/^get_xlib_include_path(){$/;"	f
-graphics	cub3D/src/cub3d.h	/^	t_graphics	graphics;$/;"	m	struct:s_gs
-graphics	graphics/include/cub3d.h	/^	t_graphics	graphics;$/;"	m	struct:s_game
-gs_init	cub3D/src/parser/main.c	/^static t_gs	*gs_init(void)$/;"	f	file:
-has_open_quote	graphics/lib/libft/quotes_utils.c	/^char	has_open_quote(char *s, int index)$/;"	f
-height	cub3D/lib/mlx/mlx_int.h	/^	int				height;$/;"	m	struct:s_img
-height	cub3D/src/cub3d.h	/^	int		height;$/;"	m	struct:s_img
-height	graphics/include/cub3d.h	/^	int		height;$/;"	m	struct:s_map
-hook	cub3D/lib/mlx/mlx_int.h	/^	int		(*hook)();$/;"	m	struct:s_event_list
-hooks	cub3D/lib/mlx/mlx_int.h	/^	t_event_list		hooks[MLX_MAX_EVENT];$/;"	m	struct:s_win_list
-im1	cub3D/lib/mlx/test/main.c	/^void    *im1;$/;"	v
-im2	cub3D/lib/mlx/test/main.c	/^void	*im2;$/;"	v
-im3	cub3D/lib/mlx/test/main.c	/^void	*im3;$/;"	v
-im4	cub3D/lib/mlx/test/main.c	/^void	*im4;$/;"	v
-image	cub3D/lib/mlx/mlx_int.h	/^	XImage			*image;$/;"	m	struct:s_img
-img	cub3D/src/cub3d.h	/^	t_img	img;$/;"	m	struct:s_graphics
-img	cub3D/src/cub3d.h	/^	void	*img;$/;"	m	struct:s_img
-img	graphics/include/cub3d.h	/^	t_img	img;$/;"	m	struct:s_graphics
-img	graphics/include/cub3d.h	/^	void	*img;$/;"	m	struct:s_img
-init_img	cub3D/src/graphics/graphics.c	/^void	init_img(t_img *img, void *mlx, int width, int height)$/;"	f
-init_img	graphics/src/main.c	/^void	init_img(t_img *img, void *mlx, int width, int height)$/;"	f
-inquote	graphics/lib/libft/quotes.c	/^char	inquote(char *s, int index)$/;"	f
-is_beginning_quote	graphics/lib/libft/quotes.c	/^int	is_beginning_quote(char *s, int index)$/;"	f
-is_beginning_wordquote	graphics/lib/libft/quotes_utils.c	/^int	is_beginning_wordquote(char *s, int index, char c)$/;"	f
-is_c_not_in_quotes	graphics/lib/libft/quotes_utils.c	/^int	is_c_not_in_quotes(char *s, int index, char c)$/;"	f
-is_end_quote	graphics/lib/libft/quotes.c	/^int	is_end_quote(char *s, int index)$/;"	f
-is_end_wordquote	graphics/lib/libft/quotes_utils.c	/^int	is_end_wordquote(char *s, int index, char c)$/;"	f
-is_just_quotes	graphics/lib/libft/ft_splitquote.c	/^int	is_just_quotes(char *str, int i)$/;"	f
-is_valid	cub3D/src/parser/main.c	/^static void	is_valid(char *f)$/;"	f	file:
-isneg	graphics/lib/libft/ft_itoa.c	/^char	*isneg(int algcount, int n)$/;"	f
-isquote	graphics/lib/libft/quotes.c	/^char	isquote(char *s, int index)$/;"	f
-key_hook	cub3D/lib/mlx/mlx_int.h	/^	int					(*key_hook)();$/;"	m	struct:s_win_list
-key_hook	cub3D/src/graphics/moves.c	/^int	key_hook(int keycode, t_gs *game)$/;"	f
-key_hook	graphics/src/moves.c	/^int	key_hook(int keycode, t_game *game)$/;"	f
-key_param	cub3D/lib/mlx/mlx_int.h	/^	void				*key_param;$/;"	m	struct:s_win_list
-key_win1	cub3D/lib/mlx/test/main.c	/^int	key_win1(int key,void *p)$/;"	f
-key_win2	cub3D/lib/mlx/test/main.c	/^int	key_win2(int key,void *p)$/;"	f
-key_win3	cub3D/lib/mlx/test/main.c	/^int	key_win3(int key,void *p)$/;"	f
-length_aux	cub3D/src/parser/map_parse.c	/^static int	length_aux(char *s, t_gs *gs)$/;"	f	file:
-line_length	cub3D/src/cub3d.h	/^	int		line_length;$/;"	m	struct:s_img
-line_length	graphics/include/cub3d.h	/^	int		line_length;$/;"	m	struct:s_img
-local_endian	cub3D/lib/mlx/test/main.c	/^int	local_endian;$/;"	v
+graphics	cub3D/src/cub3d.h	/^	t_graphics	graphics;$/;"	m	struct:s_gs	typeref:typename:t_graphics
+graphics	graphics/include/cub3d.h	/^	t_graphics	graphics;$/;"	m	struct:s_game	typeref:typename:t_graphics
+group	cub3D/.vscode/tasks.json	/^            "group": "build",$/;"	s	object:tasks.0
+group	cub3D/.vscode/tasks.json	/^            "group": {$/;"	o	object:tasks.1
+gs_init	cub3D/src/parser/main.c	/^static t_gs	*gs_init(void)$/;"	f	typeref:typename:t_gs *	file:
+has_open_quote	graphics/lib/libft/quotes_utils.c	/^char	has_open_quote(char *s, int index)$/;"	f	typeref:typename:char
+height	cub3D/lib/mlx/mlx_int.h	/^	int				height;$/;"	m	struct:s_img	typeref:typename:int
+height	cub3D/src/cub3d.h	/^	int		height;$/;"	m	struct:s_img	typeref:typename:int
+height	graphics/include/cub3d.h	/^	int		height;$/;"	m	struct:s_map	typeref:typename:int
+hook	cub3D/lib/mlx/mlx_int.h	/^	int		(*hook)();$/;"	m	struct:s_event_list	typeref:typename:int (*)()
+hooks	cub3D/lib/mlx/mlx_int.h	/^	t_event_list		hooks[MLX_MAX_EVENT];$/;"	m	struct:s_win_list	typeref:typename:t_event_list[]
+ignoreFailures	cub3D/.vscode/launch.json	/^                    "ignoreFailures": true$/;"	b	object:configurations.0.setupCommands.0
+im1	cub3D/lib/mlx/test/main.c	/^void    *im1;$/;"	v	typeref:typename:void *
+im2	cub3D/lib/mlx/test/main.c	/^void	*im2;$/;"	v	typeref:typename:void *
+im3	cub3D/lib/mlx/test/main.c	/^void	*im3;$/;"	v	typeref:typename:void *
+im4	cub3D/lib/mlx/test/main.c	/^void	*im4;$/;"	v	typeref:typename:void *
+image	cub3D/lib/mlx/mlx_int.h	/^	XImage			*image;$/;"	m	struct:s_img	typeref:typename:XImage *
+img	cub3D/src/cub3d.h	/^	t_img	img;$/;"	m	struct:s_graphics	typeref:typename:t_img
+img	cub3D/src/cub3d.h	/^	void	*img;$/;"	m	struct:s_img	typeref:typename:void *
+img	graphics/include/cub3d.h	/^	t_img	img;$/;"	m	struct:s_graphics	typeref:typename:t_img
+img	graphics/include/cub3d.h	/^	void	*img;$/;"	m	struct:s_img	typeref:typename:void *
+init_img	cub3D/src/graphics/graphics.c	/^void	init_img(t_img *img, void *mlx, int width, int height)$/;"	f	typeref:typename:void
+init_img	graphics/src/main.c	/^void	init_img(t_img *img, void *mlx, int width, int height)$/;"	f	typeref:typename:void
+inquote	graphics/lib/libft/quotes.c	/^char	inquote(char *s, int index)$/;"	f	typeref:typename:char
+isDefault	cub3D/.vscode/tasks.json	/^                "isDefault": true$/;"	b	object:tasks.1.group
+is_beginning_quote	graphics/lib/libft/quotes.c	/^int	is_beginning_quote(char *s, int index)$/;"	f	typeref:typename:int
+is_beginning_wordquote	graphics/lib/libft/quotes_utils.c	/^int	is_beginning_wordquote(char *s, int index, char c)$/;"	f	typeref:typename:int
+is_c_not_in_quotes	graphics/lib/libft/quotes_utils.c	/^int	is_c_not_in_quotes(char *s, int index, char c)$/;"	f	typeref:typename:int
+is_end_quote	graphics/lib/libft/quotes.c	/^int	is_end_quote(char *s, int index)$/;"	f	typeref:typename:int
+is_end_wordquote	graphics/lib/libft/quotes_utils.c	/^int	is_end_wordquote(char *s, int index, char c)$/;"	f	typeref:typename:int
+is_just_quotes	graphics/lib/libft/ft_splitquote.c	/^int	is_just_quotes(char *str, int i)$/;"	f	typeref:typename:int
+is_valid	cub3D/src/parser/main.c	/^static void	is_valid(char *f)$/;"	f	typeref:typename:void	file:
+isneg	graphics/lib/libft/ft_itoa.c	/^char	*isneg(int algcount, int n)$/;"	f	typeref:typename:char *
+isquote	graphics/lib/libft/quotes.c	/^char	isquote(char *s, int index)$/;"	f	typeref:typename:char
+key_hook	cub3D/lib/mlx/mlx_int.h	/^	int					(*key_hook)();$/;"	m	struct:s_win_list	typeref:typename:int (*)()
+key_hook	cub3D/src/graphics/moves.c	/^int	key_hook(int keycode, t_gs *game)$/;"	f	typeref:typename:int
+key_hook	graphics/src/moves.c	/^int	key_hook(int keycode, t_game *game)$/;"	f	typeref:typename:int
+key_param	cub3D/lib/mlx/mlx_int.h	/^	void				*key_param;$/;"	m	struct:s_win_list	typeref:typename:void *
+key_win1	cub3D/lib/mlx/test/main.c	/^int	key_win1(int key,void *p)$/;"	f	typeref:typename:int
+key_win2	cub3D/lib/mlx/test/main.c	/^int	key_win2(int key,void *p)$/;"	f	typeref:typename:int
+key_win3	cub3D/lib/mlx/test/main.c	/^int	key_win3(int key,void *p)$/;"	f	typeref:typename:int
+kind	cub3D/.vscode/tasks.json	/^                "kind": "build",$/;"	s	object:tasks.1.group
+label	cub3D/.vscode/tasks.json	/^            "label": "C\/C++: gcc build active file",$/;"	s	object:tasks.1
+label	cub3D/.vscode/tasks.json	/^            "label": "make",$/;"	s	object:tasks.0
+length_aux	cub3D/src/parser/map_parse.c	/^static int	length_aux(char *s, t_gs *gs)$/;"	f	typeref:typename:int	file:
+line_length	cub3D/src/cub3d.h	/^	int		line_length;$/;"	m	struct:s_img	typeref:typename:int
+line_length	graphics/include/cub3d.h	/^	int		line_length;$/;"	m	struct:s_img	typeref:typename:int
+local_endian	cub3D/lib/mlx/test/main.c	/^int	local_endian;$/;"	v	typeref:typename:int
 log_error	cub3D/lib/mlx/configure	/^log_error(){$/;"	f
 log_error	cub3D/lib/mlx/test/run_tests.sh	/^log_error(){$/;"	f
 log_info	cub3D/lib/mlx/configure	/^log_info(){$/;"	f
 log_info	cub3D/lib/mlx/test/run_tests.sh	/^log_info(){$/;"	f
 logging	cub3D/lib/mlx/configure	/^logging(){$/;"	f
 logging	cub3D/lib/mlx/test/run_tests.sh	/^logging(){$/;"	f
-loop_hook	cub3D/lib/mlx/mlx_int.h	/^	int			(*loop_hook)();$/;"	m	struct:s_xvar
-loop_param	cub3D/lib/mlx/mlx_int.h	/^	void		*loop_param;$/;"	m	struct:s_xvar
-lowhex	cub3D/lib/libft/printfaux2.c	/^int	lowhex(unsigned int n)$/;"	f
-main	cub3D/lib/mlx/test/main.c	/^int	main()$/;"	f
-main	cub3D/lib/mlx/test/new_win.c	/^int main()$/;"	f
+loop_hook	cub3D/lib/mlx/mlx_int.h	/^	int			(*loop_hook)();$/;"	m	struct:s_xvar	typeref:typename:int (*)()
+loop_param	cub3D/lib/mlx/mlx_int.h	/^	void		*loop_param;$/;"	m	struct:s_xvar	typeref:typename:void *
+lowhex	cub3D/lib/libft/printfaux2.c	/^int	lowhex(unsigned int n)$/;"	f	typeref:typename:int
+main	cub3D/lib/mlx/configure	/^main(){$/;"	f
+main	cub3D/lib/mlx/test/main.c	/^int	main()$/;"	f	typeref:typename:int
+main	cub3D/lib/mlx/test/new_win.c	/^int main()$/;"	f	typeref:typename:int
 main	cub3D/lib/mlx/test/run_tests.sh	/^main(){$/;"	f
-main	cub3D/src/parser/main.c	/^int	main(int argc, char **argv)$/;"	f
-main	graphics/src/main.c	/^int	main(int argc, char **argv)$/;"	f
-map	cub3D/src/cub3d.h	/^	char		**map;$/;"	m	struct:s_gs
-map	graphics/include/cub3d.h	/^	char	**map;$/;"	m	struct:s_map
-map	graphics/include/cub3d.h	/^	t_map		map;$/;"	m	struct:s_game
-map_init	cub3D/src/parser/map_parse.c	/^static void	map_init(t_gs *gs)$/;"	f	file:
-map_render	cub3D/src/graphics/renders.c	/^int	map_render(t_gs *game)$/;"	f
-map_render	graphics/src/renders.c	/^int	map_render(t_game *game)$/;"	f
-map_start	cub3D/src/parser/map_parse.c	/^int	map_start(int fd, t_gs *gs, char *f)$/;"	f
-map_write	cub3D/src/parser/map_parse.c	/^static int	map_write(t_gs *gs, char *f)$/;"	f	file:
-mask	cub3D/lib/mlx/mlx_int.h	/^	int		mask;$/;"	m	struct:s_event_list
-minimaprender	cub3D/src/graphics/renders.c	/^int	minimaprender(t_gs *game)$/;"	f
-minimaprender	graphics/src/renders.c	/^int	minimaprender(t_game *game)$/;"	f
-mlx	cub3D/lib/mlx/test/main.c	/^void	*mlx;$/;"	v
-mlx	cub3D/lib/mlx/test/new_win.c	/^void *mlx;$/;"	v
-mlx	cub3D/src/cub3d.h	/^	void	*mlx;$/;"	m	struct:s_graphics
-mlx	graphics/include/cub3d.h	/^	void	*mlx;$/;"	m	struct:s_graphics
-mlx_X_error	cub3D/lib/mlx/mlx_new_image.c	/^int	mlx_X_error;$/;"	v
-mlx_clear_window	cub3D/lib/mlx/mlx_clear_window.c	/^int		mlx_clear_window(t_xvar *xvar,t_win_list *win)$/;"	f
-mlx_close	cub3D/src/graphics/graphics.c	/^int	mlx_close(t_gs *game)$/;"	f
-mlx_close	graphics/src/main.c	/^int	mlx_close(t_game *game)$/;"	f
-mlx_col_name	cub3D/lib/mlx/mlx_rgb.c	/^struct s_col_name mlx_col_name[] =$/;"	v	typeref:struct:s_col_name
-mlx_destroy_display	cub3D/lib/mlx/mlx_destroy_display.c	/^int	mlx_destroy_display(t_xvar *xvar)$/;"	f
-mlx_destroy_image	cub3D/lib/mlx/mlx_destroy_image.c	/^int	mlx_destroy_image(t_xvar *xvar, t_img *img)$/;"	f
-mlx_destroy_window	cub3D/lib/mlx/mlx_destroy_window.c	/^int	mlx_destroy_window(t_xvar *xvar,t_win_list *win)$/;"	f
-mlx_do_key_autorepeatoff	cub3D/lib/mlx/mlx_hook.c	/^int	mlx_do_key_autorepeatoff(t_xvar *xvar)$/;"	f
-mlx_do_key_autorepeaton	cub3D/lib/mlx/mlx_hook.c	/^int	mlx_do_key_autorepeaton(t_xvar *xvar)$/;"	f
-mlx_do_sync	cub3D/lib/mlx/mlx_hook.c	/^int	mlx_do_sync(t_xvar *xvar)$/;"	f
-mlx_expose_hook	cub3D/lib/mlx/mlx_expose_hook.c	/^int		mlx_expose_hook(t_win_list *win,int (*funct)(),void *param)$/;"	f
-mlx_ext_fullscreen	cub3D/lib/mlx/mlx_ext_randr.c	/^int			mlx_ext_fullscreen(t_xvar *xvar, t_win_list *win, int fullscreen)$/;"	f
-mlx_flush_event	cub3D/lib/mlx/mlx_flush_event.c	/^int	mlx_flush_event(t_xvar *xvar)$/;"	f
-mlx_get_color_value	cub3D/lib/mlx/mlx_get_color_value.c	/^int             mlx_get_color_value(t_xvar *xvar,int color)$/;"	f
-mlx_get_data_addr	cub3D/lib/mlx/mlx_get_data_addr.c	/^char	*mlx_get_data_addr(t_img *img,int *bits_per_pixel,$/;"	f
-mlx_get_screen_size	cub3D/lib/mlx/mlx_screen_size.c	/^int		mlx_get_screen_size(void *mlx_ptr, int *sizex, int *sizey)$/;"	f
-mlx_hook	cub3D/lib/mlx/mlx_hook.c	/^int	mlx_hook(t_win_list *win, int x_event, int x_mask, $/;"	f
-mlx_init	cub3D/lib/mlx/mlx_init.c	/^void	*mlx_init()$/;"	f
-mlx_int_anti_resize_win	cub3D/lib/mlx/mlx_int_anti_resize_win.c	/^int	mlx_int_anti_resize_win(t_xvar *xvar,Window win,int w,int h)$/;"	f
-mlx_int_deal_shm	cub3D/lib/mlx/mlx_init.c	/^int		mlx_int_deal_shm(t_xvar *xvar)$/;"	f
-mlx_int_do_nothing	cub3D/lib/mlx/mlx_int_do_nothing.c	/^int	mlx_int_do_nothing(void *param)$/;"	f
-mlx_int_egal_img	cub3D/lib/mlx/mlx_lib_xpm.c	/^int	mlx_int_egal_img(XImage *img1,XImage *img2)$/;"	f
-mlx_int_file_get_rid_comment	cub3D/lib/mlx/mlx_xpm.c	/^int	mlx_int_file_get_rid_comment(char *ptr, int size)$/;"	f
-mlx_int_get_col_name	cub3D/lib/mlx/mlx_xpm.c	/^int	mlx_int_get_col_name(char *str,int size)$/;"	f
-mlx_int_get_good_color	cub3D/lib/mlx/mlx_get_color_value.c	/^int		mlx_int_get_good_color(t_xvar *xvar,int color)$/;"	f
-mlx_int_get_line	cub3D/lib/mlx/mlx_xpm.c	/^char	*mlx_int_get_line(char *ptr,int *pos,int size)$/;"	f
-mlx_int_get_text_rgb	cub3D/lib/mlx/mlx_xpm.c	/^int	mlx_int_get_text_rgb(char *name, char *end)$/;"	f
-mlx_int_get_visual	cub3D/lib/mlx/mlx_int_get_visual.c	/^int		mlx_int_get_visual(t_xvar *xvar)$/;"	f
-mlx_int_new_image	cub3D/lib/mlx/mlx_new_image.c	/^void	*mlx_int_new_image(t_xvar *xvar,int width, int height,int format)$/;"	f
-mlx_int_new_xshm_image	cub3D/lib/mlx/mlx_new_image.c	/^void	*mlx_int_new_xshm_image(t_xvar *xvar,int width,int height,int format)$/;"	f
-mlx_int_param_ButtonPress	cub3D/lib/mlx/mlx_int_param_event.c	/^int	mlx_int_param_ButtonPress(t_xvar *xvar, XEvent *ev, t_win_list *win)$/;"	f
-mlx_int_param_ButtonRelease	cub3D/lib/mlx/mlx_int_param_event.c	/^int	mlx_int_param_ButtonRelease(t_xvar *xvar, XEvent *ev, t_win_list *win)$/;"	f
-mlx_int_param_Expose	cub3D/lib/mlx/mlx_int_param_event.c	/^int	mlx_int_param_Expose(t_xvar *xvar, XEvent *ev, t_win_list *win)$/;"	f
-mlx_int_param_KeyPress	cub3D/lib/mlx/mlx_int_param_event.c	/^int	mlx_int_param_KeyPress(t_xvar *xvar, XEvent *ev, t_win_list *win)$/;"	f
-mlx_int_param_KeyRelease	cub3D/lib/mlx/mlx_int_param_event.c	/^int	mlx_int_param_KeyRelease(t_xvar *xvar, XEvent *ev, t_win_list *win)$/;"	f
-mlx_int_param_MotionNotify	cub3D/lib/mlx/mlx_int_param_event.c	/^int	mlx_int_param_MotionNotify(t_xvar *xvar, XEvent *ev, t_win_list *win)$/;"	f
-mlx_int_param_event	cub3D/lib/mlx/mlx_int_param_event.c	/^int	(*(mlx_int_param_event[]))() =$/;"	v
-mlx_int_param_generic	cub3D/lib/mlx/mlx_int_param_event.c	/^int	mlx_int_param_generic(t_xvar *xvar, XEvent *ev, t_win_list *win)$/;"	f
-mlx_int_param_undef	cub3D/lib/mlx/mlx_int_param_event.c	/^int	mlx_int_param_undef()$/;"	f
-mlx_int_parse_xpm	cub3D/lib/mlx/mlx_xpm.c	/^void	*mlx_int_parse_xpm(t_xvar *xvar,void *info,int info_size,char *(*f)())$/;"	f
-mlx_int_rgb_conversion	cub3D/lib/mlx/mlx_init.c	/^int		mlx_int_rgb_conversion(t_xvar *xvar)$/;"	f
-mlx_int_set_win_event_mask	cub3D/lib/mlx/mlx_int_set_win_event_mask.c	/^int	mlx_int_set_win_event_mask(t_xvar *xvar)$/;"	f
-mlx_int_static_line	cub3D/lib/mlx/mlx_xpm.c	/^char	*mlx_int_static_line(char **xpm_data,int *pos,int size)$/;"	f
-mlx_int_str_str	cub3D/lib/mlx/mlx_int_str_to_wordtab.c	/^int	mlx_int_str_str(char *str,char *find,int len)$/;"	f
-mlx_int_str_str_cote	cub3D/lib/mlx/mlx_int_str_to_wordtab.c	/^int	mlx_int_str_str_cote(char *str,char *find,int len)$/;"	f
-mlx_int_str_to_wordtab	cub3D/lib/mlx/mlx_int_str_to_wordtab.c	/^char	**mlx_int_str_to_wordtab(char *str)$/;"	f
-mlx_int_wait_first_expose	cub3D/lib/mlx/mlx_int_wait_first_expose.c	/^int	mlx_int_wait_first_expose(t_xvar *xvar,Window win)$/;"	f
-mlx_int_xpm_f_image	cub3D/lib/mlx/mlx_lib_xpm.c	/^void		*mlx_int_xpm_f_image(t_xvar *xvar,int *width,int *height,$/;"	f
-mlx_int_xpm_set_pixel	cub3D/lib/mlx/mlx_xpm.c	/^int	mlx_int_xpm_set_pixel(t_img *img, char *data, int opp, int col, int x)$/;"	f
-mlx_key_hook	cub3D/lib/mlx/mlx_key_hook.c	/^int		mlx_key_hook(t_win_list *win,int (*funct)(),void *param)$/;"	f
-mlx_loop	cub3D/lib/mlx/mlx_loop.c	/^int			mlx_loop(t_xvar *xvar)$/;"	f
-mlx_loop_end	cub3D/lib/mlx/mlx_loop.c	/^int			mlx_loop_end(t_xvar *xvar)$/;"	f
-mlx_loop_hook	cub3D/lib/mlx/mlx_loop_hook.c	/^int	mlx_loop_hook(t_xvar *xvar,int (*funct)(),void *param)$/;"	f
-mlx_mouse_get_pos	cub3D/lib/mlx/mlx_mouse.c	/^int		mlx_mouse_get_pos(t_xvar *xvar, t_win_list *win, \\$/;"	f
-mlx_mouse_hide	cub3D/lib/mlx/mlx_mouse.c	/^int		mlx_mouse_hide(t_xvar *xvar, t_win_list *win)$/;"	f
-mlx_mouse_hook	cub3D/lib/mlx/mlx_mouse_hook.c	/^int		mlx_mouse_hook(t_win_list *win,int (*funct)(),void *param)$/;"	f
-mlx_mouse_move	cub3D/lib/mlx/mlx_mouse.c	/^int		mlx_mouse_move(t_xvar *xvar, t_win_list *win, int x, int y)$/;"	f
-mlx_mouse_show	cub3D/lib/mlx/mlx_mouse.c	/^int		mlx_mouse_show(t_xvar *xvar, t_win_list *win)$/;"	f
-mlx_new_image	cub3D/lib/mlx/mlx_new_image.c	/^void	*mlx_new_image(t_xvar *xvar,int width, int height)$/;"	f
-mlx_new_image2	cub3D/lib/mlx/mlx_new_image.c	/^void	*mlx_new_image2(t_xvar *xvar,int width, int height)$/;"	f
-mlx_new_window	cub3D/lib/mlx/mlx_new_window.c	/^void	*mlx_new_window(t_xvar *xvar,int size_x,int size_y,char *title)$/;"	f
-mlx_pixel_put	cub3D/lib/mlx/mlx_pixel_put.c	/^int		mlx_pixel_put(t_xvar *xvar,t_win_list *win,$/;"	f
-mlx_put_image_to_window	cub3D/lib/mlx/mlx_put_image_to_window.c	/^int	mlx_put_image_to_window(t_xvar *xvar,t_win_list *win,t_img *img,$/;"	f
-mlx_set_font	cub3D/lib/mlx/mlx_set_font.c	/^void	mlx_set_font(t_xvar *xvar, t_win_list *win, char *name)$/;"	f
-mlx_start	cub3D/src/graphics/graphics.c	/^void	mlx_start(t_gs *game)$/;"	f
-mlx_start	graphics/src/main.c	/^void	mlx_start(t_game *game)$/;"	f
-mlx_string_put	cub3D/lib/mlx/mlx_string_put.c	/^int		mlx_string_put(t_xvar *xvar,t_win_list *win,$/;"	f
-mlx_xpm_file_to_image	cub3D/lib/mlx/mlx_lib_xpm.c	/^void	*mlx_xpm_file_to_image(t_xvar *xvar,char *filename,$/;"	f
-mlx_xpm_file_to_image	cub3D/lib/mlx/mlx_xpm.c	/^void	*mlx_xpm_file_to_image(t_xvar *xvar,char *file,int *width,int *height)$/;"	f
-mlx_xpm_to_image	cub3D/lib/mlx/mlx_lib_xpm.c	/^void	*mlx_xpm_to_image(t_xvar *xvar,char **data,int *width,int *height)$/;"	f
-mlx_xpm_to_image	cub3D/lib/mlx/mlx_xpm.c	/^void	*mlx_xpm_to_image(t_xvar *xvar,char **xpm_data,int *width,int *height)$/;"	f
-module	graphics/lib/libft/ft_itoa.c	/^long int	module(int n)$/;"	f
-mouse_hook	cub3D/lib/mlx/mlx_int.h	/^	int					(*mouse_hook)();$/;"	m	struct:s_win_list
-mouse_param	cub3D/lib/mlx/mlx_int.h	/^	void				*mouse_param;$/;"	m	struct:s_win_list
-mouse_win1	cub3D/lib/mlx/test/main.c	/^int	mouse_win1(int button,int x,int y, void *p)$/;"	f
-mouse_win2	cub3D/lib/mlx/test/main.c	/^int	mouse_win2(int button,int x,int y, void *p)$/;"	f
-mouse_win3	cub3D/lib/mlx/test/main.c	/^int	mouse_win3(int x,int y, void *p)$/;"	f
-move	cub3D/src/graphics/moves.c	/^int	move(int keycode, t_gs *game)$/;"	f
-move	graphics/src/moves.c	/^int	move(int keycode, t_game *game)$/;"	f
-my_pixel_put	cub3D/src/graphics/graphics.c	/^void	my_pixel_put(t_img *img, int x, int y, int color)$/;"	f
-my_pixel_put	graphics/src/main.c	/^void	my_pixel_put(t_img *img, int x, int y, int color)$/;"	f
-name	cub3D/lib/mlx/mlx_int.h	/^	char	*name;$/;"	m	struct:s_col_name
-name	cub3D/lib/mlx/mlx_int.h	/^	int		name;$/;"	m	struct:s_xpm_col
-next	cub3D/lib/libft/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list
-next	cub3D/lib/mlx/mlx_int.h	/^	struct s_win_list	*next;$/;"	m	struct:s_win_list	typeref:struct:s_win_list::s_win_list
-next	graphics/lib/libft/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list
-no	cub3D/src/cub3d.h	/^	t_img	no;$/;"	m	struct:s_graphics
-no_t	cub3D/src/cub3d.h	/^	char		*no_t;$/;"	m	struct:s_gs
-no_t	graphics/include/cub3d.h	/^	char	*no_t;$/;"	m	struct:s_graphics
-param	cub3D/lib/mlx/mlx_int.h	/^	void	*param;$/;"	m	struct:s_event_list
+main	cub3D/src/parser/main.c	/^int	main(int argc, char **argv)$/;"	f	typeref:typename:int
+main	graphics/src/main.c	/^int	main(int argc, char **argv)$/;"	f	typeref:typename:int
+map	cub3D/src/cub3d.h	/^	char		**map;$/;"	m	struct:s_gs	typeref:typename:char **
+map	graphics/include/cub3d.h	/^	char	**map;$/;"	m	struct:s_map	typeref:typename:char **
+map	graphics/include/cub3d.h	/^	t_map		map;$/;"	m	struct:s_game	typeref:typename:t_map
+map_init	cub3D/src/parser/map_parse.c	/^static void	map_init(t_gs *gs)$/;"	f	typeref:typename:void	file:
+map_render	cub3D/src/graphics/renders.c	/^int	map_render(t_gs *game)$/;"	f	typeref:typename:int
+map_render	graphics/src/renders.c	/^int	map_render(t_game *game)$/;"	f	typeref:typename:int
+map_start	cub3D/src/parser/map_parse.c	/^int	map_start(int fd, t_gs *gs, char *f)$/;"	f	typeref:typename:int
+map_write	cub3D/src/parser/map_parse.c	/^static int	map_write(t_gs *gs, char *f)$/;"	f	typeref:typename:int	file:
+mask	cub3D/lib/mlx/mlx_int.h	/^	int		mask;$/;"	m	struct:s_event_list	typeref:typename:int
+miDebuggerPath	cub3D/.vscode/launch.json	/^            "miDebuggerPath": "\/usr\/bin\/gdb"$/;"	s	object:configurations.0
+minimaprender	cub3D/src/graphics/renders.c	/^int	minimaprender(t_gs *game)$/;"	f	typeref:typename:int
+minimaprender	graphics/src/renders.c	/^int	minimaprender(t_game *game)$/;"	f	typeref:typename:int
+mlx	cub3D/lib/mlx/test/main.c	/^void	*mlx;$/;"	v	typeref:typename:void *
+mlx	cub3D/lib/mlx/test/new_win.c	/^void *mlx;$/;"	v	typeref:typename:void *
+mlx	cub3D/src/cub3d.h	/^	void	*mlx;$/;"	m	struct:s_graphics	typeref:typename:void *
+mlx	graphics/include/cub3d.h	/^	void	*mlx;$/;"	m	struct:s_graphics	typeref:typename:void *
+mlx.h	cub3D/src/.vscode/settings.json	/^        "mlx.h": "c",$/;"	s	object:files.associations
+mlx_X_error	cub3D/lib/mlx/mlx_new_image.c	/^int	mlx_X_error;$/;"	v	typeref:typename:int
+mlx_clear_window	cub3D/lib/mlx/mlx_clear_window.c	/^int		mlx_clear_window(t_xvar *xvar,t_win_list *win)$/;"	f	typeref:typename:int
+mlx_close	cub3D/src/graphics/graphics.c	/^int	mlx_close(t_gs *game)$/;"	f	typeref:typename:int
+mlx_close	graphics/src/main.c	/^int	mlx_close(t_game *game)$/;"	f	typeref:typename:int
+mlx_col_name	cub3D/lib/mlx/mlx_rgb.c	/^struct s_col_name mlx_col_name[] =$/;"	v	typeref:struct:s_col_name[]
+mlx_destroy_display	cub3D/lib/mlx/mlx_destroy_display.c	/^int	mlx_destroy_display(t_xvar *xvar)$/;"	f	typeref:typename:int
+mlx_destroy_image	cub3D/lib/mlx/mlx_destroy_image.c	/^int	mlx_destroy_image(t_xvar *xvar, t_img *img)$/;"	f	typeref:typename:int
+mlx_destroy_window	cub3D/lib/mlx/mlx_destroy_window.c	/^int	mlx_destroy_window(t_xvar *xvar,t_win_list *win)$/;"	f	typeref:typename:int
+mlx_do_key_autorepeatoff	cub3D/lib/mlx/mlx_hook.c	/^int	mlx_do_key_autorepeatoff(t_xvar *xvar)$/;"	f	typeref:typename:int
+mlx_do_key_autorepeaton	cub3D/lib/mlx/mlx_hook.c	/^int	mlx_do_key_autorepeaton(t_xvar *xvar)$/;"	f	typeref:typename:int
+mlx_do_sync	cub3D/lib/mlx/mlx_hook.c	/^int	mlx_do_sync(t_xvar *xvar)$/;"	f	typeref:typename:int
+mlx_expose_hook	cub3D/lib/mlx/mlx_expose_hook.c	/^int		mlx_expose_hook(t_win_list *win,int (*funct)(),void *param)$/;"	f	typeref:typename:int
+mlx_ext_fullscreen	cub3D/lib/mlx/mlx_ext_randr.c	/^int			mlx_ext_fullscreen(t_xvar *xvar, t_win_list *win, int fullscreen)$/;"	f	typeref:typename:int
+mlx_flush_event	cub3D/lib/mlx/mlx_flush_event.c	/^int	mlx_flush_event(t_xvar *xvar)$/;"	f	typeref:typename:int
+mlx_get_color_value	cub3D/lib/mlx/mlx_get_color_value.c	/^int             mlx_get_color_value(t_xvar *xvar,int color)$/;"	f	typeref:typename:int
+mlx_get_data_addr	cub3D/lib/mlx/mlx_get_data_addr.c	/^char	*mlx_get_data_addr(t_img *img,int *bits_per_pixel,$/;"	f	typeref:typename:char *
+mlx_get_screen_size	cub3D/lib/mlx/mlx_screen_size.c	/^int		mlx_get_screen_size(void *mlx_ptr, int *sizex, int *sizey)$/;"	f	typeref:typename:int
+mlx_hook	cub3D/lib/mlx/mlx_hook.c	/^int	mlx_hook(t_win_list *win, int x_event, int x_mask, $/;"	f	typeref:typename:int
+mlx_init	cub3D/lib/mlx/mlx_init.c	/^void	*mlx_init()$/;"	f	typeref:typename:void *
+mlx_int_anti_resize_win	cub3D/lib/mlx/mlx_int_anti_resize_win.c	/^int	mlx_int_anti_resize_win(t_xvar *xvar,Window win,int w,int h)$/;"	f	typeref:typename:int
+mlx_int_deal_shm	cub3D/lib/mlx/mlx_init.c	/^int		mlx_int_deal_shm(t_xvar *xvar)$/;"	f	typeref:typename:int
+mlx_int_do_nothing	cub3D/lib/mlx/mlx_int_do_nothing.c	/^int	mlx_int_do_nothing(void *param)$/;"	f	typeref:typename:int
+mlx_int_egal_img	cub3D/lib/mlx/mlx_lib_xpm.c	/^int	mlx_int_egal_img(XImage *img1,XImage *img2)$/;"	f	typeref:typename:int
+mlx_int_file_get_rid_comment	cub3D/lib/mlx/mlx_xpm.c	/^int	mlx_int_file_get_rid_comment(char *ptr, int size)$/;"	f	typeref:typename:int
+mlx_int_get_col_name	cub3D/lib/mlx/mlx_xpm.c	/^int	mlx_int_get_col_name(char *str,int size)$/;"	f	typeref:typename:int
+mlx_int_get_good_color	cub3D/lib/mlx/mlx_get_color_value.c	/^int		mlx_int_get_good_color(t_xvar *xvar,int color)$/;"	f	typeref:typename:int
+mlx_int_get_line	cub3D/lib/mlx/mlx_xpm.c	/^char	*mlx_int_get_line(char *ptr,int *pos,int size)$/;"	f	typeref:typename:char *
+mlx_int_get_text_rgb	cub3D/lib/mlx/mlx_xpm.c	/^int	mlx_int_get_text_rgb(char *name, char *end)$/;"	f	typeref:typename:int
+mlx_int_get_visual	cub3D/lib/mlx/mlx_int_get_visual.c	/^int		mlx_int_get_visual(t_xvar *xvar)$/;"	f	typeref:typename:int
+mlx_int_new_image	cub3D/lib/mlx/mlx_new_image.c	/^void	*mlx_int_new_image(t_xvar *xvar,int width, int height,int format)$/;"	f	typeref:typename:void *
+mlx_int_new_xshm_image	cub3D/lib/mlx/mlx_new_image.c	/^void	*mlx_int_new_xshm_image(t_xvar *xvar,int width,int height,int format)$/;"	f	typeref:typename:void *
+mlx_int_param_ButtonPress	cub3D/lib/mlx/mlx_int_param_event.c	/^int	mlx_int_param_ButtonPress(t_xvar *xvar, XEvent *ev, t_win_list *win)$/;"	f	typeref:typename:int
+mlx_int_param_ButtonRelease	cub3D/lib/mlx/mlx_int_param_event.c	/^int	mlx_int_param_ButtonRelease(t_xvar *xvar, XEvent *ev, t_win_list *win)$/;"	f	typeref:typename:int
+mlx_int_param_Expose	cub3D/lib/mlx/mlx_int_param_event.c	/^int	mlx_int_param_Expose(t_xvar *xvar, XEvent *ev, t_win_list *win)$/;"	f	typeref:typename:int
+mlx_int_param_KeyPress	cub3D/lib/mlx/mlx_int_param_event.c	/^int	mlx_int_param_KeyPress(t_xvar *xvar, XEvent *ev, t_win_list *win)$/;"	f	typeref:typename:int
+mlx_int_param_KeyRelease	cub3D/lib/mlx/mlx_int_param_event.c	/^int	mlx_int_param_KeyRelease(t_xvar *xvar, XEvent *ev, t_win_list *win)$/;"	f	typeref:typename:int
+mlx_int_param_MotionNotify	cub3D/lib/mlx/mlx_int_param_event.c	/^int	mlx_int_param_MotionNotify(t_xvar *xvar, XEvent *ev, t_win_list *win)$/;"	f	typeref:typename:int
+mlx_int_param_event	cub3D/lib/mlx/mlx_int_param_event.c	/^int	(*(mlx_int_param_event[]))() =$/;"	v	typeref:typename:int (* ([]))()
+mlx_int_param_generic	cub3D/lib/mlx/mlx_int_param_event.c	/^int	mlx_int_param_generic(t_xvar *xvar, XEvent *ev, t_win_list *win)$/;"	f	typeref:typename:int
+mlx_int_param_undef	cub3D/lib/mlx/mlx_int_param_event.c	/^int	mlx_int_param_undef()$/;"	f	typeref:typename:int
+mlx_int_parse_xpm	cub3D/lib/mlx/mlx_xpm.c	/^void	*mlx_int_parse_xpm(t_xvar *xvar,void *info,int info_size,char *(*f)())$/;"	f	typeref:typename:void *
+mlx_int_rgb_conversion	cub3D/lib/mlx/mlx_init.c	/^int		mlx_int_rgb_conversion(t_xvar *xvar)$/;"	f	typeref:typename:int
+mlx_int_set_win_event_mask	cub3D/lib/mlx/mlx_int_set_win_event_mask.c	/^int	mlx_int_set_win_event_mask(t_xvar *xvar)$/;"	f	typeref:typename:int
+mlx_int_static_line	cub3D/lib/mlx/mlx_xpm.c	/^char	*mlx_int_static_line(char **xpm_data,int *pos,int size)$/;"	f	typeref:typename:char *
+mlx_int_str_str	cub3D/lib/mlx/mlx_int_str_to_wordtab.c	/^int	mlx_int_str_str(char *str,char *find,int len)$/;"	f	typeref:typename:int
+mlx_int_str_str_cote	cub3D/lib/mlx/mlx_int_str_to_wordtab.c	/^int	mlx_int_str_str_cote(char *str,char *find,int len)$/;"	f	typeref:typename:int
+mlx_int_str_to_wordtab	cub3D/lib/mlx/mlx_int_str_to_wordtab.c	/^char	**mlx_int_str_to_wordtab(char *str)$/;"	f	typeref:typename:char **
+mlx_int_wait_first_expose	cub3D/lib/mlx/mlx_int_wait_first_expose.c	/^int	mlx_int_wait_first_expose(t_xvar *xvar,Window win)$/;"	f	typeref:typename:int
+mlx_int_xpm_f_image	cub3D/lib/mlx/mlx_lib_xpm.c	/^void		*mlx_int_xpm_f_image(t_xvar *xvar,int *width,int *height,$/;"	f	typeref:typename:void *
+mlx_int_xpm_set_pixel	cub3D/lib/mlx/mlx_xpm.c	/^int	mlx_int_xpm_set_pixel(t_img *img, char *data, int opp, int col, int x)$/;"	f	typeref:typename:int
+mlx_key_hook	cub3D/lib/mlx/mlx_key_hook.c	/^int		mlx_key_hook(t_win_list *win,int (*funct)(),void *param)$/;"	f	typeref:typename:int
+mlx_loop	cub3D/lib/mlx/mlx_loop.c	/^int			mlx_loop(t_xvar *xvar)$/;"	f	typeref:typename:int
+mlx_loop_end	cub3D/lib/mlx/mlx_loop.c	/^int			mlx_loop_end(t_xvar *xvar)$/;"	f	typeref:typename:int
+mlx_loop_hook	cub3D/lib/mlx/mlx_loop_hook.c	/^int	mlx_loop_hook(t_xvar *xvar,int (*funct)(),void *param)$/;"	f	typeref:typename:int
+mlx_mouse_get_pos	cub3D/lib/mlx/mlx_mouse.c	/^int		mlx_mouse_get_pos(t_xvar *xvar, t_win_list *win, \\$/;"	f	typeref:typename:int
+mlx_mouse_hide	cub3D/lib/mlx/mlx_mouse.c	/^int		mlx_mouse_hide(t_xvar *xvar, t_win_list *win)$/;"	f	typeref:typename:int
+mlx_mouse_hook	cub3D/lib/mlx/mlx_mouse_hook.c	/^int		mlx_mouse_hook(t_win_list *win,int (*funct)(),void *param)$/;"	f	typeref:typename:int
+mlx_mouse_move	cub3D/lib/mlx/mlx_mouse.c	/^int		mlx_mouse_move(t_xvar *xvar, t_win_list *win, int x, int y)$/;"	f	typeref:typename:int
+mlx_mouse_show	cub3D/lib/mlx/mlx_mouse.c	/^int		mlx_mouse_show(t_xvar *xvar, t_win_list *win)$/;"	f	typeref:typename:int
+mlx_new_image	cub3D/lib/mlx/mlx_new_image.c	/^void	*mlx_new_image(t_xvar *xvar,int width, int height)$/;"	f	typeref:typename:void *
+mlx_new_image2	cub3D/lib/mlx/mlx_new_image.c	/^void	*mlx_new_image2(t_xvar *xvar,int width, int height)$/;"	f	typeref:typename:void *
+mlx_new_window	cub3D/lib/mlx/mlx_new_window.c	/^void	*mlx_new_window(t_xvar *xvar,int size_x,int size_y,char *title)$/;"	f	typeref:typename:void *
+mlx_pixel_put	cub3D/lib/mlx/mlx_pixel_put.c	/^int		mlx_pixel_put(t_xvar *xvar,t_win_list *win,$/;"	f	typeref:typename:int
+mlx_put_image_to_window	cub3D/lib/mlx/mlx_put_image_to_window.c	/^int	mlx_put_image_to_window(t_xvar *xvar,t_win_list *win,t_img *img,$/;"	f	typeref:typename:int
+mlx_set_font	cub3D/lib/mlx/mlx_set_font.c	/^void	mlx_set_font(t_xvar *xvar, t_win_list *win, char *name)$/;"	f	typeref:typename:void
+mlx_start	cub3D/src/graphics/graphics.c	/^void	mlx_start(t_gs *game)$/;"	f	typeref:typename:void
+mlx_start	graphics/src/main.c	/^void	mlx_start(t_game *game)$/;"	f	typeref:typename:void
+mlx_string_put	cub3D/lib/mlx/mlx_string_put.c	/^int		mlx_string_put(t_xvar *xvar,t_win_list *win,$/;"	f	typeref:typename:int
+mlx_xpm_file_to_image	cub3D/lib/mlx/mlx_lib_xpm.c	/^void	*mlx_xpm_file_to_image(t_xvar *xvar,char *filename,$/;"	f	typeref:typename:void *
+mlx_xpm_file_to_image	cub3D/lib/mlx/mlx_xpm.c	/^void	*mlx_xpm_file_to_image(t_xvar *xvar,char *file,int *width,int *height)$/;"	f	typeref:typename:void *
+mlx_xpm_to_image	cub3D/lib/mlx/mlx_lib_xpm.c	/^void	*mlx_xpm_to_image(t_xvar *xvar,char **data,int *width,int *height)$/;"	f	typeref:typename:void *
+mlx_xpm_to_image	cub3D/lib/mlx/mlx_xpm.c	/^void	*mlx_xpm_to_image(t_xvar *xvar,char **xpm_data,int *width,int *height)$/;"	f	typeref:typename:void *
+module	graphics/lib/libft/ft_itoa.c	/^long int	module(int n)$/;"	f	typeref:typename:long int
+mouse_hook	cub3D/lib/mlx/mlx_int.h	/^	int					(*mouse_hook)();$/;"	m	struct:s_win_list	typeref:typename:int (*)()
+mouse_param	cub3D/lib/mlx/mlx_int.h	/^	void				*mouse_param;$/;"	m	struct:s_win_list	typeref:typename:void *
+mouse_win1	cub3D/lib/mlx/test/main.c	/^int	mouse_win1(int button,int x,int y, void *p)$/;"	f	typeref:typename:int
+mouse_win2	cub3D/lib/mlx/test/main.c	/^int	mouse_win2(int button,int x,int y, void *p)$/;"	f	typeref:typename:int
+mouse_win3	cub3D/lib/mlx/test/main.c	/^int	mouse_win3(int x,int y, void *p)$/;"	f	typeref:typename:int
+move	cub3D/src/graphics/moves.c	/^int	move(int keycode, t_gs *game)$/;"	f	typeref:typename:int
+move	graphics/src/moves.c	/^int	move(int keycode, t_game *game)$/;"	f	typeref:typename:int
+my_pixel_put	cub3D/src/graphics/graphics.c	/^void	my_pixel_put(t_img *img, int x, int y, int color)$/;"	f	typeref:typename:void
+my_pixel_put	graphics/src/main.c	/^void	my_pixel_put(t_img *img, int x, int y, int color)$/;"	f	typeref:typename:void
+name	cub3D/.vscode/launch.json	/^            "name": "MINISHELL",$/;"	s	object:configurations.0
+name	cub3D/lib/mlx/mlx_int.h	/^	char	*name;$/;"	m	struct:s_col_name	typeref:typename:char *
+name	cub3D/lib/mlx/mlx_int.h	/^	int		name;$/;"	m	struct:s_xpm_col	typeref:typename:int
+next	cub3D/lib/libft/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list *
+next	cub3D/lib/mlx/mlx_int.h	/^	struct s_win_list	*next;$/;"	m	struct:s_win_list	typeref:struct:s_win_list *
+next	graphics/lib/libft/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list *
+no	cub3D/src/cub3d.h	/^	t_img	no;$/;"	m	struct:s_graphics	typeref:typename:t_img
+no_t	cub3D/src/cub3d.h	/^	char		*no_t;$/;"	m	struct:s_gs	typeref:typename:char *
+no_t	graphics/include/cub3d.h	/^	char	*no_t;$/;"	m	struct:s_graphics	typeref:typename:char *
+options	cub3D/.vscode/tasks.json	/^            "options": {$/;"	o	object:tasks.1
+panel	cub3D/.vscode/tasks.json	/^                "panel": "new"$/;"	s	object:tasks.0.presentation
+param	cub3D/lib/mlx/mlx_int.h	/^	void	*param;$/;"	m	struct:s_event_list	typeref:typename:void *
 parse_args	cub3D/lib/mlx/configure	/^parse_args(){$/;"	f
-parser	cub3D/src/parser/parse.c	/^int	parser(char *f, t_gs *gs)$/;"	f
-pix	cub3D/lib/mlx/mlx_int.h	/^	Pixmap			pix;$/;"	m	struct:s_img
-player	cub3D/src/cub3d.h	/^	t_player	player;$/;"	m	struct:s_gs
-player	graphics/include/cub3d.h	/^	t_player	player;$/;"	m	struct:s_game
-player_check	cub3D/src/parser/checker.c	/^static int	player_check(t_gs *gs, int i, int j)$/;"	f	file:
-playerp	cub3D/src/cub3d.h	/^	t_position	*playerp;$/;"	m	struct:s_gs
-playerrender	cub3D/src/graphics/renders.c	/^void	playerrender(t_gs *game)$/;"	f
-playerrender	graphics/src/renders.c	/^void	playerrender(t_game *game)$/;"	f
-prev	graphics/lib/libft/libft.h	/^	struct s_list	*prev;$/;"	m	struct:s_list	typeref:struct:s_list::s_list
-private_cmap	cub3D/lib/mlx/mlx_int.h	/^	int			private_cmap;$/;"	m	struct:s_xvar
-pshm_format	cub3D/lib/mlx/mlx_int.h	/^	int			pshm_format;$/;"	m	struct:s_xvar
-put_line	cub3D/src/graphics/renders.c	/^void	put_line(t_gs *game, double x, double y, double dir, int side, int i)$/;"	f
-put_line	graphics/src/renders.c	/^void	put_line(t_game *game, double x, double y, double dir, int side, int i)$/;"	f
-quote	graphics/lib/libft/quotes.c	/^char	quote(char *s, int index)$/;"	f
-raw	cub3D/src/cub3d.h	/^	char		**raw;$/;"	m	struct:s_gs
-rgb_format	cub3D/src/parser/parse.c	/^static int	rgb_format(char *s, t_gs *gs)$/;"	f	file:
-rgbtohex	cub3D/src/parser/parse_utils.c	/^unsigned int	rgbtohex(int *rgb)$/;"	f
-root	cub3D/lib/mlx/mlx_int.h	/^	Window		root;$/;"	m	struct:s_xvar
-rstr	cub3D/lib/libft/ft_itoa.c	/^void	rstr(char *str, int size)$/;"	f
-runitdown	cub3D/src/parser/parse_utils.c	/^void	runitdown(int fd, char *line)$/;"	f
+parser	cub3D/src/parser/parse.c	/^int	parser(char *f, t_gs *gs)$/;"	f	typeref:typename:int
+pix	cub3D/lib/mlx/mlx_int.h	/^	Pixmap			pix;$/;"	m	struct:s_img	typeref:typename:Pixmap
+player	cub3D/src/cub3d.h	/^	t_player	player;$/;"	m	struct:s_gs	typeref:typename:t_player
+player	graphics/include/cub3d.h	/^	t_player	player;$/;"	m	struct:s_game	typeref:typename:t_player
+player_check	cub3D/src/parser/checker.c	/^static int	player_check(t_gs *gs, int i, int j)$/;"	f	typeref:typename:int	file:
+playerp	cub3D/src/cub3d.h	/^	t_position	*playerp;$/;"	m	struct:s_gs	typeref:typename:t_position *
+playerrender	cub3D/src/graphics/renders.c	/^void	playerrender(t_gs *game)$/;"	f	typeref:typename:void
+playerrender	graphics/src/renders.c	/^void	playerrender(t_game *game)$/;"	f	typeref:typename:void
+presentation	cub3D/.vscode/tasks.json	/^            "presentation": {$/;"	o	object:tasks.0
+prev	graphics/lib/libft/libft.h	/^	struct s_list	*prev;$/;"	m	struct:s_list	typeref:struct:s_list *
+private_cmap	cub3D/lib/mlx/mlx_int.h	/^	int			private_cmap;$/;"	m	struct:s_xvar	typeref:typename:int
+problemMatcher	cub3D/.vscode/tasks.json	/^            "problemMatcher": [$/;"	a	object:tasks.1
+program	cub3D/.vscode/launch.json	/^            "program": "${workspaceFolder}\/cub3D",$/;"	s	object:configurations.0
+pshm_format	cub3D/lib/mlx/mlx_int.h	/^	int			pshm_format;$/;"	m	struct:s_xvar	typeref:typename:int
+put_line	cub3D/src/graphics/renders.c	/^void	put_line(t_gs *game, double x, double y, double dir, int side, int i)$/;"	f	typeref:typename:void
+put_line	graphics/src/renders.c	/^void	put_line(t_game *game, double x, double y, double dir, int side, int i)$/;"	f	typeref:typename:void
+quote	graphics/lib/libft/quotes.c	/^char	quote(char *s, int index)$/;"	f	typeref:typename:char
+raw	cub3D/src/cub3d.h	/^	char		**raw;$/;"	m	struct:s_gs	typeref:typename:char **
+re	cub3D/Makefile	/^re: fclean all$/;"	t
+re	cub3D/lib/libft/Makefile	/^re:	fclean all$/;"	t
+re	cub3D/lib/mlx/Makefile	/^re	: clean all$/;"	t
+re	cub3D/lib/mlx/test/Makefile.mk	/^re: clean all$/;"	t
+re	graphics/Makefile	/^re: fclean all$/;"	t
+re	graphics/lib/libft/Makefile	/^re: fclean all$/;"	t
+request	cub3D/.vscode/launch.json	/^            "request": "launch",$/;"	s	object:configurations.0
+reveal	cub3D/.vscode/tasks.json	/^                "reveal": "always",$/;"	s	object:tasks.0.presentation
+rgb_format	cub3D/src/parser/parse.c	/^static int	rgb_format(char *s, t_gs *gs)$/;"	f	typeref:typename:int	file:
+rgbtohex	cub3D/src/parser/parse_utils.c	/^unsigned int	rgbtohex(int *rgb)$/;"	f	typeref:typename:unsigned int
+root	cub3D/lib/mlx/mlx_int.h	/^	Window		root;$/;"	m	struct:s_xvar	typeref:typename:Window
+rstr	cub3D/lib/libft/ft_itoa.c	/^void	rstr(char *str, int size)$/;"	f	typeref:typename:void
+runitdown	cub3D/src/parser/parse_utils.c	/^void	runitdown(int fd, char *line)$/;"	f	typeref:typename:void
 s_col_name	cub3D/lib/mlx/mlx_int.h	/^struct	s_col_name$/;"	s
 s_event_list	cub3D/lib/mlx/mlx_int.h	/^typedef struct	s_event_list$/;"	s
 s_game	graphics/include/cub3d.h	/^typedef struct s_game$/;"	s
@@ -558,34 +732,39 @@ s_position	cub3D/src/cub3d.h	/^typedef struct s_position$/;"	s
 s_win_list	cub3D/lib/mlx/mlx_int.h	/^typedef struct	s_win_list$/;"	s
 s_xpm_col	cub3D/lib/mlx/mlx_int.h	/^typedef	struct	s_xpm_col$/;"	s
 s_xvar	cub3D/lib/mlx/mlx_int.h	/^typedef struct	s_xvar$/;"	s
-saved_mode	cub3D/lib/mlx/mlx_ext_randr.c	/^RRMode	saved_mode = 0;$/;"	v
-screen	cub3D/lib/mlx/mlx_int.h	/^	int			screen;$/;"	m	struct:s_xvar
-set_image	cub3D/src/graphics/graphics.c	/^int	set_image(t_gs *game, char *path, int i)$/;"	f
-set_mlx_images	cub3D/src/graphics/graphics.c	/^int	set_mlx_images(t_gs *game)$/;"	f
-shm	cub3D/lib/mlx/mlx_int.h	/^	XShmSegmentInfo	shm;$/;"	m	struct:s_img
-shm_att_pb	cub3D/lib/mlx/mlx_new_image.c	/^int	shm_att_pb(Display *d,XErrorEvent *ev)$/;"	f
+saved_mode	cub3D/lib/mlx/mlx_ext_randr.c	/^RRMode	saved_mode = 0;$/;"	v	typeref:typename:RRMode
+screen	cub3D/lib/mlx/mlx_int.h	/^	int			screen;$/;"	m	struct:s_xvar	typeref:typename:int
+set_image	cub3D/src/graphics/graphics.c	/^int	set_image(t_gs *game, char *path, int i)$/;"	f	typeref:typename:int
+set_mlx_images	cub3D/src/graphics/graphics.c	/^int	set_mlx_images(t_gs *game)$/;"	f	typeref:typename:int
+setupCommands	cub3D/.vscode/launch.json	/^            "setupCommands": [$/;"	a	object:configurations.0
+shm	cub3D/lib/mlx/mlx_int.h	/^	XShmSegmentInfo	shm;$/;"	m	struct:s_img	typeref:typename:XShmSegmentInfo
+shm_att_pb	cub3D/lib/mlx/mlx_new_image.c	/^int	shm_att_pb(Display *d,XErrorEvent *ev)$/;"	f	typeref:typename:int
+show	cub3D/lib/mlx/Makefile.mk	/^show:$/;"	t
+show	cub3D/lib/mlx/test/Makefile.mk	/^show:$/;"	t
 show_help	cub3D/lib/mlx/configure	/^show_help(){$/;"	f
-side	cub3D/src/cub3d.h	/^	int		side;$/;"	m	struct:s_player
-side	graphics/include/cub3d.h	/^	int		side;$/;"	m	struct:s_player
+side	cub3D/src/cub3d.h	/^	int		side;$/;"	m	struct:s_player	typeref:typename:int
+side	graphics/include/cub3d.h	/^	int		side;$/;"	m	struct:s_player	typeref:typename:int
 sigint_handler	cub3D/lib/mlx/test/run_tests.sh	/^sigint_handler(){$/;"	f
-size_line	cub3D/lib/mlx/mlx_int.h	/^	int				size_line;$/;"	m	struct:s_img
-sl1	cub3D/lib/mlx/test/main.c	/^int	sl1;$/;"	v
-sl2	cub3D/lib/mlx/test/main.c	/^int	sl2;$/;"	v
-sl3	cub3D/lib/mlx/test/main.c	/^int	sl3;$/;"	v
-sl4	cub3D/lib/mlx/test/main.c	/^int	sl4;$/;"	v
-smaller	graphics/lib/libft/int_size_utils.c	/^int	smaller(int a, int b)$/;"	f
-so	cub3D/src/cub3d.h	/^	t_img	so;$/;"	m	struct:s_graphics
-so_t	cub3D/src/cub3d.h	/^	char		*so_t;$/;"	m	struct:s_gs
-so_t	graphics/include/cub3d.h	/^	char	*so_t;$/;"	m	struct:s_graphics
-strfill	cub3D/src/parser/map_parse.c	/^static void	strfill(char c, char *tofill, int len)$/;"	f	file:
-strfiller	graphics/lib/libft/ft_split.c	/^static void	strfiller(char *s, char **str, char c)$/;"	f	file:
-strfiller	graphics/lib/libft/ft_split_if_not_in_quote.c	/^static void	strfiller(char *s, char **str, char c)$/;"	f	file:
-strlcpy_is_not_posix	cub3D/lib/mlx/mlx_xpm.c	/^unsigned int	strlcpy_is_not_posix(char *dest, char *src, unsigned int size)$/;"	f
-strmalloc	graphics/lib/libft/ft_split.c	/^static void	strmalloc(int *j, char ***str, int *k)$/;"	f	file:
-strmalloc	graphics/lib/libft/ft_split_if_not_in_quote.c	/^static void	strmalloc(int *j, char ***str, int *k)$/;"	f	file:
-t_access	cub3D/src/parser/parse_utils.c	/^int	t_access(char *s, char **d)$/;"	f
+size_line	cub3D/lib/mlx/mlx_int.h	/^	int				size_line;$/;"	m	struct:s_img	typeref:typename:int
+sl1	cub3D/lib/mlx/test/main.c	/^int	sl1;$/;"	v	typeref:typename:int
+sl2	cub3D/lib/mlx/test/main.c	/^int	sl2;$/;"	v	typeref:typename:int
+sl3	cub3D/lib/mlx/test/main.c	/^int	sl3;$/;"	v	typeref:typename:int
+sl4	cub3D/lib/mlx/test/main.c	/^int	sl4;$/;"	v	typeref:typename:int
+smaller	graphics/lib/libft/int_size_utils.c	/^int	smaller(int a, int b)$/;"	f	typeref:typename:int
+so	cub3D/src/cub3d.h	/^	t_img	so;$/;"	m	struct:s_graphics	typeref:typename:t_img
+so_t	cub3D/src/cub3d.h	/^	char		*so_t;$/;"	m	struct:s_gs	typeref:typename:char *
+so_t	graphics/include/cub3d.h	/^	char	*so_t;$/;"	m	struct:s_graphics	typeref:typename:char *
+stdlib.h	cub3D/src/.vscode/settings.json	/^        "stdlib.h": "c"$/;"	s	object:files.associations
+stopAtEntry	cub3D/.vscode/launch.json	/^            "stopAtEntry": false,$/;"	b	object:configurations.0
+strfill	cub3D/src/parser/map_parse.c	/^static void	strfill(char c, char *tofill, int len)$/;"	f	typeref:typename:void	file:
+strfiller	graphics/lib/libft/ft_split.c	/^static void	strfiller(char *s, char **str, char c)$/;"	f	typeref:typename:void	file:
+strfiller	graphics/lib/libft/ft_split_if_not_in_quote.c	/^static void	strfiller(char *s, char **str, char c)$/;"	f	typeref:typename:void	file:
+strlcpy_is_not_posix	cub3D/lib/mlx/mlx_xpm.c	/^unsigned int	strlcpy_is_not_posix(char *dest, char *src, unsigned int size)$/;"	f	typeref:typename:unsigned int
+strmalloc	graphics/lib/libft/ft_split.c	/^static void	strmalloc(int *j, char ***str, int *k)$/;"	f	typeref:typename:void	file:
+strmalloc	graphics/lib/libft/ft_split_if_not_in_quote.c	/^static void	strmalloc(int *j, char ***str, int *k)$/;"	f	typeref:typename:void	file:
+t_access	cub3D/src/parser/parse_utils.c	/^int	t_access(char *s, char **d)$/;"	f	typeref:typename:int
 t_event_list	cub3D/lib/mlx/mlx_int.h	/^}				t_event_list;$/;"	t	typeref:struct:s_event_list
-t_format	cub3D/src/parser/parse.c	/^static int	t_format(char *s, t_gs *gs)$/;"	f	file:
+t_format	cub3D/src/parser/parse.c	/^static int	t_format(char *s, t_gs *gs)$/;"	f	typeref:typename:int	file:
 t_game	graphics/include/cub3d.h	/^}	t_game;$/;"	t	typeref:struct:s_game
 t_graphics	cub3D/src/cub3d.h	/^}	t_graphics;$/;"	t	typeref:struct:s_graphics
 t_graphics	graphics/include/cub3d.h	/^}	t_graphics;$/;"	t	typeref:struct:s_graphics
@@ -604,43 +783,50 @@ t_position	cub3D/src/cub3d.h	/^}	t_position;$/;"	t	typeref:struct:s_position
 t_win_list	cub3D/lib/mlx/mlx_int.h	/^}				t_win_list;$/;"	t	typeref:struct:s_win_list
 t_xpm_col	cub3D/lib/mlx/mlx_int.h	/^}				t_xpm_col;$/;"	t	typeref:struct:s_xpm_col
 t_xvar	cub3D/lib/mlx/mlx_int.h	/^}				t_xvar;$/;"	t	typeref:struct:s_xvar
+tasks	cub3D/.vscode/tasks.json	/^    "tasks": [$/;"	a
 test_default_main	cub3D/lib/mlx/test/run_tests.sh	/^test_default_main(){$/;"	f
-tl	cub3D/src/cub3d.h	/^	int			tl;$/;"	m	struct:s_gs
-type	cub3D/lib/mlx/mlx_int.h	/^	int				type;$/;"	m	struct:s_img
-typeconversor1	graphics/lib/libft/ft_printf.c	/^int	typeconversor1(char ch, va_list args)$/;"	f
-typeconversor2	graphics/lib/libft/ft_printf.c	/^int	typeconversor2(char ch, va_list args)$/;"	f
-use_xshm	cub3D/lib/mlx/mlx_int.h	/^	int			use_xshm;$/;"	m	struct:s_xvar
-visual	cub3D/lib/mlx/mlx_int.h	/^	Visual		*visual;$/;"	m	struct:s_xvar
-wall_check	cub3D/src/parser/checker.c	/^static int	wall_check(t_gs *gs)$/;"	f	file:
-we	cub3D/src/cub3d.h	/^	t_img	we;$/;"	m	struct:s_graphics
-we_t	cub3D/src/cub3d.h	/^	char		*we_t;$/;"	m	struct:s_gs
-we_t	graphics/include/cub3d.h	/^	char	*we_t;$/;"	m	struct:s_graphics
-width	cub3D/lib/mlx/mlx_int.h	/^	int				width;$/;"	m	struct:s_img
-width	cub3D/src/cub3d.h	/^	int		width;$/;"	m	struct:s_img
-width	graphics/include/cub3d.h	/^	int		width;$/;"	m	struct:s_map
-win	cub3D/src/cub3d.h	/^	void	*win;$/;"	m	struct:s_graphics
-win	graphics/include/cub3d.h	/^	void	*win;$/;"	m	struct:s_graphics
-win1	cub3D/lib/mlx/test/main.c	/^void	*win1;$/;"	v
-win1	cub3D/lib/mlx/test/new_win.c	/^void *win1;$/;"	v
-win2	cub3D/lib/mlx/test/main.c	/^void    *win2;$/;"	v
-win2	cub3D/lib/mlx/test/new_win.c	/^void *win2;$/;"	v
-win3	cub3D/lib/mlx/test/main.c	/^void    *win3;$/;"	v
-win_count	cub3D/lib/mlx/mlx_loop.c	/^static int	win_count(t_xvar *xvar)$/;"	f	file:
-win_list	cub3D/lib/mlx/mlx_int.h	/^	t_win_list	*win_list;$/;"	m	struct:s_xvar
-window	cub3D/lib/mlx/mlx_int.h	/^	Window				window;$/;"	m	struct:s_win_list
-wm_delete_window	cub3D/lib/mlx/mlx_int.h	/^	Atom		wm_delete_window;$/;"	m	struct:s_xvar
-wm_protocols	cub3D/lib/mlx/mlx_int.h	/^	Atom		wm_protocols;$/;"	m	struct:s_xvar
-wordcounter	graphics/lib/libft/ft_split.c	/^static int	wordcounter(char const *s, char c)$/;"	f	file:
-wordcounter	graphics/lib/libft/ft_split_if_not_in_quote.c	/^static int	wordcounter(char *s, char c)$/;"	f	file:
-wordfiller	graphics/lib/libft/ft_split.c	/^static void	wordfiller(char *j, char *str, char c)$/;"	f	file:
-wordfiller	graphics/lib/libft/ft_split_if_not_in_quote.c	/^static void	wordfiller(char *j, char *str, char c)$/;"	f	file:
-x	cub3D/src/cub3d.h	/^	double	x;$/;"	m	struct:s_player
-x	cub3D/src/cub3d.h	/^	double	x;$/;"	m	struct:s_position
-x	graphics/include/cub3d.h	/^	double	x;$/;"	m	struct:s_player
-xlen	cub3D/src/cub3d.h	/^	int			xlen;$/;"	m	struct:s_gs
-xpm1_x	cub3D/lib/mlx/test/main.c	/^int	xpm1_x;$/;"	v
-xpm1_y	cub3D/lib/mlx/test/main.c	/^int	xpm1_y;$/;"	v
-y	cub3D/src/cub3d.h	/^	double	y;$/;"	m	struct:s_player
-y	cub3D/src/cub3d.h	/^	double	y;$/;"	m	struct:s_position
-y	graphics/include/cub3d.h	/^	double	y;$/;"	m	struct:s_player
-ylen	cub3D/src/cub3d.h	/^	int			ylen;$/;"	m	struct:s_gs
+text	cub3D/.vscode/launch.json	/^                    "text": "-enable-pretty-printing",$/;"	s	object:configurations.0.setupCommands.0
+tl	cub3D/src/cub3d.h	/^	int			tl;$/;"	m	struct:s_gs	typeref:typename:int
+type	cub3D/.vscode/launch.json	/^            "type": "cppdbg",$/;"	s	object:configurations.0
+type	cub3D/.vscode/tasks.json	/^            "type": "cppbuild",$/;"	s	object:tasks.1
+type	cub3D/.vscode/tasks.json	/^            "type": "shell",$/;"	s	object:tasks.0
+type	cub3D/lib/mlx/mlx_int.h	/^	int				type;$/;"	m	struct:s_img	typeref:typename:int
+typeconversor1	graphics/lib/libft/ft_printf.c	/^int	typeconversor1(char ch, va_list args)$/;"	f	typeref:typename:int
+typeconversor2	graphics/lib/libft/ft_printf.c	/^int	typeconversor2(char ch, va_list args)$/;"	f	typeref:typename:int
+use_xshm	cub3D/lib/mlx/mlx_int.h	/^	int			use_xshm;$/;"	m	struct:s_xvar	typeref:typename:int
+version	cub3D/.vscode/launch.json	/^    "version": "0.2.0",$/;"	s
+version	cub3D/.vscode/tasks.json	/^    "version": "2.0.0",$/;"	s
+visual	cub3D/lib/mlx/mlx_int.h	/^	Visual		*visual;$/;"	m	struct:s_xvar	typeref:typename:Visual *
+wall_check	cub3D/src/parser/checker.c	/^static int	wall_check(t_gs *gs)$/;"	f	typeref:typename:int	file:
+we	cub3D/src/cub3d.h	/^	t_img	we;$/;"	m	struct:s_graphics	typeref:typename:t_img
+we_t	cub3D/src/cub3d.h	/^	char		*we_t;$/;"	m	struct:s_gs	typeref:typename:char *
+we_t	graphics/include/cub3d.h	/^	char	*we_t;$/;"	m	struct:s_graphics	typeref:typename:char *
+width	cub3D/lib/mlx/mlx_int.h	/^	int				width;$/;"	m	struct:s_img	typeref:typename:int
+width	cub3D/src/cub3d.h	/^	int		width;$/;"	m	struct:s_img	typeref:typename:int
+width	graphics/include/cub3d.h	/^	int		width;$/;"	m	struct:s_map	typeref:typename:int
+win	cub3D/src/cub3d.h	/^	void	*win;$/;"	m	struct:s_graphics	typeref:typename:void *
+win	graphics/include/cub3d.h	/^	void	*win;$/;"	m	struct:s_graphics	typeref:typename:void *
+win1	cub3D/lib/mlx/test/main.c	/^void	*win1;$/;"	v	typeref:typename:void *
+win1	cub3D/lib/mlx/test/new_win.c	/^void *win1;$/;"	v	typeref:typename:void *
+win2	cub3D/lib/mlx/test/main.c	/^void    *win2;$/;"	v	typeref:typename:void *
+win2	cub3D/lib/mlx/test/new_win.c	/^void *win2;$/;"	v	typeref:typename:void *
+win3	cub3D/lib/mlx/test/main.c	/^void    *win3;$/;"	v	typeref:typename:void *
+win_count	cub3D/lib/mlx/mlx_loop.c	/^static int	win_count(t_xvar *xvar)$/;"	f	typeref:typename:int	file:
+win_list	cub3D/lib/mlx/mlx_int.h	/^	t_win_list	*win_list;$/;"	m	struct:s_xvar	typeref:typename:t_win_list *
+window	cub3D/lib/mlx/mlx_int.h	/^	Window				window;$/;"	m	struct:s_win_list	typeref:typename:Window
+wm_delete_window	cub3D/lib/mlx/mlx_int.h	/^	Atom		wm_delete_window;$/;"	m	struct:s_xvar	typeref:typename:Atom
+wm_protocols	cub3D/lib/mlx/mlx_int.h	/^	Atom		wm_protocols;$/;"	m	struct:s_xvar	typeref:typename:Atom
+wordcounter	graphics/lib/libft/ft_split.c	/^static int	wordcounter(char const *s, char c)$/;"	f	typeref:typename:int	file:
+wordcounter	graphics/lib/libft/ft_split_if_not_in_quote.c	/^static int	wordcounter(char *s, char c)$/;"	f	typeref:typename:int	file:
+wordfiller	graphics/lib/libft/ft_split.c	/^static void	wordfiller(char *j, char *str, char c)$/;"	f	typeref:typename:void	file:
+wordfiller	graphics/lib/libft/ft_split_if_not_in_quote.c	/^static void	wordfiller(char *j, char *str, char c)$/;"	f	typeref:typename:void	file:
+x	cub3D/src/cub3d.h	/^	double	x;$/;"	m	struct:s_player	typeref:typename:double
+x	cub3D/src/cub3d.h	/^	double	x;$/;"	m	struct:s_position	typeref:typename:double
+x	graphics/include/cub3d.h	/^	double	x;$/;"	m	struct:s_player	typeref:typename:double
+xlen	cub3D/src/cub3d.h	/^	int			xlen;$/;"	m	struct:s_gs	typeref:typename:int
+xpm1_x	cub3D/lib/mlx/test/main.c	/^int	xpm1_x;$/;"	v	typeref:typename:int
+xpm1_y	cub3D/lib/mlx/test/main.c	/^int	xpm1_y;$/;"	v	typeref:typename:int
+y	cub3D/src/cub3d.h	/^	double	y;$/;"	m	struct:s_player	typeref:typename:double
+y	cub3D/src/cub3d.h	/^	double	y;$/;"	m	struct:s_position	typeref:typename:double
+y	graphics/include/cub3d.h	/^	double	y;$/;"	m	struct:s_player	typeref:typename:double
+ylen	cub3D/src/cub3d.h	/^	int			ylen;$/;"	m	struct:s_gs	typeref:typename:int

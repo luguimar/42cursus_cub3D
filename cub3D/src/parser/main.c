@@ -6,7 +6,7 @@
 /*   By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:24:58 by jduraes-          #+#    #+#             */
-/*   Updated: 2024/08/14 03:50:34 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/08/15 06:04:11 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_perror(char *str, int fd)
 {
-	ft_putstr_fd("Error: ", fd);
+	ft_putstr_fd("Error\n", fd);
 	ft_putstr_fd(str, fd);
 	ft_putstr_fd("\n", fd);
 	exit(EXIT_FAILURE);
@@ -64,7 +64,7 @@ static void	is_valid(char *f)
 		if (f[i] == '\0')
 			ft_perror("Invalid map format", 1);
 	}
-	if (ft_strncmp(f + i, ".cub", 4))
+	if (ft_strncmp(f + i, ".cub\0", 5))
 		ft_perror("Invalid map format", 1);
 	fd = open(f, O_RDONLY);
 	if (fd == -1)

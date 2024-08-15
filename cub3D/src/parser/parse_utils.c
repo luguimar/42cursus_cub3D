@@ -6,7 +6,7 @@
 /*   By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 21:13:57 by jduraes-          #+#    #+#             */
-/*   Updated: 2024/08/02 17:55:54 by jduraes-         ###   ########.fr       */
+/*   Updated: 2024/08/15 05:39:55 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 unsigned int	rgbtohex(int *rgb)
 {
-	return ((rgb[0] << 16) + (rgb[1] << 8) + rgb[2]);
+	return (0x10000 * rgb[0] + 0x100 * rgb[1] + 0x1 * rgb[2]);
 }
 
 void	runitdown(int fd, char *line)
