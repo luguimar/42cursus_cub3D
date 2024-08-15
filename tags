@@ -23,7 +23,7 @@ CUB3D_H	cub3D/src/cub3d.h	14;"	d
 CUB3D_H	graphics/include/cub3d.h	14;"	d
 D	cub3D/src/cub3d.h	/^	D = 100,$/;"	e	enum:e_key
 D	graphics/include/cub3d.h	/^	D = 100,$/;"	e	enum:e_key
-DOWNLOAD	cub3D/Makefile	/^DOWNLOAD = wget$/;"	m
+DOWNLOAD	cub3D/Makefile	/^DOWNLOAD = wget -O$/;"	m
 DOWNLOAD	graphics/Makefile	/^DOWNLOAD = wget -O$/;"	m
 ESC	cub3D/src/cub3d.h	/^	ESC = 65307,$/;"	e	enum:e_key
 ESC	graphics/include/cub3d.h	/^	ESC = 65307,$/;"	e	enum:e_key
