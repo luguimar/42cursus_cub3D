@@ -6,7 +6,7 @@
 /*   By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:01:45 by jduraes-          #+#    #+#             */
-/*   Updated: 2024/08/14 04:09:55 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/08/16 05:33:12 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,7 @@ int				t_access(char *s, char **d);
 int				map_start(int fd, t_gs *gs, char *f);
 unsigned int	rgbtohex(int *rgb);
 void			mlx_start(t_gs *game);
+void			deinitialize(t_gs *gs);
 
 int				move(int keycode, t_gs *game);
 int				key_hook(int keycode, t_gs *game);

@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 01:45:06 by luguimar          #+#    #+#             */
-/*   Updated: 2024/08/15 02:04:42 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/08/16 05:32:04 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ int	set_image(t_gs *game, char *path, int i)
 	{
 		game->graphics.no.img = mlx_xpm_file_to_image(game->graphics.mlx, path, \
 			&game->graphics.no.width, &game->graphics.no.height);
+		if (!game->graphics.no.img)
+			return (1);
 		game->graphics.no.addr = mlx_get_data_addr(game->graphics.no.img, \
 			&game->graphics.no.bits_per_pixel, &game->graphics.no.line_length, \
 			&game->graphics.no.endian);
@@ -41,6 +43,8 @@ int	set_image(t_gs *game, char *path, int i)
 	{
 		game->graphics.so.img = mlx_xpm_file_to_image(game->graphics.mlx, path, \
 			&game->graphics.so.width, &game->graphics.so.height);
+		if (!game->graphics.so.img)
+			return (1);
 		game->graphics.so.addr = mlx_get_data_addr(game->graphics.so.img, \
 			&game->graphics.so.bits_per_pixel, &game->graphics.so.line_length, \
 			&game->graphics.so.endian);
@@ -49,6 +53,8 @@ int	set_image(t_gs *game, char *path, int i)
 	{
 		game->graphics.ea.img = mlx_xpm_file_to_image(game->graphics.mlx, path, \
 			&game->graphics.ea.width, &game->graphics.ea.height);
+		if (!game->graphics.ea.img)
+			return (1);
 		game->graphics.ea.addr = mlx_get_data_addr(game->graphics.ea.img, \
 			&game->graphics.ea.bits_per_pixel, &game->graphics.ea.line_length, \
 			&game->graphics.ea.endian);
@@ -57,12 +63,12 @@ int	set_image(t_gs *game, char *path, int i)
 	{
 		game->graphics.we.img = mlx_xpm_file_to_image(game->graphics.mlx, path, \
 			&game->graphics.we.width, &game->graphics.we.height);
+		if (!game->graphics.we.img)
+			return (1);
 		game->graphics.we.addr = mlx_get_data_addr(game->graphics.we.img, \
 			&game->graphics.we.bits_per_pixel, &game->graphics.we.line_length, \
 			&game->graphics.we.endian);
 	}
-	if (!game->graphics.no.img)
-		return (error_msg("Error\nmlx_xpm_file_to_image failed\n", 1));
 	return (0);
 }
 
@@ -88,11 +94,17 @@ int	mlx_close(t_gs *game)
 	exit(0);
 }
 
-void	init_img(t_img *img, void *mlx, int width, int height)
+int	init_img(t_img *img, void *mlx, int width, int height)
 {
 	img->img = mlx_new_image(mlx, width, height);
+	if (!img->img)
+	{
+		ft_putstr_fd("Error\nmlx_new_image failed\n", 2);
+		return (1);
+	}
 	img->addr = mlx_get_data_addr(img->img, &img->bits_per_pixel, \
 		&img->line_length, &img->endian);
+	return (0);
 }
 
 void	mlx_start(t_gs *game)
@@ -112,12 +124,14 @@ void	mlx_start(t_gs *game)
 	}
 	if (set_mlx_images(game))
 	{
+		mlx_destroy_window(game->graphics.mlx, game->graphics.win);
 		mlx_destroy_display(game->graphics.mlx);
-		ft_putstr_fd("Error\nmlx_xpm_file_to_image failed fuck it\n", 2);
+		ft_putstr_fd("Error\nmlx_xpm_file_to_image failed\n", 2);
 		exit(1);
 	}
 	get_player_position(game);
-	init_img(&game->graphics.img, game->graphics.mlx, 800, 600);
+	if (init_img(&game->graphics.img, game->graphics.mlx, 800, 600))
+		deinitialize(game);
 	map_render(game);
 	cube_render(game);
 	minimaprender(game);

@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 01:02:23 by luguimar          #+#    #+#             */
-/*   Updated: 2024/08/15 04:59:46 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/08/16 02:02:00 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -269,7 +269,7 @@ void	put_line(t_gs *game, double x, double y, double dir, int side, int i)
 	j = 0;
 	while (j < line_size)
 	{
-		if (line_size <= 600 || (line_size > 600 && (j > (line_size - 600) / 2) && j < line_size - (line_size - 600) / 2))
+		if ((j > (line_size - 600) / 2) && j < line_size - (line_size - 600) / 2)
 			my_pixel_put(&game->graphics.img, i, j + 300 - line_size / 2, get_color(game, x, y, (double)j / (double)line_size, orientation));
 		j++;
 	}

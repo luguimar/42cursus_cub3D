@@ -6,7 +6,7 @@
 /*   By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:24:58 by jduraes-          #+#    #+#             */
-/*   Updated: 2024/08/15 06:04:11 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/08/16 05:32:43 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static t_gs	*gs_init(void)
 	return (gs);
 }
 
-static void	deinitialize(t_gs *gs)
+void	deinitialize(t_gs *gs)
 {
 	if (gs)
 	{
