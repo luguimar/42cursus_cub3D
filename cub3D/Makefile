@@ -6,7 +6,7 @@
 #    By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/10 22:33:22 by luguimar          #+#    #+#              #
-#    Updated: 2024/08/15 10:26:30 by luguimar         ###   ########.fr        #
+#    Updated: 2024/08/18 02:02:33 by luguimar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,25 +30,24 @@ MINILIBX_URL = https://cdn.intra.42.fr/document/document/25858/minilibx-linux.tg
 LIBFT_PATH = lib/libft
 MLX_PATH = lib/mlx
 LIBFT = ${LIBFT_PATH}/libft.a
+MLX_FILE = ${MLX_PATH}/libmlx.a
 MLX = -L ${MLX_PATH} -lmlx -Ilmlx -lXext -lX11 -lm
 
-$(NAME): $(MLX) ${OBJS} ${LIBFT}
+$(NAME): ${MLX_FILE} ${OBJS} ${LIBFT}
 		${CC} ${OBJS} ${LIBFT} ${MLX} -o ${NAME}
 
 $(LIBFT):
 		${MAKE} ${LIBFT_PATH}
 
-$(MLX): download-and-extract-mlx
-		${MAKE} ${MLX_PATH}
-
-download-and-extract-mlx:
+${MLX_FILE}:
 		if [ ! -d "${MLX_PATH}" ]; then \
 		${DOWNLOAD} ${MINILIBX_FILE} ${MINILIBX_URL}; \
 		${EXTRACT} ${MINILIBX_FILE} -C ${LIBRARIES}; \
 		${REMOVE} ${MINILIBX_FILE}; \
 		${MOVE} lib/minilibx-linux ${MLX_PATH}; \
 		fi
-
+		${MAKE} ${MLX_PATH}
+		
 all: ${NAME}
 
 clean:
@@ -63,4 +62,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: download-and-extract-mlx all clean fclean re
+.PHONY: all clean fclean re
