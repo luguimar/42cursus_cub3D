@@ -70,7 +70,7 @@ int	checkend(char *str, char *set)
 
 char	*ft_strtrimfree(char const *s1, char const *set)
 {
-	char *new;
+	char	*new;
 
 	new = ft_strtrim(s1, set);
 	free((void *)s1);

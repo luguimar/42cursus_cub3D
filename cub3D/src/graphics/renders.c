@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 01:02:23 by luguimar          #+#    #+#             */
-/*   Updated: 2024/08/16 02:02:00 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/08/18 20:50:37 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ void	put_line(t_gs *game, double x, double y, double dir, int side, int i)
 	double	intercept_x;
 	double	intercept_y;
 
+	orientation = 0;
 	dist2wall = 0;
 	perp_dir = game->player.dir;
 	perp_side = game->player.side;
@@ -233,37 +234,37 @@ void	put_line(t_gs *game, double x, double y, double dir, int side, int i)
 	if (side == 0)
 	{
 		decimal = modf(x, &integer);
-		if (decimal == 0)
+		if (decimal > -0.0001 && decimal < 0.0001)
 			orientation = 1;
 		decimal = modf(y, &integer);
-		if (decimal == 0)
+		if (decimal > -0.0001 && decimal < 0.0001)
 			orientation = 3;
 	}
 	else if (side == 1)
 	{
 		decimal = modf(x, &integer);
-		if (decimal == 0)
+		if (decimal > -0.0001 && decimal < 0.0001)
 			orientation = 0;
 		decimal = modf(y, &integer);
-		if (decimal == 0)
+		if (decimal > -0.0001 && decimal < 0.0001)
 			orientation = 3;
 	}
 	else if (side == 2)
 	{
 		decimal = modf(x, &integer);
-		if (decimal == 0)
+		if (decimal > -0.0001 && decimal < 0.0001)
 			orientation = 0;
 		decimal = modf(y, &integer);
-		if (decimal == 0)
+		if (decimal > -0.0001 && decimal < 0.0001)
 			orientation = 2;
 	}
 	else if (side == 3)
 	{
 		decimal = modf(x, &integer);
-		if (decimal == 0)
+		if (decimal > -0.0001 && decimal < 0.0001)
 			orientation = 1;
 		decimal = modf(y, &integer);
-		if (decimal == 0)
+		if (decimal > -0.0001 && decimal < 0.0001)
 			orientation = 2;
 	}
 	j = 0;

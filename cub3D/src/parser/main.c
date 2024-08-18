@@ -6,7 +6,7 @@
 /*   By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:24:58 by jduraes-          #+#    #+#             */
-/*   Updated: 2024/08/16 05:32:43 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/08/18 20:25:56 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,48 @@ void	deinitialize(t_gs *gs)
 			free(gs->we_t);
 		if (gs->ea_t)
 			free(gs->ea_t);
+		if (gs->graphics.no.img)
+			mlx_destroy_image(gs->graphics.mlx, gs->graphics.no.img);
+		if (gs->graphics.so.img)
+			mlx_destroy_image(gs->graphics.mlx, gs->graphics.so.img);
+		if (gs->graphics.ea.img)
+			mlx_destroy_image(gs->graphics.mlx, gs->graphics.ea.img);
+		if (gs->graphics.we.img)
+			mlx_destroy_image(gs->graphics.mlx, gs->graphics.we.img);
+		if (gs->graphics.img.img)
+			mlx_destroy_image(gs->graphics.mlx, gs->graphics.img.img);
+		if (gs->graphics.win)
+			mlx_destroy_window(gs->graphics.mlx, gs->graphics.win);
+		if (gs->graphics.mlx)
+		{
+			mlx_destroy_display(gs->graphics.mlx);
+			free(gs->graphics.mlx);
+		}
 		free(gs);
 	}
+}
+
+static int	check_extension(char *str, char *ext)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	while (str[i])
+		i++;
+	while (ext[j])
+		j++;
+	if (i < j)
+		return (0);
+	while (j >= 0)
+	{
+		if (str[i] != ext[j])
+			return (0);
+		i--;
+		j--;
+	}
+	return (1);
 }
 
 static void	is_valid(char *f)
@@ -59,13 +99,8 @@ static void	is_valid(char *f)
 	int	i;
 
 	i = -1;
-	while (f[++i] != '.' && f[i] != '\0')
-	{
-		if (f[i] == '\0')
-			ft_perror("Invalid map format", 1);
-	}
-	if (ft_strncmp(f + i, ".cub\0", 5))
-		ft_perror("Invalid map format", 1);
+	if (!check_extension(f, ".cub"))
+		ft_perror("Invalid file extension", 1);
 	fd = open(f, O_RDONLY);
 	if (fd == -1)
 		ft_perror("Map doesnt exist", 1);

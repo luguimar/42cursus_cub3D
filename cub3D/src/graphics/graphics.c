@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 01:45:06 by luguimar          #+#    #+#             */
-/*   Updated: 2024/08/16 05:32:04 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/08/18 20:16:24 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,10 +87,7 @@ int	set_mlx_images(t_gs *game)
 
 int	mlx_close(t_gs *game)
 {
-	mlx_destroy_window(game->graphics.mlx, game->graphics.win);
-	mlx_destroy_display(game->graphics.mlx);
-	free(game->graphics.mlx);
-	doublefree(game->map);
+	deinitialize(game);
 	exit(0);
 }
 
@@ -118,14 +115,13 @@ void	mlx_start(t_gs *game)
 	game->graphics.win = mlx_new_window(game->graphics.mlx, 800, 600, "cub3D");
 	if (!game->graphics.win)
 	{
-		mlx_destroy_display(game->graphics.mlx);
+		deinitialize(game);
 		ft_putstr_fd("Error\nmlx_new_window failed\n", 2);
 		exit(1);
 	}
 	if (set_mlx_images(game))
 	{
-		mlx_destroy_window(game->graphics.mlx, game->graphics.win);
-		mlx_destroy_display(game->graphics.mlx);
+		deinitialize(game);
 		ft_putstr_fd("Error\nmlx_xpm_file_to_image failed\n", 2);
 		exit(1);
 	}

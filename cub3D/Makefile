@@ -6,7 +6,7 @@
 #    By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/10 22:33:22 by luguimar          #+#    #+#              #
-#    Updated: 2024/08/18 02:02:33 by luguimar         ###   ########.fr        #
+#    Updated: 2024/08/18 20:18:30 by luguimar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,12 +16,12 @@ SRC = src/parser/main.c src/parser/parse.c src/parser/checker.c src/parser/map_p
 
 OBJS = ${SRC:.c=.o}
 
-CC = cc -g
+CC = cc -g #-fsanitize=address
 MOVE = mv
 REMOVE = rm -f
 EXTRACT = tar -xvf
 DOWNLOAD = wget -O
-CFLAGS = -Wall -Wextra -Werror #-fsanitize=address
+CFLAGS = -Wall -Wextra -Werror
 INCLUDE = -I .
 MAKE = make -C
 LIBRARIES = lib
