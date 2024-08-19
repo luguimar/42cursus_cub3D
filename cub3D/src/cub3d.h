@@ -6,7 +6,7 @@
 /*   By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:01:45 by jduraes-          #+#    #+#             */
-/*   Updated: 2024/08/16 05:33:12 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/08/19 20:22:07 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,28 @@ typedef enum e_key
 	LEFT = 65361,
 	RIGHT = 65363,
 }	t_key;
+
+typedef struct s_putline
+{
+	double	dist2wall;
+	double	line_size;
+	int		j;
+	int		orientation;
+	double	integer;
+	double	decimal;
+	double	delta_x;
+	double	delta_y;
+	double	perp_dir;
+	double	perp_slope;
+	double	perp_side;
+	double	perp_oo;
+	double	parallel_dir;
+	double	parallel_slope;
+	double	parallel_side;
+	double	parallel_oo;
+	double	intercept_x;
+	double	intercept_y;
+}	t_putline;
 
 typedef struct s_img
 {

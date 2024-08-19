@@ -6,7 +6,7 @@
 /*   By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 22:41:14 by jduraes-          #+#    #+#             */
-/*   Updated: 2024/07/31 20:32:14 by jduraes-         ###   ########.fr       */
+/*   Updated: 2024/08/19 18:32:40 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static int	checkvalues(char **s, t_gs *gs, char c)
 			if (!ft_isdigit(s[i][j]))
 				return (0);
 		}
-		if (ft_atoi(s[i]) < 0 || ft_atoi(s[i]) > 255)
+		if (ft_strlen(s[i]) == 0 || ft_atoi(s[i]) < 0 || ft_atoi(s[i]) > 255)
 		{
 			printf("invalid RGB number");
 			return (0);

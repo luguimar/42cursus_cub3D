@@ -6,38 +6,38 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 01:02:23 by luguimar          #+#    #+#             */
-/*   Updated: 2024/08/18 20:50:37 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/08/19 20:22:23 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../cub3d.h"
 
-int	get_color(t_gs *game, double x, double y, double z, int orientation)
+int	get_color(t_gs *game, double x, double y, double z, int vars.orientation)
 {
 	int		color;
-	double	integer;
-	double	decimal;
+	double	vars.integer;
+	double	vars.decimal;
 
 	(void)z;
-	if (orientation == 0)
+	if (vars.orientation == 0)
 	{
-		decimal = modf(y, &integer);
-		color = (*(int *)(game->graphics.no.addr + (game->graphics.no.width * ((int)(game->graphics.no.height * z)) + ((int)(game->graphics.no.width * decimal))) * game->graphics.no.bits_per_pixel / 8));
+		vars.decimal = modf(y, &vars.integer);
+		color = (*(int *)(game->graphics.no.addr + (game->graphics.no.width * ((int)(game->graphics.no.height * z)) + ((int)(game->graphics.no.width * vars.decimal))) * game->graphics.no.bits_per_pixel / 8));
 	}
-	else if (orientation == 1)
+	else if (vars.orientation == 1)
 	{
-		decimal = modf(y, &integer);
-		color = (*(int *)(game->graphics.so.addr + (game->graphics.so.width * ((int)(game->graphics.so.height * z)) + ((int)(game->graphics.so.width * (1 - decimal)))) * game->graphics.so.bits_per_pixel / 8));
+		vars.decimal = modf(y, &vars.integer);
+		color = (*(int *)(game->graphics.so.addr + (game->graphics.so.width * ((int)(game->graphics.so.height * z)) + ((int)(game->graphics.so.width * (1 - vars.decimal)))) * game->graphics.so.bits_per_pixel / 8));
 	}
-	else if (orientation == 2)
+	else if (vars.orientation == 2)
 	{
-		decimal = modf(x, &integer);
-		color = (*(int *)(game->graphics.we.addr + (game->graphics.we.width * ((int)(game->graphics.we.height * z)) + ((int)(game->graphics.we.width * (1 - decimal)))) * game->graphics.we.bits_per_pixel / 8));
+		vars.decimal = modf(x, &vars.integer);
+		color = (*(int *)(game->graphics.we.addr + (game->graphics.we.width * ((int)(game->graphics.we.height * z)) + ((int)(game->graphics.we.width * (1 - vars.decimal)))) * game->graphics.we.bits_per_pixel / 8));
 	}
-	else if (orientation == 3)
+	else if (vars.orientation == 3)
 	{
-		decimal = modf(x, &integer);
-		color = (*(int *)(game->graphics.ea.addr + (game->graphics.ea.width * ((int)(game->graphics.ea.height * z)) + ((int)(game->graphics.ea.width * (1 - decimal)))) * game->graphics.ea.bits_per_pixel / 8));
+		vars.decimal = modf(x, &vars.integer);
+		color = (*(int *)(game->graphics.ea.addr + (game->graphics.ea.width * ((int)(game->graphics.ea.height * z)) + ((int)(game->graphics.ea.width * (1 - vars.decimal)))) * game->graphics.ea.bits_per_pixel / 8));
 	}
 	else
 	{
@@ -48,74 +48,57 @@ int	get_color(t_gs *game, double x, double y, double z, int orientation)
 
 void	put_line(t_gs *game, double x, double y, double dir, int side, int i)
 {
-	double	dist2wall;
-	double	line_size;
-	int		j;
-	int		orientation;
-	double	integer;
-	double	decimal;
-	double	delta_x;
-	double	delta_y;
-	double	perp_dir;
-	double	perp_slope;
-	double	perp_side;
-	double	perp_oo;
-	double	parallel_dir;
-	double	parallel_slope;
-	double	parallel_side;
-	double	parallel_oo;
-	double	intercept_x;
-	double	intercept_y;
+	t_putline	vars;
 
-	orientation = 0;
-	dist2wall = 0;
-	perp_dir = game->player.dir;
-	perp_side = game->player.side;
-	perp_dir += M_PI_2;
-	perp_dir = M_PI_2 - perp_dir + M_PI_2;
-	if (perp_side == 2)
-		perp_side = 0;
-	if (perp_side == 3)
-		perp_side = 1;
-	if (perp_side == 0)
-		perp_side = 1;
-	else if (perp_side == 1)
-		perp_side = 0;
-/*	if (perp_side == 0)
-		perp_dir = perp_dir + M_PI_2;*/
-	if (perp_side == 1)
-		perp_dir = M_PI_2 - perp_dir + M_PI_2;
-	perp_slope = tan(perp_dir);
-	if (perp_slope > 1000 || perp_slope < -1000)
-		perp_slope = 1000;
-	perp_oo = -perp_slope * x + y;
+	vars.orientation = 0;
+	vars.dist2wall = 0;
+	vars.perp_dir = game->player.dir;
+	vars.perp_side = game->player.side;
+	vars.perp_dir += M_PI_2;
+	vars.perp_dir = M_PI_2 - vars.perp_dir + M_PI_2;
+	if (vars.perp_side == 2)
+		vars.perp_side = 0;
+	if (vars.perp_side == 3)
+		vars.perp_side = 1;
+	if (vars.perp_side == 0)
+		vars.perp_side = 1;
+	else if (vars.perp_side == 1)
+		vars.perp_side = 0;
+/*	if (vars.perp_side == 0)
+		vars.perp_dir = vars.perp_dir + M_PI_2;*/
+	if (vars.perp_side == 1)
+		vars.perp_dir = M_PI_2 - vars.perp_dir + M_PI_2;
+	vars.perp_slope = tan(vars.perp_dir);
+	if (vars.perp_slope > 1000 || vars.perp_slope < -1000)
+		vars.perp_slope = 1000;
+	vars.perp_oo = -vars.perp_slope * x + y;
 	if (side == 0)
 	{
 		while (game->map[(int)x][(int)y] != '1')
 		{
-			decimal = modf(x, &integer);
-			decimal = 1 - decimal;
-			if (decimal == 0)
-				decimal = 0.9999999999999999;
-			delta_x = decimal / cos(dir);
-			decimal = modf(y, &integer);
-			decimal = 1 - decimal;
-			if (decimal == 0)
-				decimal = 0.9999999999999999;
-			delta_y = decimal / sin(dir);
-			if (delta_x < delta_y)
+			vars.decimal = modf(x, &vars.integer);
+			vars.decimal = 1 - vars.decimal;
+			if (vars.decimal == 0)
+				vars.decimal = 0.9999999999999999;
+			vars.deltax = vars.decimal / cos(dir);
+			vars.decimal = modf(y, &vars.integer);
+			vars.decimal = 1 - vars.decimal;
+			if (vars.decimal == 0)
+				vars.decimal = 0.9999999999999999;
+			vars.deltay = vars.decimal / sin(dir);
+			if (vars.deltax < vars.deltay)
 			{
-				x += delta_x * cos(dir);
-				y += delta_x * sin(dir);
-				dist2wall += delta_x;
+				x += vars.deltax * cos(dir);
+				y += vars.deltax * sin(dir);
+				vars.dist2wall += vars.deltax;
 				if (game->map[(int)(x + 0.0001)][(int)y] == '1')
 					break ;
 			}
 			else
 			{
-				x += delta_y * cos(dir);
-				y += delta_y * sin(dir);
-				dist2wall += delta_y;
+				x += vars.deltay * cos(dir);
+				y += vars.deltay * sin(dir);
+				vars.dist2wall += vars.deltay;
 				if (game->map[(int)x][(int)(y + 0.0001)] == '1')
 					break ;
 			}
@@ -125,28 +108,28 @@ void	put_line(t_gs *game, double x, double y, double dir, int side, int i)
 	{
 		while (game->map[(int)x][(int)y] != '1')
 		{
-			decimal = modf(x, &integer);
-			if (decimal == 0)
-				decimal = 0.9999999999999999;
-			delta_x = decimal / cos(dir);
-			decimal = modf(y, &integer);
-			decimal = 1 - decimal;
-			if (decimal == 0)
-				decimal = 0.9999999999999999;
-			delta_y = decimal / sin(dir);
-			if (delta_x < delta_y)
+			vars.decimal = modf(x, &vars.integer);
+			if (vars.decimal == 0)
+				vars.decimal = 0.9999999999999999;
+			vars.deltax = vars.decimal / cos(dir);
+			vars.decimal = modf(y, &vars.integer);
+			vars.decimal = 1 - vars.decimal;
+			if (vars.decimal == 0)
+				vars.decimal = 0.9999999999999999;
+			vars.deltay = vars.decimal / sin(dir);
+			if (vars.deltax < vars.deltay)
 			{
-				x -= delta_x * cos(dir);
-				y += delta_x * sin(dir);
-				dist2wall += delta_x;
+				x -= vars.deltax * cos(dir);
+				y += vars.deltax * sin(dir);
+				vars.dist2wall += vars.deltax;
 				if (game->map[(int)(x - 0.0001)][(int)y] == '1')
 					break ;
 			}
 			else
 			{
-				x -= delta_y * cos(dir);
-				y += delta_y * sin(dir);
-				dist2wall += delta_y;
+				x -= vars.deltay * cos(dir);
+				y += vars.deltay * sin(dir);
+				vars.dist2wall += vars.deltay;
 				if (game->map[(int)x][(int)(y + 0.0001)] == '1')
 					break ;
 			}
@@ -156,27 +139,27 @@ void	put_line(t_gs *game, double x, double y, double dir, int side, int i)
 	{
 		while (game->map[(int)x][(int)y] != '1')
 		{
-			decimal = modf(x, &integer);
-			if (decimal == 0)
-				decimal = 0.9999999999999999;
-			delta_x = decimal / cos(dir);
-			decimal = modf(y, &integer);
-			if (decimal == 0)
-				decimal = 0.9999999999999999;
-			delta_y = decimal / sin(dir);
-			if (delta_x < delta_y)
+			vars.decimal = modf(x, &vars.integer);
+			if (vars.decimal == 0)
+				vars.decimal = 0.9999999999999999;
+			vars.deltax = vars.decimal / cos(dir);
+			vars.decimal = modf(y, &vars.integer);
+			if (vars.decimal == 0)
+				vars.decimal = 0.9999999999999999;
+			vars.deltay = vars.decimal / sin(dir);
+			if (vars.deltax < vars.deltay)
 			{
-				x -= delta_x * cos(dir);
-				y -= delta_x * sin(dir);
-				dist2wall += delta_x;
+				x -= vars.deltax * cos(dir);
+				y -= vars.deltax * sin(dir);
+				vars.dist2wall += vars.deltax;
 				if (game->map[(int)(x - 0.0001)][(int)y] == '1')
 					break ;
 			}
 			else
 			{
-				x -= delta_y * cos(dir);
-				y -= delta_y * sin(dir);
-				dist2wall += delta_y;
+				x -= vars.deltay * cos(dir);
+				y -= vars.deltay * sin(dir);
+				vars.dist2wall += vars.deltay;
 				if (game->map[(int)x][(int)(y - 0.0001)] == '1')
 					break ;
 			}
@@ -186,92 +169,92 @@ void	put_line(t_gs *game, double x, double y, double dir, int side, int i)
 	{
 		while (game->map[(int)x][(int)y] != '1')
 		{
-			decimal = modf(x, &integer);
-			decimal = 1 - decimal;
-			if (decimal == 0)
-				decimal = 0.9999999999999999;
-			delta_x = decimal / cos(dir);
-			decimal = modf(y, &integer);
-			if (decimal == 0)
-				decimal = 0.9999999999999999;
-			delta_y = decimal / sin(dir);
-			if (delta_x < delta_y)
+			vars.decimal = modf(x, &vars.integer);
+			vars.decimal = 1 - vars.decimal;
+			if (vars.decimal == 0)
+				vars.decimal = 0.9999999999999999;
+			vars.deltax = vars.decimal / cos(dir);
+			vars.decimal = modf(y, &vars.integer);
+			if (vars.decimal == 0)
+				vars.decimal = 0.9999999999999999;
+			vars.deltay = vars.decimal / sin(dir);
+			if (vars.deltax < vars.deltay)
 			{
-				x += delta_x * cos(dir);
-				y -= delta_x * sin(dir);
-				dist2wall += delta_x;
+				x += vars.deltax * cos(dir);
+				y -= vars.deltax * sin(dir);
+				vars.dist2wall += vars.deltax;
 				if (game->map[(int)(x + 0.0001)][(int)y] == '1')
 					break ;
 			}
 			else
 			{
-				x += delta_y * cos(dir);
-				y -= delta_y * sin(dir);
-				dist2wall += delta_y;
+				x += vars.deltay * cos(dir);
+				y -= vars.deltay * sin(dir);
+				vars.dist2wall += vars.deltay;
 				if (game->map[(int)x][(int)(y - 0.0001)] == '1')
 					break ;
 			}
 		}
 	}
-	parallel_dir = game->player.dir;
+	vars.paralel_dir = game->player.dir;
 	parallel_side = game->player.side;
 	if (parallel_side == 2)
 		parallel_side = 0;
 	if (parallel_side == 3)
 		parallel_side = 1;
 /*	if (parallel_side == 0)
-		parallel_dir = parallel_dir + M_PI_2;*/
+		vars.paralel_dir = vars.paralel_dir + M_PI_2;*/
 	if (parallel_side == 1)
-		parallel_dir = M_PI_2 - parallel_dir + M_PI_2;
-	parallel_slope = tan(parallel_dir);
-	if (parallel_slope > 1000 || parallel_slope < -1000)
-		parallel_slope = 1000;
-	parallel_oo = -parallel_slope * x + y;
-	intercept_x = (parallel_oo - perp_oo) / (perp_slope - parallel_slope);
-	intercept_y = perp_slope * intercept_x + perp_oo;
-	dist2wall = sqrt(pow(intercept_x - x, 2) + pow(intercept_y - y, 2));
-	line_size = 1 / dist2wall * 600;
+		vars.paralel_dir = M_PI_2 - vars.paralel_dir + M_PI_2;
+	vars.paralel_slope = tan(vars.paralel_dir);
+	if (vars.paralel_slope > 1000 || vars.paralel_slope < -1000)
+		vars.paralel_slope = 1000;
+	vars.paralel_oo = -vars.paralel_slope * x + y;
+	vars.intercept_x = (vars.paralel_oo - vars.perp_oo) / (vars.perp_slope - vars.paralel_slope);
+	vars.intercept_y = vars.perp_slope * vars.intercept_x + vars.perp_oo;
+	vars.dist2wall = sqrt(pow(vars.intercept_x - x, 2) + pow(vars.intercept_y - y, 2));
+	vars.line_size = 1 / vars.dist2wall * 600;
 	if (side == 0)
 	{
-		decimal = modf(x, &integer);
-		if (decimal > -0.0001 && decimal < 0.0001)
-			orientation = 1;
-		decimal = modf(y, &integer);
-		if (decimal > -0.0001 && decimal < 0.0001)
-			orientation = 3;
+		vars.decimal = modf(x, &vars.integer);
+		if (vars.decimal > -0.0001 && vars.decimal < 0.0001)
+			vars.orientation = 1;
+		vars.decimal = modf(y, &vars.integer);
+		if (vars.decimal > -0.0001 && vars.decimal < 0.0001)
+			vars.orientation = 3;
 	}
 	else if (side == 1)
 	{
-		decimal = modf(x, &integer);
-		if (decimal > -0.0001 && decimal < 0.0001)
-			orientation = 0;
-		decimal = modf(y, &integer);
-		if (decimal > -0.0001 && decimal < 0.0001)
-			orientation = 3;
+		vars.decimal = modf(x, &vars.integer);
+		if (vars.decimal > -0.0001 && vars.decimal < 0.0001)
+			vars.orientation = 0;
+		vars.decimal = modf(y, &vars.integer);
+		if (vars.decimal > -0.0001 && vars.decimal < 0.0001)
+			vars.orientation = 3;
 	}
 	else if (side == 2)
 	{
-		decimal = modf(x, &integer);
-		if (decimal > -0.0001 && decimal < 0.0001)
-			orientation = 0;
-		decimal = modf(y, &integer);
-		if (decimal > -0.0001 && decimal < 0.0001)
-			orientation = 2;
+		vars.decimal = modf(x, &vars.integer);
+		if (vars.decimal > -0.0001 && vars.decimal < 0.0001)
+			vars.orientation = 0;
+		vars.decimal = modf(y, &vars.integer);
+		if (vars.decimal > -0.0001 && vars.decimal < 0.0001)
+			vars.orientation = 2;
 	}
 	else if (side == 3)
 	{
-		decimal = modf(x, &integer);
-		if (decimal > -0.0001 && decimal < 0.0001)
-			orientation = 1;
-		decimal = modf(y, &integer);
-		if (decimal > -0.0001 && decimal < 0.0001)
-			orientation = 2;
+		vars.decimal = modf(x, &vars.integer);
+		if (vars.decimal > -0.0001 && vars.decimal < 0.0001)
+			vars.orientation = 1;
+		vars.decimal = modf(y, &vars.integer);
+		if (vars.decimal > -0.0001 && vars.decimal < 0.0001)
+			vars.orientation = 2;
 	}
 	j = 0;
-	while (j < line_size)
+	while (j < vars.line_size)
 	{
-		if ((j > (line_size - 600) / 2) && j < line_size - (line_size - 600) / 2)
-			my_pixel_put(&game->graphics.img, i, j + 300 - line_size / 2, get_color(game, x, y, (double)j / (double)line_size, orientation));
+		if ((j > (vars.line_size - 600) / 2) && j < vars.line_size - (vars.line_size - 600) / 2)
+			my_pixel_put(&game->graphics.img, i, j + 300 - vars.line_size / 2, get_color(game, x, y, (double)j / (double)vars.line_size, vars.orientation));
 		j++;
 	}
 }
