@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 01:06:18 by luguimar          #+#    #+#             */
-/*   Updated: 2024/08/18 20:32:24 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/08/20 19:52:55 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,8 @@ void	get_player_dir(t_gs *game)
 		j = 0;
 		while (game->map[i][j])
 		{
-			if (game->map[i][j] == 'N' || game->map[i][j] == 'S' || game->map[i][j] == 'E' || game->map[i][j] == 'W')
+			if (game->map[i][j] == 'N' || game->map[i][j] == 'S' \
+			|| game->map[i][j] == 'E' || game->map[i][j] == 'W')
 			{
 				game->player.dir = get_dir(game->map[i][j]);
 				game->player.side = get_side(game->map[i][j]);
@@ -72,7 +73,8 @@ void	get_player_position(t_gs *game)
 		j = 0;
 		while (game->map[i][j])
 		{
-			if (game->map[i][j] == 'N' || game->map[i][j] == 'S' || game->map[i][j] == 'E' || game->map[i][j] == 'W')
+			if (game->map[i][j] == 'N' || game->map[i][j] == 'S' \
+			|| game->map[i][j] == 'E' || game->map[i][j] == 'W')
 			{
 				game->player.x = ((double)i) + 0.5;
 				game->player.y = ((double)j) + 0.5;

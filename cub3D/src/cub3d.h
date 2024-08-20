@@ -6,7 +6,7 @@
 /*   By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:01:45 by jduraes-          #+#    #+#             */
-/*   Updated: 2024/08/19 20:22:07 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/08/20 20:00:05 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ typedef struct s_putline
 	double	line_size;
 	int		j;
 	int		orientation;
+	double	x;
+	double	y;
 	double	integer;
 	double	decimal;
 	double	delta_x;
@@ -113,7 +115,7 @@ typedef struct s_gs
 
 int				parser(char *f, t_gs *gs);
 int				checker(t_gs *gs);
-void			ft_perror(char *str, int fd);
+void			ft_perror(char *str, int fd, t_gs *gs);
 void			runitdown(int fd, char *line);
 int				check_info(t_gs *gs);
 int				copyconvert(char **s, int *a);
@@ -128,7 +130,7 @@ int				key_hook(int keycode, t_gs *game);
 int				map_render(t_gs *game);
 void			playerrender(t_gs *game);
 int				minimaprender(t_gs *game);
-void			put_line(t_gs *game, double x, double y, double dir, int side, int i);
+void			put_line(t_gs *game, double dir, int side, int i);
 void			cube_render(t_gs *game);
 double			get_dir(char c);
 int				get_side(char c);
