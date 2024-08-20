@@ -6,7 +6,7 @@
 /*   By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:24:58 by jduraes-          #+#    #+#             */
-/*   Updated: 2024/08/02 19:27:12 by jduraes-         ###   ########.fr       */
+/*   Updated: 2024/08/20 20:56:46 by jduraes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,6 @@ int	main(int argc, char **argv)
 		ft_perror("Invalid map", 1);
 	}
 	deinitialize(gs);
-	mlx_start(gs);
+	//mlx_start(gs);
 	return (0);
 }

@@ -12,7 +12,7 @@
 
 NAME = cub3D
 
-SRC = src/parser/main.c src/parser/parse.c src/parser/checker.c src/parser/map_parse.c src/parser/parse_utils.c src/graphics/graphics.c
+SRC = src/parser/main.c src/parser/parse.c src/parser/checker.c src/parser/map_parse.c src/parser/parse_utils.c
 
 OBJS = ${SRC:.c=.o}
 

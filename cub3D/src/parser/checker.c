@@ -6,7 +6,7 @@
 /*   By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 21:58:45 by jduraes-          #+#    #+#             */
-/*   Updated: 2024/08/02 18:59:24 by jduraes-         ###   ########.fr       */
+/*   Updated: 2024/08/20 21:01:12 by jduraes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@ static int	flood_fill(t_gs *gs, int x, int y, char **map)
 {
 	static int	c;
 
+	if (x < 0 || y < 0 || x >= gs->ylen || y >= gs->xlen)
+	{
+		c++;
+		return (0);
+	}
 	if (map[x][y] == '1')
 		return (1);
 	else if (map[x][y] == ' ')
