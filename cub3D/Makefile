@@ -6,13 +6,13 @@
 #    By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/10 22:33:22 by luguimar          #+#    #+#              #
-#    Updated: 2024/08/19 18:37:58 by luguimar         ###   ########.fr        #
+#    Updated: 2024/08/20 22:18:48 by luguimar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = cub3D
 
-SRC = src/parser/main.c src/parser/parse.c src/parser/checker.c src/parser/map_parse.c src/parser/parse_utils.c src/graphics/graphics.c src/graphics/moves.c src/graphics/positions.c src/graphics/renders.c
+SRC = src/parser/main.c src/parser/parse.c src/parser/checker.c src/parser/map_parse.c src/parser/parse_utils.c src/graphics/graphics.c src/graphics/moves.c src/graphics/positions.c src/graphics/renders.c src/graphics/set_image.c src/graphics/move.c
 
 OBJS = ${SRC:.c=.o}
 

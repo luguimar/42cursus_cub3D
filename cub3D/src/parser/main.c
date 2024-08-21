@@ -6,7 +6,7 @@
 /*   By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:24:58 by jduraes-          #+#    #+#             */
-/*   Updated: 2024/08/20 20:01:49 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/08/20 21:38:13 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,15 +116,9 @@ int	main(int argc, char **argv)
 		ft_perror("wrong number of arguments", 1, gs);
 	is_valid(argv[1], gs);
 	if (!parser(argv[1], gs))
-	{
-		deinitialize(gs);
 		ft_perror("Invalid map", 1, gs);
-	}
 	if (!checker(gs))
-	{
-		deinitialize(gs);
 		ft_perror("Invalid map", 1, gs);
-	}
 	mlx_start(gs);
 	deinitialize(gs);
 	return (0);

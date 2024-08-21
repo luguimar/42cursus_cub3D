@@ -6,41 +6,59 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 01:02:23 by luguimar          #+#    #+#             */
-/*   Updated: 2024/08/20 19:37:12 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/08/20 22:56:49 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../cub3d.h"
 
-int	get_color(t_gs *game, t_putline vars, double z)
+int	get_color_extra(t_gs *game, t_putline vars, double z)
 {
 	int		color;
 
-	(void)z;
-	if (vars.orientation == 0)
-	{
-		vars.decimal = modf(vars.y, &vars.integer);
-		color = (*(int *)(game->graphics.no.addr + (game->graphics.no.width * ((int)(game->graphics.no.height * z)) + ((int)(game->graphics.no.width * vars.decimal))) * game->graphics.no.bits_per_pixel / 8));
-	}
-	else if (vars.orientation == 1)
-	{
-		vars.decimal = modf(vars.y, &vars.integer);
-		color = (*(int *)(game->graphics.so.addr + (game->graphics.so.width * ((int)(game->graphics.so.height * z)) + ((int)(game->graphics.so.width * (1 - vars.decimal)))) * game->graphics.so.bits_per_pixel / 8));
-	}
-	else if (vars.orientation == 2)
+	if (vars.orientation == 2)
 	{
 		vars.decimal = modf(vars.x, &vars.integer);
-		color = (*(int *)(game->graphics.we.addr + (game->graphics.we.width * ((int)(game->graphics.we.height * z)) + ((int)(game->graphics.we.width * (1 - vars.decimal)))) * game->graphics.we.bits_per_pixel / 8));
+		color = (*(int *)(game->graphics.we.addr + (game->graphics.we.width * \
+			((int)(game->graphics.we.height * z)) + \
+			((int)(game->graphics.we.width * (1 - vars.decimal)))) * \
+			game->graphics.we.bits_per_pixel / 8));
 	}
 	else if (vars.orientation == 3)
 	{
 		vars.decimal = modf(vars.x, &vars.integer);
-		color = (*(int *)(game->graphics.ea.addr + (game->graphics.ea.width * ((int)(game->graphics.ea.height * z)) + ((int)(game->graphics.ea.width * (1 - vars.decimal)))) * game->graphics.ea.bits_per_pixel / 8));
+		color = (*(int *)(game->graphics.ea.addr + (game->graphics.ea.width * \
+			((int)(game->graphics.ea.height * z)) + \
+			((int)(game->graphics.ea.width * (1 - vars.decimal)))) * \
+			game->graphics.ea.bits_per_pixel / 8));
 	}
 	else
-	{
 		color = 0x00000000;
+	return (color);
+}
+
+int	get_color(t_gs *game, t_putline vars, double z)
+{
+	int		color;
+
+	if (vars.orientation == 0)
+	{
+		vars.decimal = modf(vars.y, &vars.integer);
+		color = (*(int *)(game->graphics.no.addr + (game->graphics.no.width \
+			* ((int)(game->graphics.no.height * z)) + \
+			((int)(game->graphics.no.width * vars.decimal))) * \
+			game->graphics.no.bits_per_pixel / 8));
 	}
+	else if (vars.orientation == 1)
+	{
+		vars.decimal = modf(vars.y, &vars.integer);
+		color = (*(int *)(game->graphics.so.addr + (game->graphics.so.width \
+			* ((int)(game->graphics.so.height * z)) + \
+			((int)(game->graphics.so.width * (1 - vars.decimal)))) \
+			* game->graphics.so.bits_per_pixel / 8));
+	}
+	else
+		color = get_color_extra(game, vars, z);
 	return (color);
 }
 
@@ -64,8 +82,6 @@ void	put_line(t_gs *game, double dir, int side, int i)
 		vars.perp_side = 1;
 	else if (vars.perp_side == 1)
 		vars.perp_side = 0;
-/*	if (vars.perp_side == 0)
-		vars.perp_dir = vars.perp_dir + M_PI_2;*/
 	if (vars.perp_side == 1)
 		vars.perp_dir = M_PI_2 - vars.perp_dir + M_PI_2;
 	vars.perp_slope = tan(vars.perp_dir);
@@ -202,8 +218,6 @@ void	put_line(t_gs *game, double dir, int side, int i)
 		vars.parallel_side = 0;
 	if (vars.parallel_side == 3)
 		vars.parallel_side = 1;
-/*	if (parallel_side == 0)
-		vars.paralel_dir = vars.paralel_dir + M_PI_2;*/
 	if (vars.parallel_side == 1)
 		vars.parallel_dir = M_PI_2 - vars.parallel_dir + M_PI_2;
 	vars.parallel_slope = tan(vars.parallel_dir);
@@ -253,8 +267,11 @@ void	put_line(t_gs *game, double dir, int side, int i)
 	vars.j = 0;
 	while (vars.j < vars.line_size)
 	{
-		if ((vars.j > (vars.line_size - 600) / 2) && vars.j < vars.line_size - (vars.line_size - 600) / 2)
-			my_pixel_put(&game->graphics.img, i, vars.j + 300 - vars.line_size / 2, get_color(game, vars, (double)vars.j / (double)vars.line_size));
+		if ((vars.j > (vars.line_size - 600) / 2) && vars.j \
+		< vars.line_size - (vars.line_size - 600) / 2)
+			my_pixel_put(&game->graphics.img, i, vars.j + 300 - \
+				vars.line_size / 2, get_color(game, vars, \
+				(double)vars.j / (double)vars.line_size));
 		vars.j++;
 	}
 }

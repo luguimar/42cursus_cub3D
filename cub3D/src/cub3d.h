@@ -6,7 +6,7 @@
 /*   By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:01:45 by jduraes-          #+#    #+#             */
-/*   Updated: 2024/08/20 20:00:05 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/08/20 22:18:33 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,5 +139,7 @@ void			get_player_position(t_gs *game);
 int				mlx_close(t_gs *game);
 void			my_pixel_put(t_img *img, int x, int y, int color);
 int				error_msg(char *msg, int ret);
+int				set_image(t_gs *game, char *path, int i);
+int				move(int keycode, t_gs *game);
 
 #endif

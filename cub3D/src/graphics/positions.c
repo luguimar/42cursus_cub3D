@@ -6,11 +6,20 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 01:06:18 by luguimar          #+#    #+#             */
-/*   Updated: 2024/08/20 19:52:55 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/08/20 21:54:40 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../cub3d.h"
+
+void	my_pixel_put(t_img *img, int x, int y, int color)
+{
+	char	*dst;
+
+	dst = img->addr + (y * img->line_length + \
+		x * (img->bits_per_pixel / 8));
+	*(unsigned int *)dst = color;
+}
 
 double	get_dir(char c)
 {

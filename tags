@@ -498,6 +498,7 @@ gc	cub3D/lib/mlx/mlx_int.h	/^	GC					gc;$/;"	m	struct:s_win_list	typeref:typenam
 gc	cub3D/lib/mlx/mlx_int.h	/^	GC				gc;$/;"	m	struct:s_img	typeref:typename:GC
 gere_mouse	cub3D/lib/mlx/test/new_win.c	/^int gere_mouse(int x,int y,int button,void*toto)$/;"	f	typeref:typename:int
 get_color	cub3D/src/graphics/renders.c	/^int	get_color(t_gs *game, t_putline vars, double z)$/;"	f	typeref:typename:int
+get_color_extra	cub3D/src/graphics/renders.c	/^int	get_color_extra(t_gs *game, t_putline vars, double z)$/;"	f	typeref:typename:int
 get_dir	cub3D/src/graphics/positions.c	/^double	get_dir(char c)$/;"	f	typeref:typename:double
 get_dir	graphics/src/positions.c	/^double	get_dir(char c)$/;"	f	typeref:typename:double
 get_line	cub3D/lib/libft/get_next_line.c	/^static char	*get_line(char *stash, int eof)$/;"	f	typeref:typename:char *	file:
@@ -558,6 +559,14 @@ key_param	cub3D/lib/mlx/mlx_int.h	/^	void				*key_param;$/;"	m	struct:s_win_list
 key_win1	cub3D/lib/mlx/test/main.c	/^int	key_win1(int key,void *p)$/;"	f	typeref:typename:int
 key_win2	cub3D/lib/mlx/test/main.c	/^int	key_win2(int key,void *p)$/;"	f	typeref:typename:int
 key_win3	cub3D/lib/mlx/test/main.c	/^int	key_win3(int key,void *p)$/;"	f	typeref:typename:int
+keycode_a	cub3D/src/graphics/move.c	/^static void	keycode_a(t_gs *game, double *new_x, double *new_y)$/;"	f	typeref:typename:void	file:
+keycode_d	cub3D/src/graphics/move.c	/^static void	keycode_d(t_gs *game, double *new_x, double *new_y)$/;"	f	typeref:typename:void	file:
+keycode_left	cub3D/src/graphics/moves.c	/^void	keycode_left(t_gs *game)$/;"	f	typeref:typename:void
+keycode_left_extra	cub3D/src/graphics/moves.c	/^void	keycode_left_extra(t_gs *game)$/;"	f	typeref:typename:void
+keycode_right	cub3D/src/graphics/moves.c	/^void	keycode_right(t_gs *game)$/;"	f	typeref:typename:void
+keycode_right_extra	cub3D/src/graphics/moves.c	/^void	keycode_right_extra(t_gs *game)$/;"	f	typeref:typename:void
+keycode_s	cub3D/src/graphics/move.c	/^static void	keycode_s(t_gs *game, double *new_x, double *new_y)$/;"	f	typeref:typename:void	file:
+keycode_w	cub3D/src/graphics/move.c	/^static void	keycode_w(t_gs *game, double *new_x, double *new_y)$/;"	f	typeref:typename:void	file:
 kind	cub3D/.vscode/tasks.json	/^                "kind": "build",$/;"	s	object:tasks.1.group
 label	cub3D/.vscode/tasks.json	/^            "label": "C\/C++: gcc build active file",$/;"	s	object:tasks.1
 label	cub3D/.vscode/tasks.json	/^            "label": "make",$/;"	s	object:tasks.0
@@ -676,9 +685,9 @@ mouse_param	cub3D/lib/mlx/mlx_int.h	/^	void				*mouse_param;$/;"	m	struct:s_win_
 mouse_win1	cub3D/lib/mlx/test/main.c	/^int	mouse_win1(int button,int x,int y, void *p)$/;"	f	typeref:typename:int
 mouse_win2	cub3D/lib/mlx/test/main.c	/^int	mouse_win2(int button,int x,int y, void *p)$/;"	f	typeref:typename:int
 mouse_win3	cub3D/lib/mlx/test/main.c	/^int	mouse_win3(int x,int y, void *p)$/;"	f	typeref:typename:int
-move	cub3D/src/graphics/moves.c	/^int	move(int keycode, t_gs *game)$/;"	f	typeref:typename:int
+move	cub3D/src/graphics/move.c	/^int	move(int keycode, t_gs *game)$/;"	f	typeref:typename:int
 move	graphics/src/moves.c	/^int	move(int keycode, t_game *game)$/;"	f	typeref:typename:int
-my_pixel_put	cub3D/src/graphics/graphics.c	/^void	my_pixel_put(t_img *img, int x, int y, int color)$/;"	f	typeref:typename:void
+my_pixel_put	cub3D/src/graphics/positions.c	/^void	my_pixel_put(t_img *img, int x, int y, int color)$/;"	f	typeref:typename:void
 my_pixel_put	graphics/src/main.c	/^void	my_pixel_put(t_img *img, int x, int y, int color)$/;"	f	typeref:typename:void
 name	cub3D/.vscode/launch.json	/^            "name": "MINISHELL",$/;"	s	object:configurations.0
 name	cub3D/lib/mlx/mlx_int.h	/^	char	*name;$/;"	m	struct:s_col_name	typeref:typename:char *
@@ -754,7 +763,11 @@ s_xpm_col	cub3D/lib/mlx/mlx_int.h	/^typedef	struct	s_xpm_col$/;"	s
 s_xvar	cub3D/lib/mlx/mlx_int.h	/^typedef struct	s_xvar$/;"	s
 saved_mode	cub3D/lib/mlx/mlx_ext_randr.c	/^RRMode	saved_mode = 0;$/;"	v	typeref:typename:RRMode
 screen	cub3D/lib/mlx/mlx_int.h	/^	int			screen;$/;"	m	struct:s_xvar	typeref:typename:int
-set_image	cub3D/src/graphics/graphics.c	/^int	set_image(t_gs *game, char *path, int i)$/;"	f	typeref:typename:int
+set_image	cub3D/src/graphics/set_image.c	/^int	set_image(t_gs *game, char *path, int i)$/;"	f	typeref:typename:int
+set_image0	cub3D/src/graphics/set_image.c	/^int	set_image0(t_gs *game, char *path)$/;"	f	typeref:typename:int
+set_image1	cub3D/src/graphics/set_image.c	/^int	set_image1(t_gs *game, char *path)$/;"	f	typeref:typename:int
+set_image2	cub3D/src/graphics/set_image.c	/^int	set_image2(t_gs *game, char *path)$/;"	f	typeref:typename:int
+set_image3	cub3D/src/graphics/set_image.c	/^int	set_image3(t_gs *game, char *path)$/;"	f	typeref:typename:int
 set_mlx_images	cub3D/src/graphics/graphics.c	/^int	set_mlx_images(t_gs *game)$/;"	f	typeref:typename:int
 setupCommands	cub3D/.vscode/launch.json	/^            "setupCommands": [$/;"	a	object:configurations.0
 shm	cub3D/lib/mlx/mlx_int.h	/^	XShmSegmentInfo	shm;$/;"	m	struct:s_img	typeref:typename:XShmSegmentInfo
