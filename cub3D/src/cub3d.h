@@ -6,7 +6,7 @@
 /*   By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:01:45 by jduraes-          #+#    #+#             */
-/*   Updated: 2024/08/20 22:18:33 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/08/22 02:51:33 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,5 +141,19 @@ void			my_pixel_put(t_img *img, int x, int y, int color);
 int				error_msg(char *msg, int ret);
 int				set_image(t_gs *game, char *path, int i);
 int				move(int keycode, t_gs *game);
+int				minimaprender(t_gs *game);
+void			cube_render(t_gs *game);
+void			put_line(t_gs *game, double dir, int side, int i);
+int				get_color(t_gs *game, t_putline vars, double z);
+void			vars_init(t_putline *vars, t_gs *game);
+void			vars_init2(t_putline *vars, t_gs *game);
+void			put_line_side0(t_gs *game, t_putline *vars, double dir);
+void			put_line_side1(t_gs *game, t_putline *vars, double dir);
+void			put_line_side2(t_gs *game, t_putline *vars, double dir);
+void			put_line_side3(t_gs *game, t_putline *vars, double dir);
+void			put_line_side0_aux(t_putline *vars, double dir);
+void			put_line_side1_aux(t_putline *vars, double dir);
+void			put_line_side2_aux(t_putline *vars, double dir);
+void			put_line_side3_aux(t_putline *vars, double dir);
 
 #endif

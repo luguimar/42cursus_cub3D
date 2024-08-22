@@ -6,7 +6,7 @@
 /*   By: jduraes- <jduraes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:24:58 by jduraes-          #+#    #+#             */
-/*   Updated: 2024/08/20 21:38:13 by luguimar         ###   ########.fr       */
+/*   Updated: 2024/08/22 02:59:08 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,43 +32,6 @@ static t_gs	*gs_init(void)
 	gs->floor[0] = -1;
 	gs->ceiling[0] = -1;
 	return (gs);
-}
-
-void	deinitialize(t_gs *gs)
-{
-	if (gs)
-	{
-		if (gs->map)
-			doublefree(gs->map);
-		if (gs->playerp)
-			free(gs->playerp);
-		if (gs->no_t)
-			free(gs->no_t);
-		if (gs->so_t)
-			free(gs->so_t);
-		if (gs->we_t)
-			free(gs->we_t);
-		if (gs->ea_t)
-			free(gs->ea_t);
-		if (gs->graphics.no.img)
-			mlx_destroy_image(gs->graphics.mlx, gs->graphics.no.img);
-		if (gs->graphics.so.img)
-			mlx_destroy_image(gs->graphics.mlx, gs->graphics.so.img);
-		if (gs->graphics.ea.img)
-			mlx_destroy_image(gs->graphics.mlx, gs->graphics.ea.img);
-		if (gs->graphics.we.img)
-			mlx_destroy_image(gs->graphics.mlx, gs->graphics.we.img);
-		if (gs->graphics.img.img)
-			mlx_destroy_image(gs->graphics.mlx, gs->graphics.img.img);
-		if (gs->graphics.win)
-			mlx_destroy_window(gs->graphics.mlx, gs->graphics.win);
-		if (gs->graphics.mlx)
-		{
-			mlx_destroy_display(gs->graphics.mlx);
-			free(gs->graphics.mlx);
-		}
-		free(gs);
-	}
 }
 
 static int	check_extension(char *str, char *ext)
